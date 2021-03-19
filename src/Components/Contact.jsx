@@ -1,6 +1,5 @@
 import React from 'react';
 import {AiFillGithub, AiFillLinkedin} from 'react-icons/ai';
-import {Link} from 'react-router-dom';
 import '.././App.css';
 
 class Contact extends React.Component{
@@ -8,12 +7,14 @@ class Contact extends React.Component{
         return(
             <div>
                 <header className="contactHead">
-                    <Link to="https://github.com/cbarkr">
-                        <AiFillGithub className="GitHub" />
-                    </Link>
-                    <Link to="https://www.linkedin.com/in/cbarkr/">
-                        <AiFillLinkedin className="LinkedIn" />
-                    </Link>
+                    <div className="links">
+                        <a href="https://github.com/cbarkr">
+                            <AiFillGithub className="GitHub" style={{color: 'black'}}/>
+                        </a>
+                        <a href="https://www.linkedin.com/in/cbarkr/">
+                            <AiFillLinkedin className="LinkedIn" style={{color: 'black'}}/>
+                        </a>
+                    </div>
                 </header>
             </div>
         )

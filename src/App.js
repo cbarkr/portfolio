@@ -9,12 +9,13 @@ function App() {
   return (
     <React.Fragment>
       <Router>
-        <TopNav></TopNav>
-        <Route exact path="About" component={About} />
-        <Route exact path="Contact" component={Contact} />
+        <TopNav />
+        <Route exact path="/" />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/contact" component={Contact} />
       </Router>
     </React.Fragment>
-  );
+  )
 }
 
 export default App;

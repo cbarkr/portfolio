@@ -6,9 +6,7 @@ class About extends React.Component{
         return(
             <div>
                 <header className="aboutHead">
-                    <p>
-                        Lorem ipsum lol
-                    </p>
+                    <p className="bio">Lorem ipsum lol</p>
                 </header>
             </div>
         )
