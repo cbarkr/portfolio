@@ -1,30 +1,35 @@
-.App {
-  text-align: center;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.navbar{
+  background-color: #0e1212;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-#topNav{
-  background-color: transparent;
+  padding-left: 100px;
+  padding-right: 100px;
+  box-shadow: 0 5px 5px -8px black;
 }
 
 .nav-link{
   padding: 10px;
+  font-size: 16px;
+  font-weight: 500;
 }
 
-.contactHead{
-  margin: 10vh;
+.wrapper{
+  background-color: #0e1212;
+  min-height: 100vh;
 }
 
-.aboutHead{
-  margin: 10vh;
+.container{
+  padding-top: 40px;
+  color: lightgrey;
+}
+
+.container h1{
+  padding-bottom: 40px;
+}
+
+.container div{
+  padding-bottom: 40px;
+}
+
+.container section{
+  padding-bottom: 40px;
 }

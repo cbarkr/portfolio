@@ -2,30 +2,28 @@ import React from 'react';
 import {Nav, Navbar} from "react-bootstrap";
 import {Link} from 'react-router-dom';
 import {AiFillGithub, AiFillLinkedin} from 'react-icons/ai';
-import Logo from '.././Logos/logo-black.svg';
+import Logo from '.././Logos/logo-white.svg';
 import "bootstrap/dist/css/bootstrap.min.css";
 import '.././App.css';
 
 class TopNav extends React.Component{
     render(){
         return(
-            <div>
-                <Navbar sticky="top" id="topNav">
-                    <Nav id="navParent">
-                        <Navbar.Brand>
-                            <img src={Logo} />
-                        </Navbar.Brand>
-                        <Nav.Link as={Link} to="/about">About</Nav.Link>
-                        <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
-                        <a href="https://github.com/cbarkr" className="nav-link">
-                            <AiFillGithub className="GitHub"/>
-                        </a>
-                        <a href="https://www.linkedin.com/in/cbarkr/" className="nav-link">
-                            <AiFillLinkedin className="LinkedIn"/>
-                        </a>
-                    </Nav>
-                </Navbar>
-            </div>
+            <Navbar variant="dark" sticky="top" className="navbar" id="topNav">
+                <Navbar.Brand as={Link} to="/" title="Home">
+                    <img src={Logo} alt="Logo"/>
+                </Navbar.Brand>
+                <Nav className="navbar-nav ml-auto">
+                    <Nav.Link as={Link} to="/about" title="About">about</Nav.Link>
+                    <Nav.Link as={Link} to="/contact" title="Contact">contact</Nav.Link>
+                    <a href="https://github.com/cbarkr" className="nav-link">
+                        <AiFillGithub title="GitHub" size={25}/>
+                    </a>
+                    <a href="https://www.linkedin.com/in/cbarkr/" className="nav-link">
+                        <AiFillLinkedin title="LinkedIn" size={25} />
+                    </a>
+                </Nav>
+            </Navbar>
         )
     }
 }
