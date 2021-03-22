@@ -8,14 +8,16 @@ class Work extends React.Component{
         return(
             <div className="container">
                 <div className="project">
-                    <a href="https://github.com/cbarkr/PathfindingVisualizer" className="project-link">
                         <h3>
-                            <span className="project-path">Pathfinding Visualizer </span>
-                            <span><AiFillGithub title="GitHub" size={25} style={{color: "lightgrey"}}/></span>
+                            <a href="https://github.com/cbarkr/PathfindingVisualizer" className="project-link">Pathfinding Visualizer
+                                <AiFillGithub title="GitHub" size={25} style={{color: "lightgrey"}}/>
+                            </a>
                         </h3>
-                    </a>
                     <div className="project-desc">
                         <h5>Description</h5>
+                        <p>Interactive shortest path visualizer using A*, Dijkstra, and BFS algoriths. Users select start, end, and barrier nodes 
+                            (or opt for randomly generated barriers), then watch as the selected algorithm finds a path between nodes.</p>
+
                         <h5>Specs</h5>
                         <p>Made in Python and Pygame</p>
                     </div>
@@ -23,13 +25,17 @@ class Work extends React.Component{
                 <div className="project">
                     <a href="https://flixxlist.herokuapp.com/" className="project-link">
                         <h3>
-                            <span className="project-path">FlixList Web App </span>
-                            <span><FiArrowUpRight title="FlixList" size={25} style={{color: "lightgrey"}}/></span>
+                            <a href="https://flixxlist.herokuapp.com/" className="project-link">FlixList Web App
+                                <FiArrowUpRight title="FlixList" size={25} style={{color: "lightgrey"}}/>
+                            </a>
                         </h3>
                     </a>
                     <div className="project-desc">
                         <h5>Description</h5>
+                        <p>Social movie rating and review site</p>
+
                         <h5>Specs</h5>
+
                         <b>Front End</b>
                         <p>ReactJS, Bootstrap</p>
 

@@ -15,23 +15,23 @@ class Home extends React.Component{
             <div className="container">
                 <section className="intro">
                     <div className="static-container" data-aos="fade-up" data-aos-easing="ease-in-out">
-                        <h3 className="name"  data-aos="flip-up" data-aos-easing="ease-in-out" style={{color: 'yellowgreen'}}> callum_barker</h3>
+                        <h1 className="name"  data-aos="flip-up" data-aos-easing="ease-in-out" style={{color: 'yellowgreen'}}> callum_barker</h1>
                     </div>
                 </section>
 
                 <section className="projects">
                     <div className="static-container" data-aos="fade-right">
-                        <h3>Projects</h3>
+                        <h2>Projects</h2>
                         <div className="project-link">
-                            <h4 className="pathfinding">
+                            <h3 className="pathfinding">
                                 <a href="/work" className="project-link">Pathfinding_Visualizer</a>
-                            </h4>
+                            </h3>
                             <p className="pathfinding-info">Interactive visualizer for A*, Dijkstra, and BFS pathfinding</p>
                         </div>
                         <div className="project-link">
-                            <h4 className="flixlist">
+                            <h3 className="flixlist">
                                 <a href="/work" className="project-link">FlixList_Web_App</a>
-                            </h4>
+                            </h3>
                             <p className="flixlist-info">Social movie rating and review site</p>
                         </div>
                     </div>
@@ -39,7 +39,7 @@ class Home extends React.Component{
 
                 <section className="interests">
                     <div className="static-container" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
-                        <h3>Interests</h3>
+                        <h2>Interests</h2>
                         <div className="interest-groups">
                             <div className="group1">
                                 <IoFingerPrint title="Personal" size={25} style={{color: 'yellowgreen'}} />
@@ -59,14 +59,13 @@ class Home extends React.Component{
 
                 <section className="inspiration">
                     <div className="static-container"  data-aos="fade-up">
-                        <h3>For This Adventure</h3>
+                        <h2>For This Adventure</h2>
                         <div className="inspiration-groups">
                             <div className="tools">
                                 <FaCode title="Tools" size={25} style={{color: 'yellowgreen'}} />
                                 <h5>ReactJS</h5>
                                 <h5>Bootstrap</h5>
                                 <h5>Photoshop</h5>
-                                <h5>ScrollMagic</h5>
                                 <h5>AOS</h5>
                             </div>
                             <div className="music">
@@ -79,7 +78,7 @@ class Home extends React.Component{
                             </div>
                             <div className="mental">
                                 <FaBrain title="Mental" size={25} style={{color: 'yellowgreen'}} />
-                                <h5>Many cups of coffee</h5>
+                                <h5>A few cups of coffee</h5>
                                 <h5>Hours of procastination</h5>
                                 <h5>A few Google searches</h5>
                                 <h5>Love</h5>

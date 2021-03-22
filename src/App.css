@@ -1,3 +1,5 @@
+/*  Global   */
+
 .navbar{
   background-color: #0e1212;
   align-items: center;
@@ -19,12 +21,30 @@
 
 .container{
   padding-top: 40px;
+  min-height: 90vh;
   color: lightgrey;
 }
 
 .container section{
   min-height: 100vh;
 }
+
+.footer{
+  color: lightgrey;
+  min-height: 10vh;
+}
+
+.footer .info{
+  display: flex;
+  justify-content: center;
+}
+
+.footer .contact-links{
+  display: flex;
+  justify-content: center;
+}
+
+/*  Home Page   */
 
 .static-container{
   padding: calc(50vh - 8rem) 0 0;
@@ -61,3 +81,45 @@
 .mental{
   flex: 0 0 15%;
 }
+
+/*  Work Page  */
+
+/*  About Page  */
+
+.links a{
+  padding-right: 20px;
+}
+
+.progress{
+  width: 50%;
+  background-color: transparent;
+}
+
+.bg-info{
+  color: #0e1212;
+  border-radius: 0.25rem;
+  background-color: yellowgreen !important;
+}
+
+.skills .languages{
+  padding-bottom: 20px;
+}
+
+.skills .tools{
+  padding-bottom: 20px;
+}
+
+.author .bio{
+  padding-bottom: 20px;
+}
+
+.bio p{
+  margin: auto;
+  padding: auto;
+}
+
+.links{
+  padding-bottom: 20px;
+}
+
+/*  Contact Page  */
