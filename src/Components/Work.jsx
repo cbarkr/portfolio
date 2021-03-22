@@ -9,7 +9,7 @@ class Work extends React.Component{
             <div className="container">
                 <div className="project">
                         <h3>
-                            <a href="https://github.com/cbarkr/PathfindingVisualizer" className="project-link">Pathfinding Visualizer
+                            <a href="https://github.com/cbarkr/PathfindingVisualizer" className="project-link" target="_blank" rel="noreferrer">Pathfinding Visualizer
                                 <AiFillGithub title="GitHub" size={25} style={{color: "lightgrey"}}/>
                             </a>
                         </h3>
@@ -23,13 +23,11 @@ class Work extends React.Component{
                     </div>
                 </div>
                 <div className="project">
-                    <a href="https://flixxlist.herokuapp.com/" className="project-link">
                         <h3>
-                            <a href="https://flixxlist.herokuapp.com/" className="project-link">FlixList Web App
+                            <a href="https://flixxlist.herokuapp.com/" className="project-link" target="_blank" rel="noreferrer">FlixList Web App
                                 <FiArrowUpRight title="FlixList" size={25} style={{color: "lightgrey"}}/>
                             </a>
                         </h3>
-                    </a>
                     <div className="project-desc">
                         <h5>Description</h5>
                         <p>Social movie rating and review site</p>
