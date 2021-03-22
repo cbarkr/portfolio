@@ -15,7 +15,7 @@ class Home extends React.Component{
             <div className="container">
                 <section className="intro">
                     <div className="static-container" data-aos="fade-up" data-aos-easing="ease-in-out">
-                        <h1 className="name"  data-aos="flip-up" data-aos-easing="ease-in-out" style={{color: '#b2fc13'}}> callum_barker</h1>
+                        <h1 className="name"  data-aos="flip-up" data-aos-easing="ease-in-out" style={{color: '#b2fc13'}}>callum_barker</h1>
                     </div>
                 </section>
 

@@ -11,7 +11,7 @@ class About extends React.Component{
     render(){
         return(
             <div className="container">
-                <div className="author">
+                <div className="author" data-aos="fade-right">
                     <h3>Hi, my name is Callum Barker</h3>
                         <div className="bio">
                             <p>Coffee enthusiast, amateur tinkerer, and occasional programmer</p>
