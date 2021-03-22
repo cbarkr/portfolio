@@ -1,5 +1,9 @@
 /*  Global   */
 
+body{
+  font-family:monospace;
+}
+
 .navbar{
   background-color: #0e1212;
   align-items: center;
@@ -37,7 +41,7 @@
 .footer .info{
   display: flex;
   justify-content: center;
-}
+} 
 
 .footer .contact-links{
   display: flex;
@@ -75,11 +79,11 @@
 }
 
 .music{
-  flex: 0 0 40%;
+  flex: 0 0 30%;
 }
 
 .mental{
-  flex: 0 0 15%;
+  flex: 0 0 20%;
 }
 
 /*  Work Page  */
@@ -97,6 +101,7 @@
 
 .bg-info{
   color: #0e1212;
+  padding-top: 8px;
   border-radius: 0.25rem;
   background-color: yellowgreen !important;
 }
@@ -105,17 +110,30 @@
   padding-bottom: 20px;
 }
 
+.skills .languages div{
+  padding-bottom: 10px;
+}
+
 .skills .tools{
   padding-bottom: 20px;
+}
+
+.skills .tools div{
+  padding-bottom: 10px;
 }
 
 .author .bio{
   padding-bottom: 20px;
 }
 
-.bio p{
+.author .bio p{
   margin: auto;
   padding: auto;
+}
+
+.author{
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .links{
@@ -123,3 +141,15 @@
 }
 
 /*  Contact Page  */
+
+.contact-email{
+  padding: calc(50vh - 8rem) 0 0;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.contact-links{
+  display: flex;
+  justify-content: center;
+}

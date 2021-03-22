@@ -6,6 +6,9 @@ class Contact extends React.Component{
     render(){
         return(
             <div className="container">
+                <div className="contact-email">
+                    <h5>cbarkr@gmail.com</h5>
+                </div>
                 <div className="contact-links">
                     <a href="https://github.com/cbarkr">
                         <AiFillGithub className="GitHub" style={{color: 'lightgrey'}} size={25} />

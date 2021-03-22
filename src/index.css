@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Roboto Mono', 'Helvetica Neue', sans-serif monospace !important;
+  font-family: 'monospace','Roboto Mono', 'Helvetica Neue', sans-serif monospace !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

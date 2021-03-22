@@ -15,7 +15,7 @@ class Home extends React.Component{
             <div className="container">
                 <section className="intro">
                     <div className="static-container" data-aos="fade-up" data-aos-easing="ease-in-out">
-                        <h1 className="name"  data-aos="flip-up" data-aos-easing="ease-in-out" style={{color: 'yellowgreen'}}> callum_barker</h1>
+                        <h1 className="name"  data-aos="flip-up" data-aos-easing="ease-in-out" style={{color: '#b2fc13'}}> callum_barker</h1>
                     </div>
                 </section>
 
@@ -70,17 +70,17 @@ class Home extends React.Component{
                             </div>
                             <div className="music">
                                 <GiSoundWaves title="Music" size={30} style={{color: 'yellowgreen'}} />
-                                <h5>Ryo Fukui</h5>
+                                <h5>Ryo_Fukui</h5>
                                 <h5>Nujabes</h5>
-                                <h5>Uyama Hiroto</h5>
+                                <h5>Uyama_Hiroto</h5>
                                 <h5>Toe</h5>
                                 <h5>Misogi</h5>
                             </div>
                             <div className="mental">
                                 <FaBrain title="Mental" size={25} style={{color: 'yellowgreen'}} />
-                                <h5>A few cups of coffee</h5>
-                                <h5>Hours of procastination</h5>
-                                <h5>A few Google searches</h5>
+                                <h5>A_few_cups_of_coffee</h5>
+                                <h5>Hours_of_procastination</h5>
+                                <h5>A_few_Google_searches</h5>
                                 <h5>Love</h5>
                             </div>
                         </div>

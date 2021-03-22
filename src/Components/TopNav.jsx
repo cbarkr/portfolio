@@ -1,15 +1,19 @@
 import React from 'react';
+import Aos from 'aos';
 import {Nav, Navbar} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import {AiFillGithub, AiFillLinkedin} from 'react-icons/ai';
 import Logo from '.././Logos/logo-white.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'aos/dist/aos.css';
 import '.././App.css';
+
+Aos.init();
 
 class TopNav extends React.Component{
     render(){
         return(
-            <Navbar variant="dark" sticky="top" className="navbar" id="topNav">
+            <Navbar variant="dark" sticky="top" className="navbar" id="topNav" data-aos="fade-down" data-aos-easing="ease-in-out">
                 <Navbar.Brand as={Link} to="/" title="Home">
                     <img src={Logo} alt="Logo"/>
                 </Navbar.Brand>
