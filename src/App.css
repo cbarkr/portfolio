@@ -58,6 +58,14 @@ body{
   text-align: center;
 }
 
+.project-link a{
+  color: yellowgreen;
+}
+
+.project-link a:hover{
+  color: lightgrey;
+}
+
 .interest-groups{
   display: flex;
 }
@@ -87,6 +95,14 @@ body{
 }
 
 /*  Work Page  */
+
+.project a{
+  color: yellowgreen;
+}
+
+.project a:hover{
+  color: lightgrey;
+}
 
 /*  About Page  */
 
@@ -140,6 +156,10 @@ body{
   padding-bottom: 20px;
 }
 
+.btn-outline-light:hover{
+  color: yellowgreen;
+}
+
 /*  Contact Page  */
 
 .contact-email{
@@ -147,6 +167,14 @@ body{
   display: flex;
   justify-content: center;
   padding-bottom: 20px;
+}
+
+.contact-email a{
+  color: lightgrey;
+}
+
+.contact-email a:hover{
+  color: yellowgreen;
 }
 
 .contact-links{

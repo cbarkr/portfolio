@@ -7,7 +7,11 @@ class Contact extends React.Component{
         return(
             <div className="container">
                 <div className="contact-email">
-                    <h5>cbarkr@gmail.com</h5>
+                    <h4>
+                        <a href="mailto:cbarkr@gmail.com" target="_blank" rel="noreferrer">
+                            cbarkr@gmail.com
+                        </a>
+                    </h4>
                 </div>
                 <div className="contact-links">
                     <a href="https://github.com/cbarkr">
