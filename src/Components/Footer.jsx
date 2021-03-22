@@ -2,19 +2,19 @@ import React from 'react';
 import {AiFillGithub, AiFillLinkedin} from 'react-icons/ai';
 import '.././App.css';
 
-class Contact extends React.Component{
+class Footer extends React.Component{
     render(){
         return(
-            <div className="container">
-                <div className="contact-email">
-                    <h5>cbarkr@gmail.com</h5>
+            <div className="footer">
+                <div className="info">
+                    <p>[Callum Barker] · [2021]</p>                
                 </div>
                 <div className="contact-links">
                     <a href="https://github.com/cbarkr">
-                        <AiFillGithub className="GitHub" style={{color: 'lightgrey'}} size={25} />
+                        <AiFillGithub className="GitHub" style={{color: 'lightgrey'}} size={15} />
                     </a>
                     <a href="https://www.linkedin.com/in/cbarkr/">
-                        <AiFillLinkedin className="LinkedIn" style={{color: 'lightgrey'}} size={25} />
+                        <AiFillLinkedin className="LinkedIn" style={{color: 'lightgrey'}} size={15} />
                     </a>
                 </div>
             </div>
@@ -22,4 +22,4 @@ class Contact extends React.Component{
     }
 }
 
-export default Contact;
+export default Footer;
