@@ -23,39 +23,41 @@
 }
 
 .container section{
-  padding-bottom: 40px;
+  min-height: 100vh;
 }
 
-.container .intro .name{
-  padding-left: 60px;
+.static-container{
+  padding: calc(50vh - 8rem) 0 0;
 }
 
-.container .intro .name .name-right{
-  padding-left: 10px;
-  color: yellowgreen;
+.intro{
+  text-align: center;
 }
 
-.container .intro .bio-short{
-  padding-left: 60px;
+.interest-groups{
+  display: flex;
 }
 
-.container .intro .bio-short .bio-short-right{
-  padding-left: 40px;
-  color: yellowgreen;
+.group1{
+  flex: 0 0 66%;
 }
 
-.inspiration{
+.group2{
+  flex: 1;
+}
+
+.inspiration-groups{
   display: flex;
 }
 
 .tools{
-  flex: 0 0 33%;
+  flex: 0 0 45%;
 }
 
 .music{
-  flex: 0 0 33%;
+  flex: 0 0 40%;
 }
 
 .mental{
-  flex: 0 0 33%;
+  flex: 0 0 15%;
 }
