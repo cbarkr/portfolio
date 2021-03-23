@@ -65,8 +65,8 @@ class Home extends React.Component{
                                 <FaCode title="Tools" size={25} style={{color: 'yellowgreen'}} />
                                 <h5>ReactJS</h5>
                                 <h5>Bootstrap</h5>
-                                <h5>Photoshop</h5>
                                 <h5>AOS</h5>
+                                <h5>Photoshop</h5>
                             </div>
                             <div className="music">
                                 <GiSoundWaves title="Music" size={30} style={{color: 'yellowgreen'}} />

@@ -19,7 +19,7 @@ class Work extends React.Component{
                         </h3>
                     <div className="project-desc">
                         <h5>Description</h5>
-                        <p>Interactive shortest path visualizer using A*, Dijkstra, and BFS algoriths. Users select start, end, and barrier nodes 
+                        <p>Interactive shortest path visualizer using A*, Dijkstra, and BFS algorithms. Users select start, end, and barrier nodes 
                             (or opt for randomly generated barriers), then watch as the selected algorithm finds a path between nodes.</p>
 
                         <h5>Specs</h5>
