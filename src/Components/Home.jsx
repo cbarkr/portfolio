@@ -70,11 +70,21 @@ class Home extends React.Component{
                             </div>
                             <div className="music">
                                 <GiSoundWaves title="Music" size={30} style={{color: 'yellowgreen'}} />
-                                <h5>Ryo_Fukui</h5>
-                                <h5>Nujabes</h5>
-                                <h5>Uyama_Hiroto</h5>
-                                <h5>Toe</h5>
-                                <h5>Misogi</h5>
+                                <h5>
+                                    <a href="https://open.spotify.com/album/5Uny0mkKiVGDat7H6SNDyS" target="_blank" rel="noreferrer">Ryo_Fukui</a>
+                                </h5>
+                                <h5>
+                                    <a href="https://open.spotify.com/album/5FrjDW96mCYw9ECc74c637" target="_blank" rel="noreferrer">Nujabes</a>
+                                </h5>
+                                <h5>
+                                    <a href="https://open.spotify.com/album/0sIEaMrJwu12F9o1S5qKNV" target="_blank" rel="noreferrer">Uyama_Hiroto</a>
+                                </h5>
+                                <h5>
+                                    <a href="https://open.spotify.com/album/6MVJEAVCUZcgFhwdHqaLP3" target="_blank" rel="noreferrer">Toe</a>
+                                </h5>
+                                <h5>
+                                    <a href="https://open.spotify.com/album/1n0eLcrd6H5Oazvp8sYgq0" target="_blank" rel="noreferrer">Misogi</a>
+                                </h5>
                             </div>
                             <div className="mental">
                                 <FaBrain title="Mental" size={25} style={{color: 'yellowgreen'}} />
