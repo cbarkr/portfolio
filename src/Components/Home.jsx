@@ -89,7 +89,6 @@ class Home extends React.Component{
                             <div className="mental">
                                 <FaBrain title="Mental" size={25} style={{color: 'yellowgreen'}} />
                                 <h5>Many_cups_of_coffee</h5>
-                                <h5>Hours_of_procastination</h5>
                                 <h5>A_few_Google_searches</h5>
                                 <h5>
                                     <code>Love {`<3`}</code>
