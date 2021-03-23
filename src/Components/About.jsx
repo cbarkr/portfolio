@@ -9,6 +9,11 @@ import '.././App.css';
 Aos.init({duration: 2000});
 
 class About extends React.Component{
+    
+    onSurpriseClick = () => {
+        window.open(Surprise);
+    }
+
     render(){
         return(
             <div className="container">
@@ -74,7 +79,7 @@ class About extends React.Component{
                     <a href="https://www.instagram.com/cbarkr/" target="_blank" rel="noreferrer">
                         <AiOutlineInstagram title="LinkedIn" style={{color: 'lightgrey'}} size={25} />
                     </a>
-                    <a href={Surprise} target="_blank" rel="noreferrer">
+                    <a onClick={this.onSurpriseClick}>
                         <Button variant="outline-light">Surprise</Button>
                     </a>
                 </div>
