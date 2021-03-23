@@ -90,6 +90,14 @@ body{
   flex: 0 0 30%;
 }
 
+.music a{
+  color: lightgrey;
+}
+
+.music a:hover{
+  color: yellowgreen;
+}
+
 .mental{
   flex: 0 0 20%;
 }
