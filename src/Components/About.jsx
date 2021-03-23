@@ -74,7 +74,7 @@ class About extends React.Component{
                     <a href="https://www.instagram.com/cbarkr/" target="_blank" rel="noreferrer">
                         <AiOutlineInstagram title="LinkedIn" style={{color: 'lightgrey'}} size={25} />
                     </a>
-                    <a href={Surprise} target="_blank" rel="noreferrer">
+                    <a href={Surprise}>
                         <Button variant="outline-light">Surprise</Button>
                     </a>
                 </div>

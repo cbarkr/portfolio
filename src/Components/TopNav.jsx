@@ -13,7 +13,7 @@ Aos.init();
 class TopNav extends React.Component{
     render(){
         return(
-            <Navbar variant="dark" sticky="top" className="navbar" id="topNav" data-aos="fade-down" data-aos-easing="ease-in-out">
+            <Navbar variant="dark" sticky="top" className="navbar" id="topNav" data-aos="fade-down" data-aos-easing="ease-in-out" data-aos-once="true">
                 <Navbar.Brand as={Link} to="/" title="Home">
                     <img src={Logo} alt="Logo"/>
                 </Navbar.Brand>
