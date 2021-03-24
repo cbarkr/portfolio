@@ -41,7 +41,7 @@ class Work extends React.Component{
                         <h5>Front End</h5>
                         <p>ReactJS, bootstrap</p>
 
-                        <h5>back End</h5>
+                        <h5>Back End</h5>
                         <p>MongoDB, NodeJS</p>
 
                         <h5>Other Ends</h5>
