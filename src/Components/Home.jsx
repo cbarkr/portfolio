@@ -59,7 +59,7 @@ class Home extends React.Component{
 
                 <section className="inspiration">
                     <div className="static-container"  data-aos="fade-up">
-                        <h2>For This Adventure</h2>
+                        <h2>This Project</h2>
                         <div className="inspiration-groups">
                             <div className="tools">
                                 <FaCode title="Tools" size={25} style={{color: 'yellowgreen'}} />

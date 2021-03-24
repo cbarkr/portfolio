@@ -12,39 +12,39 @@ class Work extends React.Component{
         return(
             <div className="container">
                 <div className="project" data-aos="fade-right">
-                        <h3>
+                        <h2>
                             <a href="https://github.com/cbarkr/PathfindingVisualizer" className="project-link" target="_blank" rel="noreferrer">Pathfinding Visualizer
                                 <AiFillGithub title="GitHub" size={25} style={{color: "lightgrey"}}/>
                             </a>
-                        </h3>
+                        </h2>
                     <div className="project-desc">
-                        <h5>Description</h5>
+                        <h4>Description</h4>
                         <p>Interactive shortest path visualizer using A*, Dijkstra, and BFS algorithms. Users select start, end, and barrier nodes 
                             (or opt for randomly generated barriers), then watch as the selected algorithm finds a path between nodes.</p>
 
-                        <h5>Specs</h5>
+                        <h4>Specs</h4>
                         <p>Made in Python and Pygame</p>
                     </div>
                 </div>
                 <div className="project" data-aos="fade-left">
-                        <h3>
+                        <h2>
                             <a href="https://flixxlist.herokuapp.com/" className="project-link" target="_blank" rel="noreferrer">FlixList Web App
                                 <FiArrowUpRight title="FlixList" size={25} style={{color: "lightgrey"}}/>
                             </a>
-                        </h3>
+                        </h2>
                     <div className="project-desc">
-                        <h5>Description</h5>
+                        <h4>Description</h4>
                         <p>Social movie rating and review site</p>
 
-                        <h5>Specs</h5>
+                        <h4>Specs</h4>
 
-                        <b>Front End</b>
-                        <p>ReactJS, Bootstrap</p>
+                        <h5>Front End</h5>
+                        <p>ReactJS, bootstrap</p>
 
-                        <b>Back End</b>
+                        <h5>back End</h5>
                         <p>MongoDB, NodeJS</p>
 
-                        <b>Other Ends</b>
+                        <h5>Other Ends</h5>
                         <p>RapidAPI Movie Database API</p>
                     </div>
                 </div>

@@ -4,6 +4,10 @@ body{
   font-family:monospace;
 }
 
+body p, span{
+  font-size: 14px;
+}
+
 .navbar{
   background-color: #0e1212;
   align-items: center;

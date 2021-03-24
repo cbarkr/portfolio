@@ -2,7 +2,7 @@ import React from 'react';
 import Aos from 'aos';
 import {AiFillGithub, AiFillLinkedin, AiOutlineInstagram} from 'react-icons/ai';
 import {Button, ProgressBar} from 'react-bootstrap';
-import Surprise from '.././static/CallumBarker-Resume.pdf';
+import Surprise from '.././CallumBarker-Resume.pdf';
 import 'aos/dist/aos.css';
 import '.././App.css';
 
@@ -33,7 +33,7 @@ class About extends React.Component{
                         </div>
                         <div className="react-skill" data-aos="fade-right" data-aos-duration="1250">
                             <span>ReactJS</span>
-                            <ProgressBar variant="info" now={70} label="70" />
+                            <ProgressBar variant="info" now={65} label="65" />
                         </div>
                         <div className="python-skill" data-aos="fade-right" data-aos-duration="1500">
                             <span>Python</span>
@@ -50,21 +50,21 @@ class About extends React.Component{
                             <span>HTML</span>
                             <ProgressBar variant="info" now={80} label="80" />
                         </div>
-                        <div className="ps-skill" data-aos="fade-right" data-aos-duration="2500">
+                        <div className="ps-skill" data-aos="fade-right" data-aos-duration="2500" data-aos-anchor="cpp-skill">
                             <span> Photoshop</span>
                             <ProgressBar variant="info" now={90} label="90" />
                         </div>
-                        <div className="vs-skill" data-aos="fade-right" data-aos-duration="2750">
+                        <div className="vs-skill" data-aos="fade-right" data-aos-duration="2750" data-aos-anchor="cpp-skill">
                             <span>Visual Studio</span> 
-                            <ProgressBar variant="info" now={80} label="80" />
+                            <ProgressBar variant="info" now={75} label="75" />
                         </div>
-                        <div className="github-skill" data-aos="fade-right" data-aos-duration="3000">
+                        <div className="github-skill" data-aos="fade-right" data-aos-duration="3000" data-aos-anchor="cpp-skill">
                             <span>GitHub</span> 
-                            <ProgressBar variant="info" now={80} label="80" />
+                            <ProgressBar variant="info" now={70} label="70" />
                         </div>
-                        <div className="gitlab-skill" data-aos="fade-right" data-aos-duration="3500">
+                        <div className="gitlab-skill" data-aos="fade-right" data-aos-duration="3500" data-aos-anchor="cpp-skill">
                             <span>GitLab</span> 
-                            <ProgressBar variant="info" now={80} label="80" />
+                            <ProgressBar variant="info" now={70} label="70" />
                         </div>
                     </div>
                 </div>
