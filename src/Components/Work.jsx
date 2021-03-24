@@ -20,7 +20,7 @@ class Work extends React.Component{
                     <div className="project-desc">
                         <h4>Description</h4>
                         <p>Interactive shortest path visualizer using A*, Dijkstra, and BFS algorithms. Users select start, end, and barrier nodes 
-                            (or opt for randomly generated barriers), then watch as the selected algorithm finds a path between nodes.</p>
+                            (or opt for randomly generated barriers), then watch as the selected algorithm finds a path between nodes</p>
 
                         <h4>Specs</h4>
                         <p>Made in Python and Pygame</p>
@@ -39,7 +39,7 @@ class Work extends React.Component{
                         <h4>Specs</h4>
 
                         <h5>Front End</h5>
-                        <p>ReactJS, bootstrap</p>
+                        <p>ReactJS, Bootstrap</p>
 
                         <h5>Back End</h5>
                         <p>MongoDB, NodeJS</p>
