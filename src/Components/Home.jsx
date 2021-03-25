@@ -4,6 +4,7 @@ import {FaCode, FaBrain} from 'react-icons/fa';
 import {GiSoundWaves} from 'react-icons/gi';
 import {IoFingerPrint} from 'react-icons/io5'
 import {RiBracesFill} from 'react-icons/ri'
+import HomeTitle from './Home-Title';
 import 'aos/dist/aos.css';
 import '.././App.css';
 
@@ -14,9 +15,9 @@ class Home extends React.Component{
         return(
             <div className="container">
                 <section className="intro">
-                    <div className="static-container" data-aos="fade-up" data-aos-easing="ease-in-out">
-                        <h1 className="name"  data-aos="flip-up" data-aos-easing="ease-in-out" style={{color: '#2aa198'}}>
-                            callum_barker
+                    <div className="static-container">
+                        <h1 className="name" style={{color: '#2aa198'}}>
+                            <HomeTitle className="author" />
                         </h1>
                     </div>
                 </section>
