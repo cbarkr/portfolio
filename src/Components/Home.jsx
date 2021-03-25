@@ -15,7 +15,44 @@ class Home extends React.Component{
             <div className="container">
                 <section className="intro">
                     <div className="static-container" data-aos="fade-up" data-aos-easing="ease-in-out">
-                        <h1 className="name"  data-aos="flip-up" data-aos-easing="ease-in-out" style={{color: '#b2fc13'}}>callum_barker</h1>
+                        <h1 className="name"  data-aos="flip-up" data-aos-easing="ease-in-out" style={{color: '#2aa198'}}>
+                            callum_barker
+                        </h1>
+                    </div>
+                </section>
+
+                <section className="interests">
+                    <div className="static-container" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                        <h2>Interests</h2>
+                        <div className="interest-groups">
+                            <div className="group1">
+                                <IoFingerPrint title="Personal" size={25} style={{color: '#2aa198'}} />
+                                <h5>Fine_Art</h5>
+                                <h5>Graphic_Design</h5>
+                                <h5>The_Great_Outdoors</h5>
+                            </div>
+                            <div className="group2">
+                                <RiBracesFill title="Tech" size={25} style={{color: '#2aa198'}} />
+                                <h5>
+                                    <a href="https://en.wikipedia.org/wiki/Generative_adversarial_network" target="_blank" rel="noreferrer">
+                                        GAN
+                                    </a>
+                                </h5>
+                                <h5>Computer_Vision</h5>
+                                <h5>Web_Development</h5>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section className="aboutme">
+                    <div className="static-container" data-aos="fade-right">
+                        <h2>A little <a href="/about">about</a> me</h2>
+                        <p>I am a second year cs student who takes any opportunity to learn something new</p>
+                        
+                        <h4 style={{float: 'left'}}>2019</h4><p> 👨‍🎓 Began studying computing science at Simon Fraser University</p>
+                        <h4 style={{float: 'left'}}>2021</h4><p> 👨‍💻 [Current] </p>
+                        <h4 style={{float: 'left'}}>20__</h4><p> ? </p>
                     </div>
                 </section>
 
@@ -37,39 +74,19 @@ class Home extends React.Component{
                     </div>
                 </section>
 
-                <section className="interests">
-                    <div className="static-container" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
-                        <h2>Interests</h2>
-                        <div className="interest-groups">
-                            <div className="group1">
-                                <IoFingerPrint title="Personal" size={25} style={{color: 'yellowgreen'}} />
-                                <h5>Fine_Art</h5>
-                                <h5>Graphic_Design</h5>
-                                <h5>The_Great_Outdoors</h5>
-                            </div>
-                            <div className="group2">
-                                <RiBracesFill title="Tech" size={25} style={{color: 'yellowgreen'}} />
-                                <h5>GAN</h5>
-                                <h5>Computer_Vision</h5>
-                                <h5>Web_Development</h5>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
                 <section className="inspiration">
                     <div className="static-container"  data-aos="fade-up">
-                        <h2>This Project</h2>
+                        <h2>Made With</h2>
                         <div className="inspiration-groups">
                             <div className="tools">
-                                <FaCode title="Tools" size={25} style={{color: 'yellowgreen'}} />
+                                <FaCode title="Tools" size={25} style={{color: '#2aa198'}} />
                                 <h5>ReactJS</h5>
                                 <h5>Bootstrap</h5>
                                 <h5>AOS</h5>
                                 <h5>Photoshop</h5>
                             </div>
                             <div className="music">
-                                <GiSoundWaves title="Music" size={30} style={{color: 'yellowgreen'}} />
+                                <GiSoundWaves title="Music" size={30} style={{color: '#2aa198'}} />
                                 <h5>
                                     <a href="https://open.spotify.com/album/5Uny0mkKiVGDat7H6SNDyS" target="_blank" rel="noreferrer">Ryo_Fukui</a>
                                 </h5>
@@ -87,7 +104,7 @@ class Home extends React.Component{
                                 </h5>
                             </div>
                             <div className="mental">
-                                <FaBrain title="Mental" size={25} style={{color: 'yellowgreen'}} />
+                                <FaBrain title="Mental" size={25} style={{color: '#2aa198'}} />
                                 <h5>Many_cups_of_coffee</h5>
                                 <h5>A_few_Google_searches</h5>
                                 <h5>

@@ -1,11 +1,11 @@
-/*  Global   */
+/**************** Global ****************/
 
 body{
   font-family:monospace;
 }
 
 body p, span{
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .navbar{
@@ -15,164 +15,235 @@ body p, span{
   padding-right: 100px;
   box-shadow: 0 5px 5px -8px black;
 }
-
 .nav-link{
   padding: 10px;
   font-size: 16px;
   font-weight: 500;
 }
-
 .wrapper{
   background-color: #0e1212;
   min-height: 100vh;
 }
-
 .container{
   padding-top: 40px;
   min-height: 90vh;
   color: lightgrey;
 }
-
 .container section{
   min-height: 100vh;
 }
-
 .footer{
   color: lightgrey;
   min-height: 10vh;
 }
-
 .footer .info{
   display: flex;
   justify-content: center;
 } 
-
 .footer .contact-links{
   display: flex;
   justify-content: center;
 }
 
-/*  Home Page   */
+@media screen and (max-width: 800px) {
+  .navbar, .wrapper, .container, .footer{
+    min-width: 280px;
+    max-width: 100%;
+    padding: 0;
+  }
+  .container h3{
+    font-size: 20px;
+  }
+}
+
+/**************** Home ****************/
 
 .static-container{
   padding: calc(50vh - 8rem) 0 0;
 }
-
 .intro{
   text-align: center;
 }
-
 .project-link a{
-  color: yellowgreen;
+  color: #2aa198;
 }
-
 .project-link a:hover{
   color: lightgrey;
 }
-
 .interest-groups{
   display: flex;
 }
-
-.group1{
-  flex: 0 0 66%;
+.interest-groups a{
+  color: lightgrey;
 }
-
-.group2{
-  flex: 1;
+.interest-groups a:hover{
+  color: #2aa198;
 }
-
-.inspiration-groups{
-  display: flex;
-}
-
-.tools{
-  flex: 0 0 45%;
-}
-
-.music{
-  flex: 0 0 30%;
-}
-
-.music a{
+.aboutme a{
   color: lightgrey;
 }
 
-.music a:hover{
-  color: yellowgreen;
+.aboutme a:hover{
+  color: #2aa198;
 }
-
+.aboutme .progress-years{
+  display: flex;
+}
+.aboutme .progress-years .dlsr{
+  max-width: 15%;
+  flex: 0 0 20%;
+}
+.aboutme .progress-years .design{
+  max-width: 15%;
+  flex: 0 0 20%;
+}
+.aboutme .progress-years .studies{
+  max-width: 15%;
+  flex: 0 0 20%;
+}
+.aboutme .progress-years .sfu{
+  max-width: 15%;
+  flex: 0 0 20%;
+  
+}
+.aboutme .progress-years .future{
+  max-width: 15%;
+  flex: 1;
+}
+.group1{
+  flex: 0 0 66%;
+}
+.group2{
+  flex: 1;
+}
+.inspiration-groups{
+  display: flex;
+}
+.tools{
+  flex: 0 0 45%;
+}
+.music{
+  flex: 0 0 30%;
+}
+.music a{
+  color: lightgrey;
+}
+.music a:hover{
+  color: #2aa198;
+}
 .mental{
   flex: 0 0 20%;
 }
 
-/*  Work Page  */
-
-.project a{
-  color: yellowgreen;
+@media screen and (max-width: 800px) {
+  .intro h1{
+    font-size: 25px;
+  }
+  .projects{
+    padding-left: 10vw;
+  }
+  .project-link{
+    display: block;
+    max-width: 80%;
+  }
+  .interests{
+    padding-left: 10vw;
+  }
+  .interest-groups{
+    display: block;
+  }
+  .interests .group1{
+    padding-bottom: 10px;
+  }
+  .aboutme{
+    padding-left: 10vw;
+    width: 90%;
+  }
+  .inspiration{
+    padding-left: 10vw;
+  }
+  .inspiration-groups{
+    display: block;
+  }
+  .inspiration .tools{
+    padding-bottom: 10px;
+  }
+  .inspiration .music{
+    padding-bottom: 10px;
+  }
+  .inspiration .mental{
+    padding-bottom: 10px;
+  }
 }
 
+/**************** Work ****************/
+
+.project a{
+  color: #2aa198;
+}
 .project a:hover{
   color: lightgrey;
 }
 
-/*  About Page  */
+@media screen and (max-width: 800px) {
+  .container .project{
+    padding-left: 10vw;
+    width: 90%;
+  }
+}
+
+/**************** About ****************/
 
 .links a{
   padding-right: 20px;
 }
-
 .progress{
   width: 50%;
   background-color: transparent;
 }
-
 .bg-info{
   color: #0e1212;
   padding-top: 8px;
   border-radius: 0.25rem;
-  background-color: yellowgreen !important;
+  background-color: #2aa198 !important;
 }
-
 .skills .languages{
   padding-bottom: 20px;
 }
-
 .skills .languages div{
   padding-bottom: 10px;
 }
-
 .skills .tools{
   padding-bottom: 20px;
 }
-
 .skills .tools div{
   padding-bottom: 10px;
 }
-
 .author .bio{
   padding-bottom: 20px;
 }
-
 .author .bio p{
   margin: auto;
   padding: auto;
 }
-
 .author{
   padding-top: 20px;
   padding-bottom: 20px;
 }
-
 .links{
   padding-bottom: 20px;
 }
-
 .btn-outline-light:hover{
-  color: yellowgreen;
+  color: #2aa198;
 }
 
-/*  Contact Page  */
+@media screen and (max-width: 800px) {
+  .container .author, .skills, .links{
+    padding-left: 10vw;
+  }
+}
+
+/**************** Contact ****************/
 
 .contact-email{
   padding: calc(50vh - 8rem) 0 0;
@@ -180,15 +251,12 @@ body p, span{
   justify-content: center;
   padding-bottom: 20px;
 }
-
 .contact-email a{
   color: lightgrey;
 }
-
 .contact-email a:hover{
-  color: yellowgreen;
+  color: #2aa198;
 }
-
 .contact-links{
   display: flex;
   justify-content: center;

@@ -22,10 +22,10 @@ class TopNav extends React.Component{
                     <Nav.Link as={Link} to="/about" title="About">about</Nav.Link>
                     <Nav.Link as={Link} to="/contact" title="Contact">contact</Nav.Link>
                     <a href="https://github.com/cbarkr" className="nav-link">
-                        <AiFillGithub title="GitHub" size={25} style={{color: 'yellowgreen'}}/>
+                        <AiFillGithub title="GitHub" size={25} style={{color: '#2aa198'}}/>
                     </a>
                     <a href="https://www.linkedin.com/in/cbarkr/" className="nav-link">
-                        <AiFillLinkedin title="LinkedIn" size={25} style={{color: 'yellowgreen'}} />
+                        <AiFillLinkedin title="LinkedIn" size={25} style={{color: '#2aa198'}} />
                     </a>
                 </Nav>
             </Navbar>
