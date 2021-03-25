@@ -64,6 +64,10 @@ body p, span{
 .intro{
   text-align: center;
 }
+.intro .type-name span{
+  font-size: 32px;
+  font-weight: 500;
+}
 .project-link a{
   color: #2aa198;
 }
@@ -240,6 +244,12 @@ body p, span{
 @media screen and (max-width: 800px) {
   .container .author, .skills, .links{
     padding-left: 10vw;
+  }
+  .author{
+    width: 90%;
+  }
+  .author .bio{
+    width: 90%;
   }
 }
 
