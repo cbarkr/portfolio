@@ -1,7 +1,7 @@
 import React from 'react';
 import Aos from 'aos';
-import {FaCode, FaBrain} from 'react-icons/fa';
-import {GiSoundWaves} from 'react-icons/gi';
+//import {FaCode, FaBrain} from 'react-icons/fa';
+//import {GiSoundWaves} from 'react-icons/gi';
 import {IoFingerPrint} from 'react-icons/io5';
 import {RiBracesFill} from 'react-icons/ri';
 import HomeTitle from './Home-Title';
@@ -75,6 +75,7 @@ class Home extends React.Component{
                         </div>
                     </section>
 
+                    {/*
                     <section className="inspiration">
                         <div className="static-container"  data-aos="fade-up">
                             <h2>Made With</h2>
@@ -115,6 +116,7 @@ class Home extends React.Component{
                             </div>
                         </div>
                     </section>
+                    */}
             </div>
         )
     }
