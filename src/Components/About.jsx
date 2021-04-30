@@ -31,22 +31,22 @@ class About extends React.Component{
                             <span>C/C++</span>
                             <ProgressBar variant="info" now={70} label="70" />
                         </div>
-                        <div className="react-skill" data-aos="fade-right" data-aos-duration="1250">
+                        <div className="react-skill" data-aos="fade-right" data-aos-duration="1250"data-aos-anchor="cpp-skill">
                             <span>ReactJS</span>
                             <ProgressBar variant="info" now={65} label="65" />
                         </div>
-                        <div className="python-skill" data-aos="fade-right" data-aos-duration="1500">
+                        <div className="python-skill" data-aos="fade-right" data-aos-duration="1500"data-aos-anchor="cpp-skill">
                             <span>Python</span>
                             <ProgressBar variant="info" now={80} label="80" />
                         </div>
                     </div>
                     <div className="tools">
                         <h5>Tools</h5>
-                        <div className="css-skill" data-aos="fade-right" data-aos-duration="1750">
+                        <div className="css-skill" data-aos="fade-right" data-aos-duration="1750"data-aos-anchor="cpp-skill">
                             <span>CSS</span>
                             <ProgressBar variant="info" now={80} label="80" />
                         </div>
-                        <div className="html-skill" data-aos="fade-right" data-aos-duration="2250">
+                        <div className="html-skill" data-aos="fade-right" data-aos-duration="2250"data-aos-anchor="cpp-skill">
                             <span>HTML</span>
                             <ProgressBar variant="info" now={80} label="80" />
                         </div>
