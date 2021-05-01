@@ -3,7 +3,7 @@ import Aos from 'aos';
 import {Nav, Navbar} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import {AiFillGithub, AiFillLinkedin} from 'react-icons/ai';
-import Logo from '.././Logos/logo-white.svg';
+import Logo from './Assets/Logos/logo-white.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'aos/dist/aos.css';
 import '.././App.css';

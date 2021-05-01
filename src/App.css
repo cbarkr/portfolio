@@ -68,11 +68,27 @@ body p, span{
   font-size: 32px;
   font-weight: 500;
 }
+.project-image{
+  flex: 0 0 66%;
+  max-width: 312px;
+  max-height: 390px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+.project-link{
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
 .project-link a{
   color: #2aa198;
 }
 .project-link a:hover{
   color: lightgrey;
+}
+.project-text{
+  display: flex;
+  flex-direction: column;
 }
 .interest-groups{
   display: flex;
@@ -83,10 +99,15 @@ body p, span{
 .interest-groups a:hover{
   color: #2aa198;
 }
+.group1{
+  flex: 0 0 66%;
+}
+.group2{
+  flex: 1;
+}
 .aboutme a{
   color: lightgrey;
 }
-
 .aboutme a:hover{
   color: #2aa198;
 }
@@ -108,16 +129,9 @@ body p, span{
 .aboutme .progress-years .sfu{
   max-width: 15%;
   flex: 0 0 20%;
-  
 }
 .aboutme .progress-years .future{
   max-width: 15%;
-  flex: 1;
-}
-.group1{
-  flex: 0 0 66%;
-}
-.group2{
   flex: 1;
 }
 .inspiration-groups{
@@ -145,6 +159,10 @@ body p, span{
   }
   .projects{
     padding-left: 10vw;
+  }
+  .project-image{
+    max-width: 260px;
+    max-height: 325px;
   }
   .project-link{
     display: block;
