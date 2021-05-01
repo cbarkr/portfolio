@@ -2,7 +2,7 @@ import React from 'react';
 import Aos from 'aos';
 import {AiFillGithub, AiFillLinkedin, AiOutlineInstagram} from 'react-icons/ai';
 import {Button, ProgressBar} from 'react-bootstrap';
-import Surprise from '.././CallumBarker-Resume.pdf';
+import Surprise from './Assets/Images/CallumBarker-Resume.pdf';
 import 'aos/dist/aos.css';
 import '.././App.css';
 
