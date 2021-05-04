@@ -1,28 +1,27 @@
 import React from 'react';
 import Aos from 'aos';
 import {AiFillGithub, AiFillLinkedin, AiOutlineInstagram} from 'react-icons/ai';
-import {Button, ProgressBar} from 'react-bootstrap';
-import Surprise from './Assets/Images/CallumBarker-Resume.pdf';
+import {ProgressBar} from 'react-bootstrap';
+import Surprise from './OpenPDF';
+import Scan from './Assets/Images/3DScan.PNG';
 import 'aos/dist/aos.css';
 import '.././App.css';
 
 Aos.init({duration: 2000});
 
 class About extends React.Component{
-    
-    onSurpriseClick = () => {
-        window.open(Surprise);
-    }
-
     render(){
         return(
             <div className="container">
                 <div className="author" data-aos="fade-right">
-                    <h3>Hi, my name is Callum Barker</h3>
-                        <div className="bio">
-                            <p>Coffee enthusiast, amateur tinkerer, and occasional programmer</p>
-                            <p>I am currently attending Simon Fraser University for computing science and will be based out of Vancouver for the foreseeable future</p>
-                        </div>
+                    <img className="profile-photo" src={Scan} alt="3D Scan"></img>
+                    <div className="author-text">
+                        <h3>Hi, my name is Callum Barker</h3>
+                            <div className="bio">
+                                <p>Coffee enthusiast, amateur tinkerer, and occasional programmer</p>
+                                <p>I am currently attending Simon Fraser University for computing science and will be based out of Vancouver for the foreseeable future</p>
+                            </div>
+                    </div>
                 </div>
                 <div className="skills">
                     <div className="languages">
@@ -70,18 +69,18 @@ class About extends React.Component{
                 </div>
                 <div className="links">
                     <h5>Other places to find me</h5>
-                    <a href="https://github.com/cbarkr" target="_blank" rel="noreferrer">
-                        <AiFillGithub  title="GitHub" style={{color: 'lightgrey'}} size={25} />
-                    </a>
-                    <a href="https://www.linkedin.com/in/cbarkr/" target="_blank" rel="noreferrer">
-                        <AiFillLinkedin title="LinkedIn" style={{color: 'lightgrey'}} size={25} />
-                    </a>
-                    <a href="https://www.instagram.com/cbarkr/" target="_blank" rel="noreferrer">
-                        <AiOutlineInstagram title="LinkedIn" style={{color: 'lightgrey'}} size={25} />
-                    </a>
-                    <a href={Surprise} target="_blank" rel="noreferrer">
-                        <Button variant="outline-light">Surprise</Button>
-                    </a>
+                    <div className="icons">
+                        <a href="https://github.com/cbarkr" target="_blank" rel="noreferrer">
+                            <AiFillGithub  title="GitHub" style={{color: 'lightgrey'}} size={25} />
+                        </a>
+                        <a href="https://www.linkedin.com/in/cbarkr/" target="_blank" rel="noreferrer">
+                            <AiFillLinkedin title="LinkedIn" style={{color: 'lightgrey'}} size={25} />
+                        </a>
+                        <a href="https://www.instagram.com/cbarkr/" target="_blank" rel="noreferrer">
+                            <AiOutlineInstagram title="LinkedIn" style={{color: 'lightgrey'}} size={25} />
+                        </a>
+                        <Surprise/>
+                    </div>
                 </div>
             </div>
         )
