@@ -268,7 +268,11 @@ body p, span{
   padding-bottom: 20px;
 }
 .links a{
+  display: inline-flex;
   padding-right: 20px;
+}
+.links .icons{
+  display: inline-flex;
 }
 .btn-outline-light:hover{
   color: #2aa198;

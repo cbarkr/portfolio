@@ -1,8 +1,8 @@
 import React from 'react';
 import Aos from 'aos';
 import {AiFillGithub, AiFillLinkedin, AiOutlineInstagram} from 'react-icons/ai';
-import {Button, ProgressBar} from 'react-bootstrap';
-import Surprise from './Assets/Images/CallumBarker-Resume.pdf';
+import {ProgressBar} from 'react-bootstrap';
+import Surprise from './OpenPDF';
 import Scan from './Assets/Images/3DScan.PNG';
 import 'aos/dist/aos.css';
 import '.././App.css';
@@ -10,11 +10,6 @@ import '.././App.css';
 Aos.init({duration: 2000});
 
 class About extends React.Component{
-    
-    onSurpriseClick = () => {
-        window.open(Surprise);
-    }
-
     render(){
         return(
             <div className="container">
@@ -74,18 +69,18 @@ class About extends React.Component{
                 </div>
                 <div className="links">
                     <h5>Other places to find me</h5>
-                    <a href="https://github.com/cbarkr" target="_blank" rel="noreferrer">
-                        <AiFillGithub  title="GitHub" style={{color: 'lightgrey'}} size={25} />
-                    </a>
-                    <a href="https://www.linkedin.com/in/cbarkr/" target="_blank" rel="noreferrer">
-                        <AiFillLinkedin title="LinkedIn" style={{color: 'lightgrey'}} size={25} />
-                    </a>
-                    <a href="https://www.instagram.com/cbarkr/" target="_blank" rel="noreferrer">
-                        <AiOutlineInstagram title="LinkedIn" style={{color: 'lightgrey'}} size={25} />
-                    </a>
-                    <a href={Surprise} target="_blank" rel="noreferrer">
-                        <Button variant="outline-light">Surprise</Button>
-                    </a>
+                    <div className="icons">
+                        <a href="https://github.com/cbarkr" target="_blank" rel="noreferrer">
+                            <AiFillGithub  title="GitHub" style={{color: 'lightgrey'}} size={25} />
+                        </a>
+                        <a href="https://www.linkedin.com/in/cbarkr/" target="_blank" rel="noreferrer">
+                            <AiFillLinkedin title="LinkedIn" style={{color: 'lightgrey'}} size={25} />
+                        </a>
+                        <a href="https://www.instagram.com/cbarkr/" target="_blank" rel="noreferrer">
+                            <AiOutlineInstagram title="LinkedIn" style={{color: 'lightgrey'}} size={25} />
+                        </a>
+                        <Surprise/>
+                    </div>
                 </div>
             </div>
         )
