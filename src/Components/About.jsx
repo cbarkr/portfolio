@@ -3,6 +3,7 @@ import Aos from 'aos';
 import {AiFillGithub, AiFillLinkedin, AiOutlineInstagram} from 'react-icons/ai';
 import {Button, ProgressBar} from 'react-bootstrap';
 import Surprise from './Assets/Images/CallumBarker-Resume.pdf';
+import Scan from './Assets/Images/3DScan.PNG';
 import 'aos/dist/aos.css';
 import '.././App.css';
 
@@ -18,11 +19,14 @@ class About extends React.Component{
         return(
             <div className="container">
                 <div className="author" data-aos="fade-right">
-                    <h3>Hi, my name is Callum Barker</h3>
-                        <div className="bio">
-                            <p>Coffee enthusiast, amateur tinkerer, and occasional programmer</p>
-                            <p>I am currently attending Simon Fraser University for computing science and will be based out of Vancouver for the foreseeable future</p>
-                        </div>
+                    <img className="profile-photo" src={Scan} alt="3D Scan"></img>
+                    <div className="author-text">
+                        <h3>Hi, my name is Callum Barker</h3>
+                            <div className="bio">
+                                <p>Coffee enthusiast, amateur tinkerer, and occasional programmer</p>
+                                <p>I am currently attending Simon Fraser University for computing science and will be based out of Vancouver for the foreseeable future</p>
+                            </div>
+                    </div>
                 </div>
                 <div className="skills">
                     <div className="languages">
