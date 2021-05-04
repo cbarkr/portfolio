@@ -2,8 +2,8 @@ import React from 'react';
 import Aos from 'aos';
 import {AiFillGithub, AiFillLinkedin, AiOutlineInstagram} from 'react-icons/ai';
 import {ProgressBar} from 'react-bootstrap';
+import Scan from './Assets/Images/3DScan.png';
 import Surprise from './OpenPDF';
-import Scan from './Assets/Images/3DScan.PNG';
 import 'aos/dist/aos.css';
 import '.././App.css';
 
