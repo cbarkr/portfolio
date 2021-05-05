@@ -3,24 +3,25 @@ import Pdf from './Assets/Images/CallumBarker-Resume.pdf';
 import {Button} from 'react-bootstrap';
 import { Document, Page, pdfjs } from "react-pdf";
 import ScrollToTop from '../ScrollToTop';
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 class OpenPDF extends React.Component {
   state = {numPages: null, pageNumber: 1};
-
-    onDocumentLoadSuccess = ({numPages}) => {
-        this.setState({numPages});
-    };
-    prevPage = () => {
+  componentDidMount() {
+    pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+  };
+  onDocumentLoadSuccess = ({numPages}) => {
+      this.setState({numPages});
+  };
+  prevPage = () => {
       if (this.state.pageNumber > 1){
-        this.setState(state => ({ pageNumber: this.state.pageNumber - 1 })); 
+          this.setState(state => ({ pageNumber: this.state.pageNumber - 1 })); 
       }
-    }
-    nextPage = () => {
+  };
+  nextPage = () => {
       if (this.state.pageNumber < this.state.numPages){
-        this.setState(state => ({ pageNumber: this.state.pageNumber + 1}));    
+          this.setState(state => ({ pageNumber: this.state.pageNumber + 1}));    
       }
-    }
+  }
 
   render() {
     const {numPages, pageNumber} = this.state;
