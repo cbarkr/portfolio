@@ -292,6 +292,29 @@ body p, span{
   }
 }
 
+/**************** Surprise ****************/
+
+.document-pdf {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  padding-bottom: 20px;
+  color: lightgrey;
+}
+.document-pdf .document-nav{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+  .document-pdf {
+    width: 250px
+  }
+}
+
 /**************** Contact ****************/
 
 .contact-email{
