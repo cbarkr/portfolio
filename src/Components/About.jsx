@@ -1,9 +1,9 @@
 import React from 'react';
 import Aos from 'aos';
 import {AiFillGithub, AiFillLinkedin, AiOutlineInstagram} from 'react-icons/ai';
-import {ProgressBar} from 'react-bootstrap';
+import {ProgressBar, Button} from 'react-bootstrap';
 import Scan from './Assets/Images/Scan.png';
-import Surprise from './OpenPDF';
+import {Link} from 'react-router-dom';
 import 'aos/dist/aos.css';
 import '.././App.css';
 
@@ -79,7 +79,7 @@ class About extends React.Component{
                         <a href="https://www.instagram.com/cbarkr/" target="_blank" rel="noreferrer">
                             <AiOutlineInstagram title="LinkedIn" style={{color: 'lightgrey'}} size={25} />
                         </a>
-                        <Surprise/>
+                        <Button as={Link} to="/surprise" title="Surprise" variant="outline-light">Surprise</Button>
                     </div>
                 </div>
             </div>
