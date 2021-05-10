@@ -1,6 +1,6 @@
 # Deployed App
 
-cbarkr.com
+[cbarkr.com](https://www.cbarkr.com/)
 
 # Getting Started with Create React App
 
