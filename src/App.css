@@ -3,11 +3,9 @@
 body{
   font-family:monospace;
 }
-
 body p, span{
   font-size: 16px;
 }
-
 .navbar{
   background-color: #0e1212;
   align-items: center;
@@ -25,12 +23,17 @@ body p, span{
   min-height: 100vh;
 }
 .container{
-  padding-top: 40px;
   min-height: 90vh;
   color: lightgrey;
+  padding-left: 0;
+  padding-right: 0; 
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 100vw;
 }
 .container section{
   min-height: 100vh;
+  max-width: 100vw;
 }
 .footer{
   color: lightgrey;
@@ -48,7 +51,7 @@ body p, span{
 @media screen and (max-width: 800px) {
   .navbar, .wrapper, .container, .footer{
     min-width: 280px;
-    max-width: 100%;
+    max-width: 100vw;
     padding: 0;
   }
   .container h3{
@@ -67,6 +70,10 @@ body p, span{
 .intro .type-name span{
   font-size: 32px;
   font-weight: 500;
+}
+.container .interests, .aboutme, .projects, .project, .author, .skills, .links{
+  margin-left: 15vw;
+  margin-right: 15vw;
 }
 .project-image{
   flex: 0 0 66%;
@@ -158,6 +165,10 @@ body p, span{
 @media screen and (max-width: 800px) {
   .intro h1{
     font-size: 25px;
+    margin-left: 20%;
+  }
+  .static-container{
+    max-width: 80%;
   }
   .projects{
     padding-left: 10vw;
@@ -211,8 +222,9 @@ body p, span{
 
 @media screen and (max-width: 800px) {
   .container .project{
-    padding-left: 10vw;
-    width: 90%;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    width: 80%;
   }
 }
 
@@ -280,7 +292,8 @@ body p, span{
 
 @media screen and (max-width: 800px) {
   .container .author, .skills, .links{
-    padding-left: 10vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
   }
   .author{
     width: 90%;
