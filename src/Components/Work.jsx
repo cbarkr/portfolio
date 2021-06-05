@@ -26,7 +26,7 @@ class Work extends React.Component{
                         <p>Made in Python and Pygame</p>
                     </div>
                 </div>
-                <div className="project" data-aos="fade-left">
+                <div className="project" data-aos="fade-right">
                         <h2>
                             <a href="https://flixxlist.herokuapp.com/" className="project-link" target="_blank" rel="noreferrer">FlixList Web App
                                 <FiArrowUpRight title="FlixList" size={25} style={{color: "lightgrey"}}/>

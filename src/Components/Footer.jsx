@@ -7,7 +7,7 @@ class Footer extends React.Component{
         return(
             <div className="footer">
                 <div className="info">
-                    <p>[Callum Barker] · [2021]</p>                
+                    <p>[Callum Barker] · [2021]</p>
                 </div>
                 <div className="contact-links">
                     <a href="https://github.com/cbarkr">

@@ -19,6 +19,7 @@ class About extends React.Component{
                         <h3>Hi, my name is Callum Barker</h3>
                             <div className="bio">
                                 <p>Coffee enthusiast, amateur tinkerer, and occasional programmer</p>
+                                <br />
                                 <p>I am currently attending Simon Fraser University for computing science and will be based out of Vancouver for the foreseeable future</p>
                             </div>
                     </div>
@@ -28,11 +29,11 @@ class About extends React.Component{
                         <h5>Languages</h5>
                         <div className="cpp-skill" data-aos="fade-right" data-aos-duration="1000">
                             <span>C/C++</span>
-                            <ProgressBar variant="info" now={70} label="70" />
+                            <ProgressBar variant="info" now={70} label="75" />
                         </div>
                         <div className="react-skill" data-aos="fade-right" data-aos-duration="1250"data-aos-anchor="cpp-skill">
                             <span>ReactJS</span>
-                            <ProgressBar variant="info" now={65} label="65" />
+                            <ProgressBar variant="info" now={65} label="70" />
                         </div>
                         <div className="python-skill" data-aos="fade-right" data-aos-duration="1500"data-aos-anchor="cpp-skill">
                             <span>Python</span>
