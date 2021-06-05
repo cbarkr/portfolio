@@ -7,6 +7,7 @@ import Work from './Components/Work';
 import About from './Components/About';
 import Contact from './Components/Contact';
 import Surprise from './Components/OpenPDF';
+import ScrollTopButton from './Components/ScrollToTopButton';
 import {Route, BrowserRouter as Router} from 'react-router-dom';
 import './App.css';
 
@@ -17,6 +18,7 @@ function App() {
       <Router>
         <ScrollToTop>
             <TopNav />
+            <ScrollTopButton />
             <Route exact path="/" component={Home} />
             <Route exact path="/work" component={Work} />
             <Route exact path="/about" component={About} />

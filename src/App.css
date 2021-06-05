@@ -12,6 +12,7 @@ body p, span{
   padding-left: 100px;
   padding-right: 100px;
   box-shadow: 0 5px 5px -8px black;
+  max-width: 100vw;
 }
 .nav-link{
   padding: 10px;
@@ -21,6 +22,11 @@ body p, span{
 .wrapper{
   background-color: #0e1212;
   min-height: 100vh;
+  max-width: 100vw;
+  cursor: crosshair;
+}
+a:hover{
+  cursor: cell;
 }
 .container{
   min-height: 90vh;
@@ -34,6 +40,18 @@ body p, span{
 .container section{
   min-height: 100vh;
   max-width: 100vw;
+}
+.scrollTop{
+  position: fixed;
+  right: 75px;
+  bottom: 75px;
+  color: lightgrey;
+  animation: fadeIn 0.3s;
+  transition: opacity 0.4s;
+  opacity: 0.75;
+}
+.scrollTop:hover{
+  opacity: 1;
 }
 .footer{
   color: lightgrey;
@@ -120,29 +138,6 @@ body p, span{
 .aboutme a:hover{
   color: #2aa198;
 }
-.aboutme .progress-years{
-  display: flex;
-}
-.aboutme .progress-years .dlsr{
-  max-width: 15%;
-  flex: 0 0 20%;
-}
-.aboutme .progress-years .design{
-  max-width: 15%;
-  flex: 0 0 20%;
-}
-.aboutme .progress-years .studies{
-  max-width: 15%;
-  flex: 0 0 20%;
-}
-.aboutme .progress-years .sfu{
-  max-width: 15%;
-  flex: 0 0 20%;
-}
-.aboutme .progress-years .future{
-  max-width: 15%;
-  flex: 1;
-}
 .inspiration-groups{
   display: flex;
 }
@@ -171,7 +166,8 @@ body p, span{
     max-width: 80%;
   }
   .projects{
-    padding-left: 10vw;
+    padding-left: 5vw;
+    max-width: 80vw;
   }
   .project-image{
     max-width: 260px;
@@ -182,7 +178,8 @@ body p, span{
     max-width: 80%;
   }
   .interests{
-    padding-left: 10vw;
+    padding-left: 5vw;
+    max-width: 80vw;
   }
   .interest-groups{
     display: block;
@@ -191,11 +188,12 @@ body p, span{
     padding-bottom: 10px;
   }
   .aboutme{
-    padding-left: 10vw;
-    width: 90%;
+    padding-left: 5vw;
+    max-width: 80vw;
   }
   .inspiration{
-    padding-left: 10vw;
+    padding-left: 5vw;
+    max-width: 80vw;
   }
   .inspiration-groups{
     display: block;
