@@ -138,35 +138,21 @@ a:hover{
 .aboutme a:hover{
   color: #2aa198;
 }
-.inspiration-groups{
-  display: flex;
-}
-.tools{
-  flex: 0 0 45%;
-}
-.music{
-  flex: 0 0 30%;
-}
-.music a{
-  color: lightgrey;
-}
-.music a:hover{
-  color: #2aa198;
-}
-.mental{
-  flex: 0 0 20%;
-}
 
 @media screen and (max-width: 800px) {
-  .intro h1{
+  .intro, .interests, .aboutme, .projects{
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+  .intro .type-name{
     font-size: 25px;
-    margin-left: 20%;
+    margin-left: 15vw;
+    text-align: center;
   }
   .static-container{
     max-width: 80%;
   }
   .projects{
-    padding-left: 5vw;
     max-width: 80vw;
   }
   .project-image{
@@ -175,10 +161,9 @@ a:hover{
   }
   .project-link{
     display: block;
-    max-width: 80%;
+    max-width: 80vw;
   }
   .interests{
-    padding-left: 5vw;
     max-width: 80vw;
   }
   .interest-groups{
@@ -188,24 +173,7 @@ a:hover{
     padding-bottom: 10px;
   }
   .aboutme{
-    padding-left: 5vw;
     max-width: 80vw;
-  }
-  .inspiration{
-    padding-left: 5vw;
-    max-width: 80vw;
-  }
-  .inspiration-groups{
-    display: block;
-  }
-  .inspiration .tools{
-    padding-bottom: 10px;
-  }
-  .inspiration .music{
-    padding-bottom: 10px;
-  }
-  .inspiration .mental{
-    padding-bottom: 10px;
   }
 }
 
