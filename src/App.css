@@ -108,10 +108,10 @@ a:hover{
 .group2{
   flex: 1;
 }
-.sc-gtsrHT.jTPHDy{
+.sc-gtsrHT.gfuSqG{
   white-space: normal;
 }
-.sc-bdnxRM.dWbRSk{
+.sc-bdnxRM.jvCTkj{
   white-space: normal;
 }
 .aboutme a{
@@ -147,7 +147,7 @@ a:hover{
 
 @media screen and (max-width: 800px) {
   .intro, .interests, .aboutme, .projects{
-    padding-left: 10vw;
+    padding-left: 5vw;
     padding-right: 5vw;
   }
   .intro .type-name{
