@@ -93,6 +93,33 @@ a:hover{
   margin-left: 15vw;
   margin-right: 15vw;
 }
+.interest-groups{
+  display: flex;
+}
+.interest-groups a{
+  color: lightgrey;
+}
+.interest-groups a:hover{
+  color: #2aa198;
+}
+.group1{
+  flex: 0 0 66%;
+}
+.group2{
+  flex: 1;
+}
+.sc-gtsrHT.jTPHDy{
+  white-space: normal;
+}
+.sc-bdnxRM.dWbRSk{
+  white-space: normal;
+}
+.aboutme a{
+  color: lightgrey;
+}
+.aboutme a:hover{
+  color: #2aa198;
+}
 .project-image{
   flex: 0 0 66%;
   width: 100%;
@@ -117,68 +144,22 @@ a:hover{
   display: flex;
   flex-direction: column;
 }
-.interest-groups{
-  display: flex;
-}
-.interest-groups a{
-  color: lightgrey;
-}
-.interest-groups a:hover{
-  color: #2aa198;
-}
-.group1{
-  flex: 0 0 66%;
-}
-.group2{
-  flex: 1;
-}
-.aboutme a{
-  color: lightgrey;
-}
-.aboutme a:hover{
-  color: #2aa198;
-}
-.inspiration-groups{
-  display: flex;
-}
-.tools{
-  flex: 0 0 45%;
-}
-.music{
-  flex: 0 0 30%;
-}
-.music a{
-  color: lightgrey;
-}
-.music a:hover{
-  color: #2aa198;
-}
-.mental{
-  flex: 0 0 20%;
-}
 
 @media screen and (max-width: 800px) {
-  .intro h1{
+  .intro, .interests, .aboutme, .projects{
+    padding-left: 10vw;
+    padding-right: 5vw;
+  }
+  .intro .type-name{
     font-size: 25px;
-    margin-left: 20%;
+    margin-left: 10vw;
+    text-align: center;
   }
   .static-container{
-    max-width: 80%;
-  }
-  .projects{
-    padding-left: 5vw;
-    max-width: 80vw;
-  }
-  .project-image{
-    max-width: 260px;
-    max-height: 325px;
-  }
-  .project-link{
-    display: block;
-    max-width: 80%;
+    max-width: 90%;
+    margin-right: 5vw;
   }
   .interests{
-    padding-left: 5vw;
     max-width: 80vw;
   }
   .interest-groups{
@@ -188,24 +169,18 @@ a:hover{
     padding-bottom: 10px;
   }
   .aboutme{
-    padding-left: 5vw;
     max-width: 80vw;
   }
-  .inspiration{
-    padding-left: 5vw;
+  .projects{
     max-width: 80vw;
   }
-  .inspiration-groups{
+  .project-image{
+    max-width: 260px;
+    max-height: 325px;
+  }
+  .project-link{
     display: block;
-  }
-  .inspiration .tools{
-    padding-bottom: 10px;
-  }
-  .inspiration .music{
-    padding-bottom: 10px;
-  }
-  .inspiration .mental{
-    padding-bottom: 10px;
+    max-width: 80vw;
   }
 }
 
