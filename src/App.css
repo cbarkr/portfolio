@@ -93,6 +93,33 @@ a:hover{
   margin-left: 15vw;
   margin-right: 15vw;
 }
+.interest-groups{
+  display: flex;
+}
+.interest-groups a{
+  color: lightgrey;
+}
+.interest-groups a:hover{
+  color: #2aa198;
+}
+.group1{
+  flex: 0 0 66%;
+}
+.group2{
+  flex: 1;
+}
+.sc-gtsrHT.jTPHDy{
+  white-space: normal;
+}
+.sc-bdnxRM.dWbRSk{
+  white-space: normal;
+}
+.aboutme a{
+  color: lightgrey;
+}
+.aboutme a:hover{
+  color: #2aa198;
+}
 .project-image{
   flex: 0 0 66%;
   width: 100%;
@@ -117,51 +144,20 @@ a:hover{
   display: flex;
   flex-direction: column;
 }
-.interest-groups{
-  display: flex;
-}
-.interest-groups a{
-  color: lightgrey;
-}
-.interest-groups a:hover{
-  color: #2aa198;
-}
-.group1{
-  flex: 0 0 66%;
-}
-.group2{
-  flex: 1;
-}
-.aboutme a{
-  color: lightgrey;
-}
-.aboutme a:hover{
-  color: #2aa198;
-}
 
 @media screen and (max-width: 800px) {
   .intro, .interests, .aboutme, .projects{
-    padding-left: 5vw;
+    padding-left: 10vw;
     padding-right: 5vw;
   }
   .intro .type-name{
     font-size: 25px;
-    margin-left: 15vw;
+    margin-left: 10vw;
     text-align: center;
   }
   .static-container{
-    max-width: 80%;
-  }
-  .projects{
-    max-width: 80vw;
-  }
-  .project-image{
-    max-width: 260px;
-    max-height: 325px;
-  }
-  .project-link{
-    display: block;
-    max-width: 80vw;
+    max-width: 90%;
+    margin-right: 5vw;
   }
   .interests{
     max-width: 80vw;
@@ -173,6 +169,17 @@ a:hover{
     padding-bottom: 10px;
   }
   .aboutme{
+    max-width: 80vw;
+  }
+  .projects{
+    max-width: 80vw;
+  }
+  .project-image{
+    max-width: 260px;
+    max-height: 325px;
+  }
+  .project-link{
+    display: block;
     max-width: 80vw;
   }
 }
