@@ -103,9 +103,9 @@ a:hover{
   font-size: 32px;
   font-weight: 500;
 }
-.container .interests, .aboutme, .projects, .project, .author, .skills, .links{
-  margin-left: 25vw;
-  margin-right: 25vw;
+.interests, .aboutme, .projects, .project, .author, .skills, .links{
+  padding-left: 25vw;
+  padding-right: 25vw;
 }
 .interest-groups{
   display: flex;
@@ -122,7 +122,10 @@ a:hover{
 .group2{
   flex: 1;
 }
-.sc-gtsrHT.gfuSqG, .sc-bdnxRM.jvCTkj{
+.group1 div{
+  white-space: normal;
+}
+.group2 div{
   white-space: normal;
 }
 .aboutme a{
@@ -162,22 +165,21 @@ a:hover{
   flex-direction: column;
 }
 
-@media screen and (max-width: 800px) {
-  .intro, .interests, .aboutme, .projects{
-    padding-left: 5vw;
-    padding-right: 5vw;
+@media screen and (max-width: 812px) {
+  body .interests, .aboutme, .projects{
+    padding-left: 20vw;
+    padding-right: 20vw;
   }
   .intro .type-name{
     font-size: 25px;
-    margin-left: 10vw;
+    padding-left: 10vw;
     text-align: center;
   }
   .static-container{
-    max-width: 90%;
-    margin-right: 5vw;
+    max-width: 90vw;
   }
   .interests{
-    max-width: 80vw;
+    max-width: 90vw;
   }
   .interest-groups{
     display: block;
@@ -211,10 +213,10 @@ a:hover{
 }
 
 @media screen and (max-width: 800px) {
-  .container .project{
-    margin-left: 10vw;
-    margin-right: 10vw;
-    width: 80%;
+  body .project{  
+    width: 90vw;
+    padding-left: 20vw;
+    padding-right: 10vw;
   }
 }
 
@@ -281,9 +283,9 @@ a:hover{
 }
 
 @media screen and (max-width: 800px) {
-  .container .author, .skills, .links{
-    margin-left: 10vw;
-    margin-right: 10vw;
+  body .author, .skills, .links{
+    padding-left: 20vw;
+    padding-right: 5vw;
   }
   .author{
     width: 90%;
