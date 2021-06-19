@@ -57,14 +57,14 @@ class Home extends React.Component{
                                 <h5>
                                     <Tree name="Fine_Art">
                                         <Tree name="Photography">
-                                            <br /><p>Focus in fashion and fine art photography</p><br />
+                                            <br /><p>Focus on fashion and fine art photography</p><br />
                                         </Tree>
                                         <Tree name="Architecture" />
                                         <Tree name="Fashion" />
                                     </Tree>
                                     <Tree name="Graphic_Design">
                                         <Tree name="Designed personal logo" />
-                                        <Tree name="Graphics for highschool yearbooks" />
+                                        <Tree name="Created graphics for highschool yearbooks" />
                                     </Tree>
                                     <Tree name="The_Great_Outdoors">
                                         <Tree name="Hiking" />
@@ -92,6 +92,8 @@ class Home extends React.Component{
                     <div className="static-container" data-aos="fade-up">
                         <h2>A little <a href="/about">about</a> me</h2>
                         <p>I take any opportunity to learn something new</p>
+                        <p>Currently working on learning Unity, C# scripting, and backend technologies</p>
+                        <p className="timeline">{'//'}Timeline</p>
                         <h4 style={{float: 'left'}}>2019</h4><p> 👨‍🎓 Began studying computing science at Simon Fraser University</p>
                         <h4 style={{float: 'left'}}>2021</h4><p> 👨‍💻 [Current] </p>
                         <h4 style={{float: 'left'}}>20__</h4><p> ? </p>

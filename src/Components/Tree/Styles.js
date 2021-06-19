@@ -41,7 +41,7 @@ const Frame = styled('div')`
   padding: 4px 0px 0px 0px;
   text-overflow: ellipsis;
   white-space: nowrap;
-  overflow-x: auto;
+  overflow-x: hidden;
   vertical-align: middle;
   color: lightgrey;
   fill: lightgrey;
@@ -51,7 +51,7 @@ const Content = styled(animated.div)`
   margin-left: 6px;
   padding: 0px 0px 0px 14px;
   border-left: 1px dashed rgba(255, 255, 255, 0.4);
-  overflow-x: auto;
+  overflow-x: hidden;
   overflow-y: hidden;
 `
 const toggle = {
