@@ -9,6 +9,7 @@ import {useMeasure, usePrevious} from './Tree/Helpers';
 import {Frame, Content, toggle} from './Tree/Styles';
 import Pathfinding from './Assets/Images/PathfindingVisualizer.jpg';
 import FlixList from './Assets/Images/FlixList-Search.png';
+import UnityGame from './Assets/Images/GetMeOutOfHereCity.png';
 import 'aos/dist/aos.css';
 import '.././App.css';
 
@@ -123,6 +124,17 @@ class Home extends React.Component{
                                     <a href="/work" className="project-link">FlixList_Web_App</a>
                                 </h3>
                                 <p className="flixlist-info">Social movie rating and review site</p>
+                            </div>
+                        </div>
+                        <div className="project-link">
+                            <a href="/work" className="project-inner-link">
+                                <img className="project-image" src={UnityGame} alt="Get Me Out Of Here"/>
+                            </a>
+                            <div className="project-text">
+                                <h3 className="platformer">
+                                    <a href="/work" className="project-link">2D_Rage_Platformer</a>
+                                </h3>
+                                <p className="flixlist-info">Rage platformer inspired by Jump King</p>
                             </div>
                         </div>
                     </div>
