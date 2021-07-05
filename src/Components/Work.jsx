@@ -12,11 +12,11 @@ class Work extends React.Component{
         return(
             <div className="container">
                 <div className="project" data-aos="fade-right">
-                        <h2>
-                            <a href="https://github.com/cbarkr/PathfindingVisualizer" className="project-link" target="_blank" rel="noreferrer">Pathfinding Visualizer
-                                <AiFillGithub title="GitHub" size={25} style={{color: "lightgrey"}}/>
-                            </a>
-                        </h2>
+                    <h2>
+                        <a href="https://github.com/cbarkr/PathfindingVisualizer" className="project-link" target="_blank" rel="noreferrer">Pathfinding Visualizer
+                            <AiFillGithub title="GitHub" size={25} style={{color: "lightgrey"}}/>
+                        </a>
+                    </h2>
                     <div className="project-desc">
                         <h4>Description</h4>
                         <p>Interactive shortest path visualizer using A*, Dijkstra, and BFS algorithms. Users select start, end, and barrier nodes 
@@ -27,11 +27,11 @@ class Work extends React.Component{
                     </div>
                 </div>
                 <div className="project" data-aos="fade-right">
-                        <h2>
-                            <a href="https://flixxlist.herokuapp.com/" className="project-link" target="_blank" rel="noreferrer">FlixList Web App
-                                <FiArrowUpRight title="FlixList" size={25} style={{color: "lightgrey"}}/>
-                            </a>
-                        </h2>
+                    <h2>
+                        <a href="https://flixxlist.herokuapp.com/" className="project-link" target="_blank" rel="noreferrer">FlixList Web App
+                            <FiArrowUpRight title="FlixList" size={25} style={{color: "lightgrey"}}/>
+                        </a>
+                    </h2>
                     <div className="project-desc">
                         <h4>Description</h4>
                         <p>Social movie rating and review site</p>
@@ -46,6 +46,21 @@ class Work extends React.Component{
 
                         <h5>Other Ends</h5>
                         <p>RapidAPI Movie Database API</p>
+                    </div>
+                </div>
+
+                <div className="project" data-aos="fade-right" data-aos-anchor="project">
+                    <h2>
+                        <a href="https://github.com/cbarkr/Get-Me-Out-Of-Here" className="project-link" target="_blank" rel="noreferrer">Get Me Out Of Here
+                            <AiFillGithub title="Github" size={25} style={{color: "lightgrey"}}/>
+                        </a>
+                    </h2>
+                    <div className="project-desc">
+                        <h4>Description</h4>
+                        <p>Rage platformer inspired by Jump King</p>
+                        
+                        <h4>Specs</h4>
+                        <p>Unity, C#</p>
                     </div>
                 </div>
             </div>
