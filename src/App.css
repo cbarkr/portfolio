@@ -148,11 +148,10 @@ a:hover{
   padding-right: 20px;
   padding-bottom: 20px;
   transition: opacity 0.5s;
-  opacity: 60%;
+  opacity: 0.6;
 }
 .project-image:hover{
-  transition: opacity 0.5s;
-  opacity: 80%;
+  opacity: 0.8;
 }
 .project-link{
   display: flex;
@@ -217,20 +216,6 @@ a:hover{
 }
 .project a:hover{
   color: lightgrey;
-}
-.project-image-work{
-  position: relative;
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-  padding-right: 20px;
-  padding-bottom: 20px;
-  transition: opacity 0.5s;
-  opacity: 60%;
-}
-.project-image-work:hover{
-  transition: opacity 0.5s;
-  opacity: 80%;
 }
 
 @media screen and (max-width: 800px) {
