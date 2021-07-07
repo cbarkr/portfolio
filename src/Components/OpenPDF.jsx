@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import Pdf from './Assets/Images/CallumBarker-Resume.pdf';
 import {Button} from 'react-bootstrap';
 import { Document, Page, pdfjs } from "react-pdf";
 import ScrollToTop from '../ScrollToTop';
 
-class OpenPDF extends React.Component {
+class OpenPDF extends PureComponent {
   state = {numPages: null, pageNumber: 1};
   componentDidMount() {
     pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
