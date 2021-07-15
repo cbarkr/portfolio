@@ -1,7 +1,6 @@
 import React, {PureComponent} from 'react';
-import Pdf from './Assets/Images/CallumBarker-Resume.pdf';
 import {Button} from 'react-bootstrap';
-import { Document, Page, pdfjs } from "react-pdf";
+import {Document, Page, pdfjs} from "react-pdf";
 import ScrollToTop from '../ScrollToTop';
 
 class OpenPDF extends PureComponent {
@@ -28,8 +27,8 @@ class OpenPDF extends PureComponent {
     return (
         <div className="document-pdf">
             <ScrollToTop>
-                <Document file={Pdf} onLoadSuccess={this.onDocumentLoadSuccess} renderAnnotationLayer="false">
-                    <Page pageNumber={pageNumber} width={600} />
+                <Document file="CallumBarker-Resume.pdf" onLoadSuccess={this.onDocumentLoadSuccess} renderAnnotationLayer="false">
+                    <Page pageNumber={pageNumber}/>
                 </Document>
                 <div className="document-nav">
                     <div className="pdf-nav-buttons">

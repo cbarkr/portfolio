@@ -14,9 +14,11 @@ class About extends React.Component{
         return(
             <div className="container">
                 <div className="author" data-aos="fade-right">
-                    <img className="profile-photo" src={Scan} alt="3D Scan"></img>
+                    <div className="profile-photo-wrapper">
+                        <img className="profile-photo" src={Scan} alt="3D Scan"></img>
+                    </div>
                     <div className="author-text">
-                        <h3>Hi, my name is Callum Barker</h3>
+                        <h2>Callum Barker</h2>
                             <div className="bio">
                                 <p>Coffee enthusiast, amateur tinkerer, and occasional programmer</p>
                                 <br />
@@ -25,8 +27,8 @@ class About extends React.Component{
                     </div>
                 </div>
                 <div className="skills">
-                    <div className="languages">
-                        <h5>Languages</h5>
+                    <div className="languages" data-aos="fade-right">
+                        <h4>Languages</h4>
                         <div className="cpp-skill" data-aos="fade-right" data-aos-duration="1000">
                             <span>C/C++</span>
                             <ProgressBar variant="info" now={80} label="80" />
@@ -44,8 +46,8 @@ class About extends React.Component{
                             <ProgressBar variant="info" now={80} label="80" />
                         </div>
                     </div>
-                    <div className="tools">
-                        <h5>Tools</h5>
+                    <div className="tools" data-aos="fade-right">
+                        <h4>Tools</h4>
                         <div className="css-skill" data-aos="fade-right" data-aos-duration="1750" data-aos-anchor="cpp-skill">
                             <span>CSS</span>
                             <ProgressBar variant="info" now={80} label="80" />
