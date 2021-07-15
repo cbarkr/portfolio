@@ -106,7 +106,9 @@ class Home extends React.Component{
                         <h2>Projects</h2>
                         <div className="project-link">
                             <a href="/work" className="project-inner-link">
-                                <img className="project-image" src={Pathfinding} alt="Pathfinding"/>
+                                <div className="project-image-wrapper">
+                                    <img className="project-image" src={Pathfinding} alt="Pathfinding"/>
+                                </div>
                             </a>
                             <div className="project-text">
                                 <h3 className="pathfinding">
@@ -117,7 +119,9 @@ class Home extends React.Component{
                         </div>
                         <div className="project-link">
                             <a href="/work" className="project-inner-link">
-                                <img className="project-image" src={FlixList} alt="FlixList"/>
+                                <div className="project-image-wrapper">
+                                    <img className="project-image" src={FlixList} alt="FlixList"/>
+                                </div>
                             </a>
                             <div className="project-text">
                                 <h3 className="flixlist">
@@ -128,7 +132,9 @@ class Home extends React.Component{
                         </div>
                         <div className="project-link">
                             <a href="/work" className="project-inner-link">
-                                <img className="project-image" src={UnityGame} alt="Get Me Out Of Here"/>
+                                <div className="project-image-wrapper">
+                                    <img className="project-image" src={UnityGame} alt="Get Me Out Of Here"/>
+                                </div>
                             </a>
                             <div className="project-text">
                                 <h3 className="platformer">
