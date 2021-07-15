@@ -1,5 +1,4 @@
 /**************** Global ****************/
-
 /* Hides scrollbar */
 html {
   overflow: scroll;
@@ -92,7 +91,6 @@ a:hover{
 }
 
 /**************** Home ****************/
-
 .static-container{
   padding: calc(50vh - 8rem) 0 0;
 }
@@ -140,13 +138,22 @@ a:hover{
   margin-block-start: 0;
   margin-block-end: 0;
 }
+.project-image-wrapper{
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  padding-right: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 2vw;
+}
 .project-image{
   flex: 0 0 66%;
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
-  padding-right: 20px;
-  padding-bottom: 20px;
   transition: opacity 0.5s;
   opacity: 0.6;
 }
@@ -166,6 +173,8 @@ a:hover{
   color: lightgrey;
 }
 .project-text{
+  padding-left: 5vw;
+  padding-top: 65px;
   display: flex;
   flex-direction: column;
 }
@@ -198,18 +207,30 @@ a:hover{
   .projects{
     max-width: 80vw;
   }
+  .project-image-wrapper{
+    width: 150px;
+    height: 150px;
+    padding-right: 150px;
+  }
   .project-image{
-    width: 200px;
-    height: 200px;
+    padding-right: 50px;
     object-fit: cover;
   }
   .project-link{
     display: block;
     max-width: 80vw;
   }
+  .project-text{
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 1vh;
+  }
 }
 
 /**************** Work ****************/
+.project{
+  padding-bottom: 1.5vh;
+}
 .project a{
   color: #2aa198;
 }
@@ -226,7 +247,6 @@ a:hover{
 }
 
 /**************** About ****************/
-
 .author{
   padding-top: 20px;
   padding-bottom: 20px;
@@ -250,7 +270,7 @@ a:hover{
   
 }
 .author .author-text{
-  padding-left: 20px;
+  padding-left: 5vw;
   display: flex;
   flex-direction: column;
 }
@@ -264,13 +284,15 @@ a:hover{
 }
 .progress{
   width: 80%;
+  animation-name: growSkillBar;
+  animation-duration: 2s;
   background-color: transparent;
 }
 .bg-info{
   color: #0e1212;
   padding-top: 8px;
   border-radius: 0.25rem;
-  background-color: #2aa198 !important;
+  background: #2aa198 !important; 
 }
 .skills .languages, .tools, .links{
   padding-bottom: 2vh;
@@ -287,6 +309,10 @@ a:hover{
 }
 .btn-outline-light:hover{
   color: #2aa198;
+}
+@keyframes growSkillBar{
+  from {width: 0;}
+  to {width: 80%;}
 }
 
 @media screen and (max-width: 800px) {
@@ -306,7 +332,7 @@ a:hover{
     margin-left: 10vw;
   }
   .author .author-text{
-    padding-top: 5vh;
+    padding-top: 2vh;
     padding-left: 0vw;
   }
   .author .bio{
@@ -347,7 +373,6 @@ a:hover{
 }
 
 /**************** Contact ****************/
-
 .contact-email{
   padding: calc(50vh - 8rem) 0 0;
   display: flex;
