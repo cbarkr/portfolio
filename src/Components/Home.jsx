@@ -7,6 +7,9 @@ import HomeTitle from './Home-Title';
 import * as Icons from './Tree/Icons';
 import {useMeasure, usePrevious} from './Tree/Helpers';
 import {Frame, Content, toggle} from './Tree/Styles';
+import Pathfinding from './Assets/Images/PathfindingVisualizer.jpg';
+import FlixList from './Assets/Images/FlixList-Search.png';
+import UnityGame from './Assets/Images/GetMeOutOfHereCity.png';
 import 'aos/dist/aos.css';
 import '.././App.css';
 
@@ -102,7 +105,11 @@ class Home extends React.Component{
                     <div className="static-container" data-aos="fade-up">
                         <h2>Projects</h2>
                         <div className="project-link">
-                            <div className="path-project-bg" />
+                            <a href="/work">
+                                <div className="project-image-wrapper">
+                                    <img className="project-image" src={Pathfinding} alt="Pathfinding"/>
+                                </div>
+                            </a>
                             <div className="project-text">
                                 <h3 className="pathfinding">
                                     <a href="/work">Pathfinding_Visualizer</a>
@@ -111,7 +118,11 @@ class Home extends React.Component{
                             </div>
                         </div>
                         <div className="project-link">
-                            <div className="flixlist-project-bg" />
+                            <a href="/work">
+                                <div className="project-image-wrapper">
+                                    <img className="project-image" src={FlixList} alt="FlixList"/>
+                                </div>
+                            </a>
                             <div className="project-text">
                                 <h3 className="flixlist">
                                     <a href="/work">FlixList_Web_App</a>
@@ -120,7 +131,11 @@ class Home extends React.Component{
                             </div>
                         </div>
                         <div className="project-link">
-                            <div className="unity-project-bg" />
+                            <a href="/work">
+                                <div className="project-image-wrapper">
+                                    <img className="project-image" src={UnityGame} alt="Get Me Out Of Here"/> 
+                                </div>
+                            </a>
                             <div className="project-text">
                                 <h3 className="platformer">
                                     <a href="/work">2D_Rage_Platformer</a>

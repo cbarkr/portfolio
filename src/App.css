@@ -145,38 +145,19 @@ a:hover{
   position: relative;
 }
 .project-link a{
-  color: white;
+  color: #2aa198;
   transition: color 0.5s;
 }
 .project-link a:hover{
-  color: black;
+  color: white;
 }
 .project-link p{
   color: white;
 }
-.path-project-bg, .flixlist-project-bg, .unity-project-bg{
-  border-radius: 5px;
-  width: 100vw;  
-  height: 25vh;
-}
-.path-project-bg{
-  background: url("/src/Components/Assets/Images/PathfindingVisualizer.jpg") no-repeat center / cover;
-}
-.flixlist-project-bg{
-  background: url("/src/Components/Assets/Images/FlixList-Search.png") no-repeat center / cover;
-}
-.unity-project-bg{
-  background: url("/src/Components/Assets/Images/GetMeOutOfHereCity.png") no-repeat center / cover;
-}
 .project-text{
-  background: #2aa198;
-  border-radius: 5px;
-  margin: 12vh 0 5vh -5vw;
-  padding: 1vw;
+  padding: 10vh 0 0 5vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   height: 100%;
   width: 100%;
 }
@@ -214,14 +195,11 @@ a:hover{
     flex-direction: column;
     max-width: 80vw;
   }
-  .path-project-bg, .flixlist-project-bg, .unity-project-bg{
-    width: 100%;  
-  }
   .project-text{
     width: 90%;
     padding: 2px;
-    padding-bottom: 1vh;
-    margin: -5vh 0 5vh 3vw;
+    padding-top: 2vh;
+    padding-bottom: 4vh;
   }
 }
 @media screen and (max-width: 460px) {
@@ -264,7 +242,7 @@ a:hover{
   padding-right: 200px;
   border-radius: 50%;
   overflow: hidden;
-  margin-bottom: 2vh;
+  margin: 0 auto 2vh auto;
 }
 .project-image{
   flex: 0 0 66%;
@@ -273,6 +251,7 @@ a:hover{
   object-fit: cover;
   transition: opacity 0.5s;
   opacity: 0.6;
+  margin: 0 auto 2vh auto;
 }
 .project-image:hover{
   opacity: 0.8;
@@ -295,11 +274,12 @@ a:hover{
     width: 150px;
     height: 150px;
     padding-right: 150px;
-    margin: 0 auto;
+    margin: 0 auto 2vh auto;
   }
   .project-image{
     padding-right: 50px;
     object-fit: cover;
+    margin: 0 auto 2vh auto;  
   }
   .project-desc{
     padding-top: 2vh;
