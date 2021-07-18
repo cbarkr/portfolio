@@ -240,7 +240,7 @@ a:hover{
   padding-right: 200px;
   border-radius: 50%;
   overflow: hidden;
-  margin: 0 auto 2vh auto;
+  margin-bottom: 2vh;
 }
 .project-image{
   flex: 0 0 66%;
@@ -249,7 +249,7 @@ a:hover{
   object-fit: cover;
   transition: opacity 0.5s;
   opacity: 0.6;
-  margin: 0 auto 2vh auto;
+  margin-bottom: 2vh;
 }
 .project-image:hover{
   opacity: 0.8;
