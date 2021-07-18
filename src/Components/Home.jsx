@@ -7,9 +7,6 @@ import HomeTitle from './Home-Title';
 import * as Icons from './Tree/Icons';
 import {useMeasure, usePrevious} from './Tree/Helpers';
 import {Frame, Content, toggle} from './Tree/Styles';
-import Pathfinding from './Assets/Images/PathfindingVisualizer.jpg';
-import FlixList from './Assets/Images/FlixList-Search.png';
-import UnityGame from './Assets/Images/GetMeOutOfHereCity.png';
 import 'aos/dist/aos.css';
 import '.././App.css';
 
@@ -105,40 +102,28 @@ class Home extends React.Component{
                     <div className="static-container" data-aos="fade-up">
                         <h2>Projects</h2>
                         <div className="project-link">
-                            <a href="/work" className="project-inner-link">
-                                <div className="project-image-wrapper">
-                                    <img className="project-image" src={Pathfinding} alt="Pathfinding"/>
-                                </div>
-                            </a>
+                            <div className="path-project-bg" />
                             <div className="project-text">
                                 <h3 className="pathfinding">
-                                    <a href="/work" className="project-link">Pathfinding_Visualizer</a>
+                                    <a href="/work">Pathfinding_Visualizer</a>
                                 </h3>
                                 <p className="pathfinding-info">Interactive visualizer for A*, Dijkstra, and BFS pathfinding</p>
                             </div>
                         </div>
                         <div className="project-link">
-                            <a href="/work" className="project-inner-link">
-                                <div className="project-image-wrapper">
-                                    <img className="project-image" src={FlixList} alt="FlixList"/>
-                                </div>
-                            </a>
+                            <div className="flixlist-project-bg" />
                             <div className="project-text">
                                 <h3 className="flixlist">
-                                    <a href="/work" className="project-link">FlixList_Web_App</a>
+                                    <a href="/work">FlixList_Web_App</a>
                                 </h3>
                                 <p className="flixlist-info">Social movie rating and review site</p>
                             </div>
                         </div>
                         <div className="project-link">
-                            <a href="/work" className="project-inner-link">
-                                <div className="project-image-wrapper">
-                                    <img className="project-image" src={UnityGame} alt="Get Me Out Of Here"/>
-                                </div>
-                            </a>
+                            <div className="unity-project-bg" />
                             <div className="project-text">
                                 <h3 className="platformer">
-                                    <a href="/work" className="project-link">2D_Rage_Platformer</a>
+                                    <a href="/work">2D_Rage_Platformer</a>
                                 </h3>
                                 <p className="flixlist-info">Rage platformer inspired by Jump King</p>
                             </div>
