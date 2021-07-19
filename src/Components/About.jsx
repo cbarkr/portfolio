@@ -58,7 +58,7 @@ class About extends React.Component{
                         </div>
                         <div className="ps-skill" data-aos="fade-right" data-aos-duration="2500" data-aos-anchor="cpp-skill">
                             <span> Photoshop</span>
-                            <ProgressBar variant="info" now={90} label="90" />
+                            <ProgressBar variant="info" now={80} label="80" />
                         </div>
                         <div className="vs-skill" data-aos="fade-right" data-aos-duration="2750" data-aos-anchor="cpp-skill">
                             <span>Visual Studio</span> 

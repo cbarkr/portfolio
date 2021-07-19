@@ -7,6 +7,7 @@ import HomeTitle from './Home-Title';
 import * as Icons from './Tree/Icons';
 import {useMeasure, usePrevious} from './Tree/Helpers';
 import {Frame, Content, toggle} from './Tree/Styles';
+import {FiArrowUpRight} from 'react-icons/fi';
 import Pathfinding from './Assets/Images/PathfindingVisualizer.jpg';
 import FlixList from './Assets/Images/FlixList-Search.png';
 import UnityGame from './Assets/Images/GetMeOutOfHereCity.png';
@@ -58,7 +59,13 @@ class Home extends React.Component{
                                 <h5>
                                     <Tree name="Fine_Art">
                                         <Tree name="Photography">
-                                            <br /><p>Focus on fashion and fine art photography</p><br />
+                                            <br /><p>Focus on fashion and fine art photography</p>
+                                            <br />
+                                            <a href="https://cbarkr.tumblr.com" target="_blank" rel="noreferrer">
+                                                <p style={{float: 'left'}}>Temporary portfolio</p>
+                                                <FiArrowUpRight title="FlixList" size={20} style={{color: "lightgrey"}}/>
+                                            </a><br />
+                                            <br />
                                         </Tree>
                                         <Tree name="Architecture" />
                                         <Tree name="Fashion" />
@@ -96,8 +103,8 @@ class Home extends React.Component{
                         <p>Currently working on learning Unity, C# scripting, and backend technologies</p>
                         <p className="timeline">{'//'}Timeline</p>
                         <h4 style={{float: 'left'}}>2019</h4><p> 👨‍🎓 Began studying computing science at Simon Fraser University</p>
-                        <h4 style={{float: 'left'}}>2021</h4><p> 👨‍💻 [Current] </p>
-                        <h4 style={{float: 'left'}}>20__</h4><p> ? </p>
+                        <h4 style={{float: 'left'}}>2021</h4><p> 👨‍💻 [Current] Studying and working on projects </p>
+                        <h4 style={{float: 'left'}}>2024</h4><p> 🧾 Expected graduation date </p>
                     </div>
                 </section>
 

@@ -15,9 +15,11 @@ class Work extends React.Component{
         return(
             <div className="container">
                 <div className="project" data-aos="fade-right">
-                    <div className="project-image-wrapper">
-                        <img className="project-image" src={Pathfinding} alt="Pathfinding"/>
-                    </div>
+                    <a href="https://github.com/cbarkr/PathfindingVisualizer" className="work-project-link" target="_blank" rel="noreferrer">
+                        <div className="project-image-wrapper">
+                            <img className="project-image" src={Pathfinding} alt="Pathfinding"/>
+                        </div>
+                    </a>
                     <div className="project-desc">
                         <h2>
                             <a href="https://github.com/cbarkr/PathfindingVisualizer" className="work-project-link" target="_blank" rel="noreferrer">Pathfinding Visualizer
@@ -33,9 +35,11 @@ class Work extends React.Component{
                     </div>
                 </div>
                 <div className="project" data-aos="fade-right">
-                    <div className="project-image-wrapper">
-                        <img className="project-image" src={FlixList} alt="FlixList"/>
-                    </div>
+                    <a href="https://flixxlist.herokuapp.com/" className="work-project-link" target="_blank" rel="noreferrer">
+                        <div className="project-image-wrapper">
+                            <img className="project-image" src={FlixList} alt="FlixList"/>
+                        </div>
+                    </a>
                     <div className="project-desc">
                         <h2>
                             <a href="https://flixxlist.herokuapp.com/" className="work-project-link" target="_blank" rel="noreferrer">FlixList Web App
@@ -54,9 +58,11 @@ class Work extends React.Component{
                 </div>
 
                 <div className="project" data-aos="fade-right" data-aos-anchor="project">
-                    <div className="project-image-wrapper">
-                        <img className="project-image" src={UnityGame} alt="Get Me Out Of Here"/> 
-                    </div>
+                    <a href="https://github.com/cbarkr/Get-Me-Out-Of-Here" className="work-project-link" target="_blank" rel="noreferrer">
+                        <div className="project-image-wrapper">
+                            <img className="project-image" src={UnityGame} alt="Get Me Out Of Here"/> 
+                        </div>
+                    </a>
                     <div className="project-desc">
                         <h2>
                             <a href="https://github.com/cbarkr/Get-Me-Out-Of-Here" className="work-project-link" target="_blank" rel="noreferrer">Get Me Out Of Here
