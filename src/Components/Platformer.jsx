@@ -14,10 +14,12 @@ class Platformer extends React.Component {
                         <img className="project-image" src={PlatformerImg} alt="Get Me Out Of Here"/> 
                     </div>
                     <div className="project-desc-sub">
-                        <h2>Get Me Out Of Here</h2>
-                        <Button href="https://github.com/cbarkr/Get-Me-Out-Of-Here" target="_blank" rel="noreferrer" title="Platformer Link" variant="outline-light">
-                            <AiFillGithub title="Platformer" size={25} style={{color: "lightgrey"}}/> GitHub Link
-                        </Button>
+                        <div className="project-desc-sub-title">
+                            <h2>Get Me Out Of Here</h2>
+                            <Button href="https://github.com/cbarkr/Get-Me-Out-Of-Here" target="_blank" rel="noreferrer" title="Platformer Link" variant="outline-light">
+                                <AiFillGithub title="Platformer" size={25}/> Link
+                            </Button>
+                        </div>
                         <h4>Description</h4>
                         <p>Rage platformer inspired by Jump King</p>
                         <br />

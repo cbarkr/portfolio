@@ -14,10 +14,12 @@ class FlixList extends React.Component {
                         <img className="project-image" src={FlixListImg} alt="FlixList"/>
                     </div>
                     <div className="project-desc-sub">
-                        <h2>FlixList Web App</h2>
-                        <Button href="https://flixxlist.herokuapp.com/" target="_blank" rel="noreferrer" title="FlixList Link" variant="outline-light">
-                            <FiArrowUpRight title="FlixList" size={25} style={{color: "lightgrey"}}/> FlixList Link
-                        </Button>
+                        <div className="project-desc-sub-title">
+                            <h2>FlixList Web App</h2>
+                            <Button href="https://flixxlist.herokuapp.com/" target="_blank" rel="noreferrer" title="FlixList Link" variant="outline-light">
+                                <FiArrowUpRight title="FlixList" size={25}/> Link
+                            </Button>
+                        </div>
                         <h4>Description</h4>
                         <p>Social movie rating and review site</p>
                         <br />
