@@ -52,7 +52,7 @@ class Home extends React.Component{
                 </section>
 
                 <section className="aboutme">
-                    <div className="static-container" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                    <div className="static-container" data-aos="fade-up">
                         <div className="aboutme-wrapper">
                             <h2>A little <a href="/about">about</a> me</h2>
                             <p>I take any opportunity to learn something new</p>
@@ -66,7 +66,7 @@ class Home extends React.Component{
                 </section>
 
                 <section className="interests">
-                    <div className="static-container" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                    <div className="static-container" data-aos="fade-up">
                         <h2>Interests</h2>
                         <div className="interest-groups">
                             <div className="group1" style={{color: "black"}}>
