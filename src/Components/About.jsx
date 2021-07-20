@@ -20,9 +20,9 @@ class About extends React.Component{
                     <div className="author-text">
                         <h2>Callum Barker</h2>
                             <div className="bio">
-                                <p>Coffee enthusiast, amateur tinkerer, and occasional programmer</p>
+                                <p>Coffee enthusiast and occasional programmer</p>
                                 <br />
-                                <p>I am currently attending Simon Fraser University for computing science and will be based out of Vancouver for the foreseeable future</p>
+                                <p>Computing science student attending Simon Fraser University - Based out of Vancouver</p>
                             </div>
                     </div>
                 </div>
@@ -84,7 +84,7 @@ class About extends React.Component{
                             <AiFillLinkedin title="LinkedIn" style={{color: 'lightgrey'}} size={25} />
                         </a>
                         <a href="https://www.instagram.com/cbarkr/" target="_blank" rel="noreferrer">
-                            <AiOutlineInstagram title="LinkedIn" style={{color: 'lightgrey'}} size={25} />
+                            <AiOutlineInstagram title="Instagram" style={{color: 'lightgrey'}} size={25} />
                         </a>
                         <Button as={Link} to="/surprise" title="Surprise" variant="outline-light">Surprise</Button>
                     </div>
