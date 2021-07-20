@@ -14,10 +14,12 @@ class Pathfinding extends React.Component {
                         <img className="project-image" src={PathfindingImg} alt="Pathfinding"/>
                     </div>
                     <div className="project-desc-sub">
-                        <h2>Pathfinding Visualizer</h2>
-                        <Button href="https://github.com/cbarkr/PathfindingVisualizer" target="_blank" rel="noreferrer" title="Pathfinding Link" variant="outline-light">
-                            <AiFillGithub title="GitHub" size={25} style={{color: "lightgrey"}}/> GitHub Link
-                        </Button>
+                        <div className="project-desc-sub-title">
+                            <h2>Pathfinding Visualizer</h2>
+                            <Button href="https://github.com/cbarkr/PathfindingVisualizer" target="_blank" rel="noreferrer" title="Pathfinding Link" variant="outline-light">
+                                <AiFillGithub title="GitHub" size={25}/> Link
+                            </Button>
+                        </div>
                         <h4>Description</h4>
                         <p>Interactive shortest path visualizer using A*, Dijkstra, and BFS algorithms. Users select start, end, and barrier nodes 
                             (or opt for randomly generated barriers), then watch as the selected algorithm finds a path between nodes</p>

@@ -75,6 +75,7 @@ class About extends React.Component{
                     </div>
                 </div>
                 <div className="links">
+                    {/*
                     <h5>Other places to find me</h5>
                     <div className="icons">
                         <a href="https://github.com/cbarkr" target="_blank" rel="noreferrer">
@@ -87,7 +88,7 @@ class About extends React.Component{
                             <AiOutlineInstagram title="Instagram" style={{color: 'lightgrey'}} size={25} />
                         </a>
                         <Button as={Link} to="/surprise" title="Surprise" variant="outline-light">Surprise</Button>
-                    </div>
+                    </div>*/}
                 </div>
             </div>
         )

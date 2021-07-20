@@ -1,8 +1,5 @@
 import React from 'react';
 import Aos from 'aos';
-import {AiFillGithub} from 'react-icons/ai';
-import {FiArrowUpRight} from 'react-icons/fi';
-import {Button} from 'react-bootstrap';
 import Pathfinding from './Assets/Images/PathfindingVisualizer.jpg';
 import FlixList from './Assets/Images/FlixList-Search.png';
 import UnityGame from './Assets/Images/GetMeOutOfHereCity.png';
@@ -22,11 +19,10 @@ class Work extends React.Component{
                         </div>
                     </a>
                     <div className="project-desc">
-                        <h2><a href="/work/pathfinding">Pathfinding Visualizer</a></h2>
-                        <Button href="https://github.com/cbarkr/PathfindingVisualizer" target="_blank" rel="noreferrer" title="Pathfinding Link" variant="outline-light">
-                            <AiFillGithub title="GitHub" size={25} style={{color: "lightgrey"}}/> GitHub Link
-                        </Button>
-                        <p>Interactive visualizer for A*, Dijkstra, and BFS pathfinding</p>
+                        <a href="/work/pathfinding">
+                            <h2>Pathfinding Visualizer</h2>
+                            <p>Interactive visualizer for A*, Dijkstra, and BFS pathfinding</p>
+                        </a>
                     </div>
                 </div>
                 <div className="project" data-aos="fade-right">
@@ -36,11 +32,10 @@ class Work extends React.Component{
                         </div>
                     </a>
                     <div className="project-desc">
-                        <h2><a href="/work/flixlist"> FlixList Web App</a></h2>
-                        <Button href="https://flixxlist.herokuapp.com/" target="_blank" rel="noreferrer" title="FlixList Link" variant="outline-light">
-                            <FiArrowUpRight title="FlixList" size={25} style={{color: "lightgrey"}}/> FlixList Link
-                        </Button>
-                        <p>Social movie rating and review site</p>
+                        <a href="/work/flixlist"> 
+                            <h2>FlixList Web App</h2>
+                            <p>Social movie rating and review site</p>
+                        </a>
                     </div>
                 </div>
 
@@ -51,11 +46,10 @@ class Work extends React.Component{
                         </div>
                     </a>
                     <div className="project-desc">
-                        <h2><a href="/work/platformer">Get Me Out Of Here</a></h2>
-                        <Button href="https://github.com/cbarkr/Get-Me-Out-Of-Here" target="_blank" rel="noreferrer" title="Platformer Link" variant="outline-light">
-                            <AiFillGithub title="Platformer" size={25} style={{color: "lightgrey"}}/> GitHub Link
-                        </Button>
-                        <p>Rage platformer inspired by Jump King</p>
+                        <a href="/work/platformer">
+                            <h2>Get Me Out Of Here</h2>
+                            <p>Rage platformer inspired by Jump King</p>
+                        </a>
                     </div>
                 </div>
             </div>

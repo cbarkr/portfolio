@@ -55,8 +55,9 @@ class Home extends React.Component{
                     <div className="static-container" data-aos="fade-up">
                         <div className="aboutme-wrapper">
                             <h2>A little <a href="/about">about</a> me</h2>
-                            <p>I take any opportunity to learn something new</p>
-                            <p>Currently working on learning Unity, C# scripting, and backend technologies</p>
+                            <p>I am a computing science student with an interest in design</p>
+                            <p>Currently working on learning back end technologies and improving front end skills</p>
+                            <p>I am open to any opportunities to develop my skills and learn :)</p>
                             <p className="timeline">{'//'}Timeline</p>
                             <h4 style={{float: 'left'}}>2019</h4><p> 👨‍🎓 Began studying computing science at Simon Fraser University</p>
                             <h4 style={{float: 'left'}}>2021</h4><p> 👨‍💻 [Current] Studying and working on projects </p>
@@ -113,7 +114,7 @@ class Home extends React.Component{
 
                 <section className="projects">
                     <div className="static-container" data-aos="fade-up">
-                        <h2>Projects</h2>
+                        <h2><a href="/work">Projects</a></h2>
                         <div className="project-link">
                             <a href="/work/pathfinding">
                                 <div className="project-image-wrapper">
