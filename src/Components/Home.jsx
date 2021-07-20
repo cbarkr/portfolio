@@ -8,6 +8,7 @@ import * as Icons from './Tree/Icons';
 import {useMeasure, usePrevious} from './Tree/Helpers';
 import {Frame, Content, toggle} from './Tree/Styles';
 import {FiArrowUpRight} from 'react-icons/fi';
+import {AiOutlineInstagram, AiFillMail, AiFillLinkedin} from 'react-icons/ai';
 import Pathfinding from './Assets/Images/PathfindingVisualizer.jpg';
 import FlixList from './Assets/Images/FlixList-Search.png';
 import UnityGame from './Assets/Images/GetMeOutOfHereCity.png';
@@ -50,11 +51,25 @@ class Home extends React.Component{
                     </div>
                 </section>
 
+                <section className="aboutme">
+                    <div className="static-container" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                        <div className="aboutme-wrapper">
+                            <h2>A little <a href="/about">about</a> me</h2>
+                            <p>I take any opportunity to learn something new</p>
+                            <p>Currently working on learning Unity, C# scripting, and backend technologies</p>
+                            <p className="timeline">{'//'}Timeline</p>
+                            <h4 style={{float: 'left'}}>2019</h4><p> 👨‍🎓 Began studying computing science at Simon Fraser University</p>
+                            <h4 style={{float: 'left'}}>2021</h4><p> 👨‍💻 [Current] Studying and working on projects </p>
+                            <h4 style={{float: 'left'}}>2024</h4><p> 🧾 Expected graduation date </p>
+                        </div>
+                    </div>
+                </section>
+
                 <section className="interests">
                     <div className="static-container" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
                         <h2>Interests</h2>
                         <div className="interest-groups">
-                            <div className="group1">
+                            <div className="group1" style={{color: "black"}}>
                                 <IoFingerPrint title="Personal" size={25} style={{color: '#2aa198'}} />
                                 <h5>
                                     <Tree name="Fine_Art">
@@ -96,59 +111,61 @@ class Home extends React.Component{
                     </div>
                 </section>
 
-                <section className="aboutme">
-                    <div className="static-container" data-aos="fade-up">
-                        <h2>A little <a href="/about">about</a> me</h2>
-                        <p>I take any opportunity to learn something new</p>
-                        <p>Currently working on learning Unity, C# scripting, and backend technologies</p>
-                        <p className="timeline">{'//'}Timeline</p>
-                        <h4 style={{float: 'left'}}>2019</h4><p> 👨‍🎓 Began studying computing science at Simon Fraser University</p>
-                        <h4 style={{float: 'left'}}>2021</h4><p> 👨‍💻 [Current] Studying and working on projects </p>
-                        <h4 style={{float: 'left'}}>2024</h4><p> 🧾 Expected graduation date </p>
-                    </div>
-                </section>
-
                 <section className="projects">
                     <div className="static-container" data-aos="fade-up">
                         <h2>Projects</h2>
                         <div className="project-link">
-                            <a href="/work">
+                            <a href="/work/pathfinding">
                                 <div className="project-image-wrapper">
                                     <img className="project-image" src={Pathfinding} alt="Pathfinding"/>
+                                    <p className="project-name">Pathfinding_Visualizer</p>
                                 </div>
                             </a>
-                            <div className="project-text">
-                                <h3 className="pathfinding">
-                                    <a href="/work">Pathfinding_Visualizer</a>
-                                </h3>
-                                <p className="pathfinding-info">Interactive visualizer for A*, Dijkstra, and BFS pathfinding</p>
-                            </div>
                         </div>
                         <div className="project-link">
-                            <a href="/work">
+                            <a href="/work/flixlist">
                                 <div className="project-image-wrapper">
                                     <img className="project-image" src={FlixList} alt="FlixList"/>
+                                    <p className="project-name">FlixList_Web_App</p>
                                 </div>
                             </a>
-                            <div className="project-text">
-                                <h3 className="flixlist">
-                                    <a href="/work">FlixList_Web_App</a>
-                                </h3>
-                                <p className="flixlist-info">Social movie rating and review site</p>
-                            </div>
                         </div>
                         <div className="project-link">
-                            <a href="/work">
+                            <a href="/work/platformer">
                                 <div className="project-image-wrapper">
                                     <img className="project-image" src={UnityGame} alt="Get Me Out Of Here"/> 
+                                    <p className="project-name">2D_Rage_Platformer</p>
                                 </div>
                             </a>
-                            <div className="project-text">
-                                <h3 className="platformer">
-                                    <a href="/work">2D_Rage_Platformer</a>
-                                </h3>
-                                <p className="flixlist-info">Rage platformer inspired by Jump King</p>
-                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section className="contact">
+                    <div className="static-container" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                        <h2 className="contact-title">Contact</h2>
+                        <div className="contact-links-home">
+                            <h5>
+                                <a href="https://www.instagram.com/cbarkr/" target="_blank" rel="noreferrer">
+                                    <AiOutlineInstagram title="Instagram" size={25} />@cbarkr
+                                </a>
+                            </h5>
+                            <h5>
+                                <a href="mailto:callumb@sfu.ca" target="_blank" rel="noreferrer">
+                                        <AiFillMail title="Mail" size={25} />callumb@sfu.ca
+                                </a>
+                                <span style={{color: "lightgrey"}}> (school)</span>
+                            </h5>
+                            <h5>
+                                <a href="mailto:cbarkr@gmail.ca" target="_blank" rel="noreferrer">
+                                    <AiFillMail title="Mail" size={25} />cbarkr@gmail.com
+                                </a>
+                                <span style={{color: "lightgrey"}}> (personal)</span>
+                            </h5>
+                            <h5>
+                                <a href="https://www.linkedin.com/in/cbarkr/" target="_blank" rel="noreferrer">
+                                    <AiFillLinkedin title="LinkedIn" size={25} />cbarkr
+                                </a>
+                            </h5>
                         </div>
                     </div>
                 </section>

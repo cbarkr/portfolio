@@ -65,6 +65,7 @@ a:hover{
   opacity: 1;
 }
 .footer{
+  margin-top: 2vh;
   color: lightgrey;
   min-height: 10vh;
 }
@@ -99,12 +100,30 @@ a:hover{
   font-size: 32px;
   font-weight: 500;
 }
-.interests, .aboutme, .projects, .project, .author, .skills, .links{
+.interests, .aboutme, .projects, .project, .author, .skills, .contact, .links{
   padding-left: 25vw;
   padding-right: 25vw;
 }
+.aboutme{
+  background: #2aa198;
+  margin: 2vh 0;
+}
+.aboutme a{
+  color: lightgrey;
+  transition: color 0.5s;
+}
+.aboutme a:hover{
+  color: black;
+}
+.timeline{
+  font-size: 14px;
+  color: black;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
 .interest-groups{
   display: flex;
+  margin: 2vh 0;
 }
 .interest-groups a{
   color: lightgrey;
@@ -125,41 +144,87 @@ a:hover{
 .group2 div{
   white-space: normal;
 }
-.aboutme a{
-  color: lightgrey;
-  transition: color 0.5s;
-}
-.aboutme a:hover{
-  color: #2aa198;
-}
-.timeline{
-  font-size: 14px;
-  color: grey;
-  margin-block-start: 0;
-  margin-block-end: 0;
-}
-.project-link{
+.projects{
+  background: #2aa198;
   display: flex;
   flex-direction: row;
-  flex: 1;
-  position: relative;
+  flex-wrap: wrap;
+}
+.project-link{
+  display: inline-block;
+  margin-right: 2vw;
+  flex: 0 0 33.33%;
 }
 .project-link a{
   color: #2aa198;
   transition: color 0.5s;
 }
 .project-link a:hover{
-  color: white;
+  color: lightgrey;
 }
 .project-link p{
-  color: white;
+  color: lightgrey;
 }
-.project-text{
-  padding: 10vh 0 0 5vw;
+.project-image-wrapper{
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  padding-right: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 2vh 0 2vh 1.5vw;
+}
+.project-image-wrapper:hover .project-name{
+  visibility: visible;
+  opacity: 1;
+}
+.project-image{
+  flex: 0 0 66%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  transition: opacity 0.5s;
+  opacity: 0.6;
+  margin-bottom: 2vh;
+}
+.project-image:hover{
+  opacity: 0.8;
+}
+.project-name{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 0;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  width: 100%;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .5s, visibility .5s;
+}
+.contact-links-home{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: left;
+  margin: 2vh 0 0 0;
+  vertical-align: middle;
+  color: #2aa198
+}
+.contact-links-home a{
+  padding: 1vh 0;
+  transition: color 0.5s;
+  color: #2aa198
+}
+.contact-links-home a:hover{
+  color: lightgrey;
 }
 
 @media screen and (max-width: 812px) {
@@ -187,6 +252,9 @@ a:hover{
   .aboutme{
     max-width: 80vw;
   }
+  .aboutme-wrapper{
+    padding-bottom: 25vh;
+  }
   .projects{
     max-width: 80vw;
   }
@@ -195,16 +263,10 @@ a:hover{
     flex-direction: column;
     max-width: 80vw;
   }
-  .project-text{
-    width: 90%;
-    padding: 2vh 0 4vh 0;
+  .project-link:last-child{
+    padding-bottom: 25vh;
   }
-}
-@media screen and (max-width: 460px) {
-  .project-text h3{
-    font-size: 4vw;
-  }
-  .project-text p{
+  .project-name{
     font-size: 3vw;
   }
 }
@@ -231,28 +293,9 @@ a:hover{
   display: flex;
   flex-direction: column;
 }
-.project-image-wrapper{
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
-  width: 200px;
-  height: 200px;
-  padding-right: 200px;
-  border-radius: 50%;
-  overflow: hidden;
+.project-desc .btn-outline-light{
+  width: 15vw;
   margin-bottom: 2vh;
-}
-.project-image{
-  flex: 0 0 66%;
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  transition: opacity 0.5s;
-  opacity: 0.6;
-  margin-bottom: 2vh;
-}
-.project-image:hover{
-  opacity: 0.8;
 }
 .specComment{
   font-size: 18px;
@@ -283,6 +326,35 @@ a:hover{
     padding-top: 2vh;
     padding-bottom: 4vh;
   }
+  .project-desc .btn-outline-light, .project-desc-sub .btn-outline-light{
+    width: 50vw !important; 
+  }
+}
+
+/**************** Work Sub ****************/
+
+.pathfinding, .flixlist, .platformer{
+  padding-left: 25vw;
+  padding-right: 25vw;
+}
+.pathfinding a, .flixlist a, .platformer a{
+  color: #2aa198;
+}
+.pathfinding a:hover, .flixlist a:hover, .platformer a:hover{
+  color: black;
+}
+.project-desc-sub{
+  padding-top: 5vh;
+  display: flex;
+  flex-direction: column;
+}
+.project-desc-sub p{
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.project-desc-sub .btn-outline-light{
+  width: 15vw;
+  margin-bottom: 2vh;
 }
 
 /**************** About ****************/
