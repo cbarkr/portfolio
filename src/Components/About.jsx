@@ -1,9 +1,9 @@
 import React from 'react';
 import Aos from 'aos';
-import {AiFillGithub, AiFillLinkedin, AiOutlineInstagram} from 'react-icons/ai';
+//import {AiFillGithub, AiFillLinkedin, AiOutlineInstagram} from 'react-icons/ai';
 import {ProgressBar, Button} from 'react-bootstrap';
 import Scan from './Assets/Images/Scan.png';
-import {Link} from 'react-router-dom';
+//import {Link} from 'react-router-dom';
 import 'aos/dist/aos.css';
 import '.././App.css';
 
