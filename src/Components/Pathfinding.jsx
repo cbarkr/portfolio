@@ -20,12 +20,12 @@ class Pathfinding extends React.Component {
                                 <AiFillGithub title="GitHub" size={25}/> Link
                             </Button>
                         </div>
-                        <h4>Description</h4>
+                        <h4 className="comment">{'//'}Description</h4>
                         <p>Interactive shortest path visualizer using A*, Dijkstra, and BFS algorithms. Users select start, end, and barrier nodes 
                             (or opt for randomly generated barriers), then watch as the selected algorithm finds a path between nodes</p>
                         <br />
 
-                        <h4 className="specComment">{'//'}Specs</h4>
+                        <h4 className="comment">{'//'}Specs</h4>
                         <p>Made in Python and Pygame</p>
                         <br />
                     </div>
