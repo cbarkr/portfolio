@@ -12,6 +12,15 @@ html {
 ::-webkit-scrollbar-thumb {
   background: #2aa198;
 }
+/* Change highlight colour*/
+::-moz-selection {
+  color: #2aa198;
+  background: lightgrey;
+}
+::selection {
+  color: #2aa198;
+  background: lightgrey;
+}
 
 body{
   font-family:monospace;
@@ -220,6 +229,12 @@ a:hover{
   color: lightgrey;
 }
 
+@media screen and (device-width: 768px){
+  .project-name{
+    font-size: 1.5vw !important;
+  }
+}
+
 @media screen and (max-width: 812px) {
   body .interests, .aboutme, .projects{
     padding-left: 20vw;
@@ -290,7 +305,7 @@ a:hover{
   text-decoration: none;
   color: #2aa198;
 }
-.specComment{
+.comment{
   font-size: 18px;
   color: grey;
   margin-block-start: 0;
@@ -356,7 +371,7 @@ a:hover{
   width: 8vw;
   margin-bottom: 2vh; 
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-device-width: 800px) {
   .project-desc-sub-title{
     flex-direction: column;
   }

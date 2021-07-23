@@ -20,16 +20,16 @@ class FlixList extends React.Component {
                                 <FiArrowUpRight title="FlixList" size={25}/> Link
                             </Button>
                         </div>
-                        <h4>Description</h4>
+                        <h4 className="comment">{'//'}Description</h4>
                         <p>Social movie rating and review site</p>
                         <br />
 
-                        <h4>Responsibilites</h4>
+                        <h4 className="comment">{'//'}Responsibilites</h4>
                         <p>Designing and creating mockups for each view</p>
                         <p>Producing UI and front end components - navigation, profile pages, user searching, errors</p>
                         <br />
 
-                        <h4 className="specComment">{'//'}Specs</h4>
+                        <h4 className="comment">{'//'}Specs</h4>
                         <p>Front End - ReactJS, Bootstrap</p>
                         <p>Back End - MongoDB, NodeJS</p>
                         <p>Other Ends - RapidAPI Movie Database API</p>

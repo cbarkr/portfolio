@@ -20,11 +20,11 @@ class Platformer extends React.Component {
                                 <AiFillGithub title="Platformer" size={25}/> Link
                             </Button>
                         </div>
-                        <h4>Description</h4>
+                        <h4 className="comment">{'//'}Description</h4>
                         <p>Rage platformer inspired by Jump King</p>
                         <br />
                         
-                        <h4 className="specComment">{'//'}Specs</h4>
+                        <h4 className="comment">{'//'}Specs</h4>
                         <p>Unity, C#</p>
                         <br />
                     </div>
