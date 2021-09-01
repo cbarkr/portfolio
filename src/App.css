@@ -211,6 +211,13 @@ a:hover{
   opacity: 0;
   transition: opacity .5s, visibility .5s;
 }
+.contact a{
+  color: lightgrey;
+  transition: color 0.5s;
+}
+.contact a:hover{
+  color: #2aa198;
+}
 .contact-links-home{
   display: flex;
   flex-direction: column;
@@ -230,6 +237,12 @@ a:hover{
 }
 
 @media screen and (device-width: 768px){
+  .project-name{
+    font-size: 1.5vw !important;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 802px){
   .project-name{
     font-size: 1.5vw !important;
   }
@@ -275,7 +288,7 @@ a:hover{
     padding-bottom: 25vh;
   }
   .project-name{
-    font-size: 3vw;
+    font-size: 2vw;
   }
 }
 
@@ -506,20 +519,8 @@ a:hover{
 }
 
 /**************** Contact ****************/
-.contact-email{
-  padding: calc(50vh - 8rem) 0 0;
+.contact-form-email{
   display: flex;
   justify-content: center;
-  padding-bottom: 20px;
-}
-.contact-email a{
-  color: lightgrey;
-  transition: color 0.5s;
-}
-.contact-email a:hover{
-  color: #2aa198;
-}
-.contact-links{
-  display: flex;
-  justify-content: center;
+  padding: calc(50vh - 12rem) 25vw 20px 25vw;
 }
