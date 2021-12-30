@@ -143,7 +143,7 @@ class Home extends React.Component{
                 </section>
                 <section className="contact">
                     <div className="static-container" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
-                        <h2 className="contact-title">Contact</h2>
+                        <h2 className="contact-title"><a href="/contact">Contact</a></h2>
                         <div className="contact-links-home">
                             <h5>
                                 <a href="https://www.instagram.com/cbarkr/" target="_blank" rel="noreferrer">
