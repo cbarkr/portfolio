@@ -23,6 +23,7 @@ app.post('/contact/send', (req, res) => {
     var message = req.body.message;
     var content = `name: ${name}\nemail: ${email}\nmessage: ${message}`;
 
+    // Setup email
     var mail = {
         from: email,
         to: process.env.OUTGOING_EMAIL,
@@ -30,6 +31,7 @@ app.post('/contact/send', (req, res) => {
         text: content
     };
 
+    // Setup transport
     var transport = {
         service: 'gmail',
         port: 587,
@@ -39,6 +41,7 @@ app.post('/contact/send', (req, res) => {
         }
     }
     
+    // Setup transporter
     var transporter = nodemailer.createTransport(transport);
 
     transporter.verify((err) => {
@@ -51,11 +54,13 @@ app.post('/contact/send', (req, res) => {
         }
     })
 
+    // Act
     transporter.sendMail(mail, (err) => {
         if (err){
             console.log(err);
             res.json({
-                status: 'fail'
+                status: 'fail',
+                error: err
             })
         }
         else{
