@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  font-family: 'monospace','Roboto Mono', 'Helvetica Neue', sans-serif monospace !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@font-face {
+  font-family: 'Technique';
+  src: local('Technique'), url(../fonts/Technique+Sans.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Carmilla';
+  src: local('Carmilla'), url(../fonts/Carmilla\ Demo.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'JetBrainsMonoRegular';
+  src: local('JetBrainsMonoRegular'), url(../fonts/JetBrains-Mono/JetBrainsMono-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'JetBrainsMonoLight';
+  src: local('JetBrainsMonoLight'), url(../fonts/JetBrains-Mono/JetBrainsMono-Light.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'JetBrainsMonoThin';
+  src: local('JetBrainsMonoThin'), url(../fonts/JetBrains-Mono/JetBrainsMono-Thin.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'JetBrainsMonoBold';
+  src: local('JetBrainsMonoBold'), url(../fonts/JetBrains-Mono/JetBrainsMonoNL-Bold.ttf) format('truetype');
+}
