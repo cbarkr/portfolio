@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import {FiArrowUp} from 'react-icons/fi';
-import '.././App.css';
 
 const ScrollTopButton = () =>{
     const [showScroll, setShowScroll] = useState(false)

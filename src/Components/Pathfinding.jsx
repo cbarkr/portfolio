@@ -2,7 +2,6 @@ import React from 'react';
 import {Button} from 'react-bootstrap';
 import {AiFillGithub} from 'react-icons/ai';
 import PathfindingImg from './Assets/Images/PathfindingVisualizer.jpg';
-import '.././App.css';
 import 'aos/dist/aos.css';
 
 class Pathfinding extends React.Component {

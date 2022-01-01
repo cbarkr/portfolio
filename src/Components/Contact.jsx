@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 import Aos from 'aos';
-import '.././App.css';
 import 'aos/dist/aos.css';
 
 Aos.init({duration: 2000});

@@ -2,7 +2,6 @@ import React from 'react';
 import {Button} from 'react-bootstrap';
 import {AiFillGithub} from 'react-icons/ai';
 import PlatformerImg from './Assets/Images/GetMeOutOfHereCity.png';
-import '.././App.css';
 import 'aos/dist/aos.css';
 
 class Platformer extends React.Component {

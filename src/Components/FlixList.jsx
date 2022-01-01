@@ -3,7 +3,6 @@ import {Button} from 'react-bootstrap';
 import {FiArrowUpRight} from 'react-icons/fi';
 import FlixListImg from './Assets/Images/FlixList-Search.png';
 import 'aos/dist/aos.css';
-import '.././App.css';
 
 class FlixList extends React.Component {
     render(){

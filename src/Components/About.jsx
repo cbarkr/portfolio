@@ -1,11 +1,8 @@
 import React from 'react';
 import Aos from 'aos';
-//import {AiFillGithub, AiFillLinkedin, AiOutlineInstagram} from 'react-icons/ai';
 import {ProgressBar} from 'react-bootstrap';
 import Scan from './Assets/Images/Scan.png';
-//import {Link} from 'react-router-dom';
 import 'aos/dist/aos.css';
-import '.././App.css';
 
 Aos.init({duration: 2000});
 
@@ -73,22 +70,6 @@ class About extends React.Component{
                             <ProgressBar variant="info" now={70} label="70" />
                         </div>
                     </div>
-                </div>
-                <div className="links">
-                    {/*
-                    <h5>Other places to find me</h5>
-                    <div className="icons">
-                        <a href="https://github.com/cbarkr" target="_blank" rel="noreferrer">
-                            <AiFillGithub  title="GitHub" style={{color: 'lightgrey'}} size={25} />
-                        </a>
-                        <a href="https://www.linkedin.com/in/cbarkr/" target="_blank" rel="noreferrer">
-                            <AiFillLinkedin title="LinkedIn" style={{color: 'lightgrey'}} size={25} />
-                        </a>
-                        <a href="https://www.instagram.com/cbarkr/" target="_blank" rel="noreferrer">
-                            <AiOutlineInstagram title="Instagram" style={{color: 'lightgrey'}} size={25} />
-                        </a>
-                        <Button as={Link} to="/surprise" title="Surprise" variant="outline-light">Surprise</Button>
-                    </div>*/}
                 </div>
             </div>
         )

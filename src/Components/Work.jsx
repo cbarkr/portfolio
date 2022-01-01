@@ -4,7 +4,6 @@ import Pathfinding from './Assets/Images/PathfindingVisualizer.jpg';
 import FlixList from './Assets/Images/FlixList-Search.png';
 import UnityGame from './Assets/Images/GetMeOutOfHereCity.png';
 import 'aos/dist/aos.css';
-import '.././App.css';
 
 Aos.init({duration: 2000});
 
