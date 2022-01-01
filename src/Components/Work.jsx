@@ -1,17 +1,13 @@
 import React from 'react';
-import Aos from 'aos';
 import Pathfinding from './Assets/Images/PathfindingVisualizer.jpg';
 import FlixList from './Assets/Images/FlixList-Search.png';
 import UnityGame from './Assets/Images/GetMeOutOfHereCity.png';
-import 'aos/dist/aos.css';
-
-Aos.init({duration: 2000});
 
 class Work extends React.Component{
     render(){
         return(
             <div className="container">
-                <div className="project" data-aos="fade-right">
+                <div className="project">
                     <a href="/work/pathfinding" className="work-project-link">
                         <div className="project-image-wrapper">
                             <img className="project-image" src={Pathfinding} alt="Pathfinding"/>
@@ -24,7 +20,7 @@ class Work extends React.Component{
                         </a>
                     </div>
                 </div>
-                <div className="project" data-aos="fade-right">
+                <div className="project">
                     <a href="/work/flixlist" className="work-project-link">
                         <div className="project-image-wrapper">
                             <img className="project-image" src={FlixList} alt="FlixList"/>
@@ -38,7 +34,7 @@ class Work extends React.Component{
                     </div>
                 </div>
 
-                <div className="project" data-aos="fade-right" data-aos-anchor="project">
+                <div className="project">
                     <a href="/work/platformer" className="work-project-link">
                         <div className="project-image-wrapper">
                             <img className="project-image" src={UnityGame} alt="Get Me Out Of Here"/> 

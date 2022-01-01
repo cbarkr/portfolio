@@ -2,13 +2,12 @@ import React from 'react';
 import {Button} from 'react-bootstrap';
 import {AiFillGithub} from 'react-icons/ai';
 import PathfindingImg from './Assets/Images/PathfindingVisualizer.jpg';
-import 'aos/dist/aos.css';
 
 class Pathfinding extends React.Component {
     render(){
         return(
             <div className="container">
-                <div className="pathfinding" data-aos="fade-right">
+                <div className="pathfinding">
                     <div className="project-image-wrapper">
                         <img className="project-image" src={PathfindingImg} alt="Pathfinding"/>
                     </div>

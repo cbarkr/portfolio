@@ -2,13 +2,12 @@ import React from 'react';
 import {Button} from 'react-bootstrap';
 import {AiFillGithub} from 'react-icons/ai';
 import PlatformerImg from './Assets/Images/GetMeOutOfHereCity.png';
-import 'aos/dist/aos.css';
 
 class Platformer extends React.Component {
     render(){
         return(
             <div className="container">
-                <div className="platformer" data-aos="fade-right" data-aos-anchor="project">
+                <div className="platformer">
                     <div className="project-image-wrapper">
                         <img className="project-image" src={PlatformerImg} alt="Get Me Out Of Here"/> 
                     </div>

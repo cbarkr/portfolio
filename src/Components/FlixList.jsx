@@ -2,13 +2,12 @@ import React from 'react';
 import {Button} from 'react-bootstrap';
 import {FiArrowUpRight} from 'react-icons/fi';
 import FlixListImg from './Assets/Images/FlixList-Search.png';
-import 'aos/dist/aos.css';
 
 class FlixList extends React.Component {
     render(){
         return(
             <div className="container">
-                <div className="flixlist" data-aos="fade-right">
+                <div className="flixlist">
                     <div className="project-image-wrapper">
                         <img className="project-image" src={FlixListImg} alt="FlixList"/>
                     </div>

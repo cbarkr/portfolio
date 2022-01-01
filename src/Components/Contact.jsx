@@ -1,9 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import Aos from 'aos';
-import 'aos/dist/aos.css';
-
-Aos.init({duration: 2000});
 
 var getUrl = window.location;
 var baseUrl = getUrl.protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
@@ -57,7 +53,7 @@ class Contact extends React.Component{
     render(){
         return(
             <div className="container">
-                <div className="contact-form-email"  data-aos="fade-right">
+                <div className="contact-form-email">
                     <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
                         <div className="form-group">
                             <label htmlFor="name" style={{color: "#2aa198"}}>Name</label>
