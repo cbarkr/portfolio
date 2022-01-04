@@ -34,10 +34,13 @@ app.post('/contact/send', (req, res) => {
     // Setup transport
     var transport = {
         service: 'gmail',
-        port: 587,
         auth: {
+            type: 'OAuth2',
             user: process.env.EMAIL,
-            pass: process.env.PASSWORD
+            clientId: process.env.CLIENT_ID,
+            clientSecret: process.env.CLIENT_SECRET,
+            refreshToken: process.env.REFRESH_TOKEN,
+            accessToken: process.env.ACCESS_TOKEN
         }
     }
     
