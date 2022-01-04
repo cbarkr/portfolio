@@ -4,7 +4,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 require('dotenv').config();
 
-const PORT = process.env.port || 3001;
+const PORT = process.env.PORT || 3001;
 
 const app = express();
 app.use(cors());
@@ -34,10 +34,13 @@ app.post('/contact/send', (req, res) => {
     // Setup transport
     var transport = {
         service: 'gmail',
-        port: 587,
         auth: {
+            type: 'OAuth2',
             user: process.env.EMAIL,
-            pass: process.env.PASSWORD
+            clientId: process.env.CLIENT_ID,
+            clientSecret: process.env.CLIENT_SECRET,
+            refreshToken: process.env.REFRESH_TOKEN,
+            accessToken: process.env.ACCESS_TOKEN
         }
     }
     
