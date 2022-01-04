@@ -14,7 +14,7 @@ class TopNav extends React.Component{
                 <Navbar.Brand as={Link} to="/">
                     <img src={Logo} alt="Logo"/>
                 </Navbar.Brand>
-                <Nav className="navbar-nav ml-auto">
+                <Nav className="navbar-nav ms-auto">
                     <Nav.Link as={Link} to="/work">work</Nav.Link>
                     <Nav.Link as={Link} to="/about">about</Nav.Link>
                     <Nav.Link as={Link} to="/contact">contact</Nav.Link>

@@ -179,6 +179,7 @@ html {
 .visible-link, a {
     color: map-get($palette, "accessory");
     transition: color 0.5s;
+    text-decoration: none;
 
     &:hover {
         color: map-get($palette, "secondary");
