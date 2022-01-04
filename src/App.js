@@ -12,7 +12,7 @@ import Contact from './Components/Contact';
 import Surprise from './Components/OpenPDF';
 import ScrollTopButton from './Components/ScrollToTopButton';
 import {Route, BrowserRouter as Router} from 'react-router-dom';
-import './App.css';
+import './scss/App.scss';
 
 function App() {
   return (

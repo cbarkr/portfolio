@@ -5,68 +5,72 @@ import Scan from './Assets/Images/Scan.png';
 class About extends React.Component{
     render(){
         return(
-            <div className="container">
-                <div className="author">
-                    <div className="profile-photo-wrapper">
-                        <img className="profile-photo" src={Scan} alt="3D Scan"></img>
+            <div className="page-container">
+                <section className="content-padding">
+                    <h2 className="heading">About</h2>
+                    <div className="flex-container flex-column">
+                        <div className="profile-photo-wrapper">
+                            <img className="profile-photo" tabIndex="-1" src={Scan} alt="3D Scan"></img>    
+                        </div>
+                        <h3 className="subheading">「Callum Barker」</h3>
+                        <p>Computing science student and software developer based in Vancouver, Canada</p>
                     </div>
-                    <div className="author-text">
-                        <h2>Callum Barker</h2>
-                            <div className="bio">
-                                <p>Coffee enthusiast and occasional programmer</p>
-                                <br />
-                                <p>Computing science student attending Simon Fraser University - Based out of Vancouver</p>
-                            </div>
-                    </div>
-                </div>
-                <div className="skills">
-                    <div className="languages">
-                        <h4>Languages</h4>
-                        <div className="cpp-skill">
+                    <div className="flex-container flex-column">
+                        <span className="subheading comment-alt">Languages</span>
+                        <div>
                             <span>C/C++</span>
-                            <ProgressBar variant="info" now={80} label="80" />
+                            <ProgressBar className="skills-bar" variant="info" now={80} label="80" />
                         </div>
-                        <div className="react-skill">
-                            <span>ReactJS</span>
-                            <ProgressBar variant="info" now={70} label="70" />
+                        <div>
+                            <span>C#</span>
+                            <ProgressBar className="skills-bar" variant="info" now={80} label="80" />
                         </div>
-                        <div className="js-skill">
+                        <div>
                             <span>JavaScript</span>
-                            <ProgressBar variant="info" now={70} label="70" />
+                            <ProgressBar className="skills-bar" variant="info" now={80} label="80" />
                         </div>
-                        <div className="python-skill">
+                        <div>
+                            <span>TypeScript</span>
+                            <ProgressBar className="skills-bar" variant="info" now={70} label="70" />
+                        </div>
+                        <div>
                             <span>Python</span>
-                            <ProgressBar variant="info" now={80} label="80" />
+                            <ProgressBar className="skills-bar" variant="info" now={75} label="75" />
+                        </div>
+                        <div>
+                            <span>ASP.NET</span>
+                            <ProgressBar className="skills-bar" variant="info" now={75} label="75" />
+                        </div>
+                        <div>
+                            <span>ReactJS</span>
+                            <ProgressBar className="skills-bar" variant="info" now={70} label="70" />
                         </div>
                     </div>
-                    <div className="tools">
-                        <h4>Tools</h4>
-                        <div className="css-skill">
+                    <br />
+                    <div className="flex-container flex-column">
+                        <span className="subheading comment-alt">Tools</span>
+                        <div>
                             <span>CSS</span>
-                            <ProgressBar variant="info" now={80} label="80" />
+                            <ProgressBar className="skills-bar" variant="info" now={90} label="90" />
                         </div>
-                        <div className="html-skill">
+                        <div>
                             <span>HTML</span>
-                            <ProgressBar variant="info" now={80} label="80" />
+                            <ProgressBar className="skills-bar" variant="info" now={90} label="90" />
                         </div>
-                        <div className="ps-skill">
-                            <span> Photoshop</span>
-                            <ProgressBar variant="info" now={80} label="80" />
+                        <div>
+                            <span>Photoshop</span>
+                            <ProgressBar className="skills-bar" variant="info" now={80} label="80" />
                         </div>
-                        <div className="vs-skill">
+                        <div>
                             <span>Visual Studio</span> 
-                            <ProgressBar variant="info" now={75} label="75" />
+                            <ProgressBar className="skills-bar" variant="info" now={75} label="75" />
                         </div>
-                        <div className="github-skill">
-                            <span>GitHub</span> 
-                            <ProgressBar variant="info" now={70} label="70" />
-                        </div>
-                        <div className="gitlab-skill">
-                            <span>GitLab</span> 
-                            <ProgressBar variant="info" now={70} label="70" />
+                        <div>
+                            <span>Git</span> 
+                            <ProgressBar className="skills-bar" variant="info" now={70} label="70" />
                         </div>
                     </div>
-                </div>
+                </section>
             </div>
         )
     }

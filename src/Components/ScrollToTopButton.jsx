@@ -24,7 +24,7 @@ const ScrollTopButton = () =>{
     };
 
     return (
-            <FiArrowUp className="scrollTop" onClick={scrollTop} style={{height: 20, width: 20, display: showScroll ? 'flex' : 'none'}}/>
+            <FiArrowUp className="scrollTop" aria-label="Scroll To Top" tabIndex="0" onClick={scrollTop} onKeyDown={scrollTop} style={{display: showScroll ? 'flex' : 'none'}}/>
     );
 }
 
