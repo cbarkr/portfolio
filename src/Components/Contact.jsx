@@ -1,5 +1,6 @@
 import React from 'react';
-import axios from 'axios';
+//import axios from 'axios';
+import {API} from 'aws-amplify';
 import Aos from 'aos';
 import '.././App.css';
 import 'aos/dist/aos.css';
@@ -19,6 +20,27 @@ class Contact extends React.Component{
         }
     }
 
+    handleSubmit = async(e) => {
+        e.preventDefault();
+        await API.post(baseUrl + '/send', {
+            name: this.state.name,
+            email: this.state.email,
+            message: this.state.message
+        })
+        .then((response) => {
+            if (response.status === 200){
+                alert("Message Sent");
+                this.formReset()
+            }
+            else {
+                alert("Message failed to send :(")
+            }
+        }, (err) => {
+            console.log(err);
+        });
+    }
+
+    /*
     handleSubmit = async (e) => {
         e.preventDefault();
         await axios.post(baseUrl + '/send', {
@@ -38,6 +60,7 @@ class Contact extends React.Component{
             console.log(err);
         });
     }
+    */
 
     formReset(){
         this.setState({name: '', email: '', message: ''})
