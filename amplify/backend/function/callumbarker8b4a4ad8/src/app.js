@@ -96,6 +96,64 @@ app.post('/contact/send', (req, res) => {
   })
 })
 
+app.post('/contact/send/*', (req, res) => {
+  console.log(req.body);
+  var name = req.body.name;
+  var email = req.body.email;
+  var message = req.body.message;
+  var content = `name: ${name}\nemail: ${email}\nmessage: ${message}`;
+
+  // Setup email
+  var mail = {
+      from: email,
+      to: process.env.OUTGOING_EMAIL,
+      subject: 'New contact form submission',
+      text: content
+  };
+
+  // Setup transport
+  var transport = {
+      service: 'gmail',
+      auth: {
+          type: 'OAuth2',
+          user: process.env.EMAIL,
+          clientId: process.env.CLIENT_ID,
+          clientSecret: process.env.CLIENT_SECRET,
+          refreshToken: process.env.REFRESH_TOKEN,
+          accessToken: process.env.ACCESS_TOKEN
+      }
+  }
+  
+  // Setup transporter
+  var transporter = nodemailer.createTransport(transport);
+
+  transporter.verify((err) => {
+      if (err){
+          console.log(err);
+      }
+
+      else{
+          console.log('Server is ready to take messages');
+      }
+  })
+
+  // Act
+  transporter.sendMail(mail, (err) => {
+      if (err){
+          console.log(err);
+          res.json({
+              status: 'fail',
+              error: err
+          })
+      }
+      else{
+          res.json({
+              status: 'success'
+          })
+      }
+  })
+})
+
 /* Put */
 app.put('/contact/send', function(req, res) {
   const items = ['hello', 'there']
