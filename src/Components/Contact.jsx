@@ -9,8 +9,8 @@ import 'aos/dist/aos.css';
 Amplify.configure(awsExports);
 Aos.init({duration: 2000});
 
-var getUrl = window.location;
-var baseUrl = getUrl.protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
+//var getUrl = window.location;
+//var baseUrl = getUrl.protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
 var myAPI = "ContactAPI";
 
 class Contact extends React.Component{
