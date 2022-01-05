@@ -1,6 +1,5 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
-const cors = require('cors');
 const bodyParser = require('body-parser');
 var awsServerlessExpressMiddleware = require('aws-serverless-express/middleware')
 require('dotenv').config();
@@ -9,10 +8,7 @@ const PORT = process.env.PORT || 3000;
 
 // declare a new express app
 const app = express();
-app.use(cors());
-app.use(express.json());
 app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: false })); 
 app.use(awsServerlessExpressMiddleware.eventContext())
 
 // Enable CORS for all methods
