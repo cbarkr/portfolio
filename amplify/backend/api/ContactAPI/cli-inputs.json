@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/contact/send": {
+      "name": "/contact/send",
+      "lambdaFunction": "callumbarker8b4a4ad8",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}
