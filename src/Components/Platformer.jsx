@@ -2,33 +2,27 @@ import React from 'react';
 import {Button} from 'react-bootstrap';
 import {AiFillGithub} from 'react-icons/ai';
 import PlatformerImg from './Assets/Images/GetMeOutOfHereCity.png';
-import '.././App.css';
-import 'aos/dist/aos.css';
 
 class Platformer extends React.Component {
     render(){
         return(
-            <div className="container">
-                <div className="platformer" data-aos="fade-right" data-aos-anchor="project">
-                    <div className="project-image-wrapper">
-                        <img className="project-image" src={PlatformerImg} alt="Get Me Out Of Here"/> 
-                    </div>
-                    <div className="project-desc-sub">
-                        <div className="project-desc-sub-title">
-                            <h2>Get Me Out Of Here</h2>
-                            <Button href="https://github.com/cbarkr/Get-Me-Out-Of-Here" target="_blank" rel="noreferrer" title="Platformer Link" variant="outline-light">
-                                <AiFillGithub title="Platformer" size={25}/> Link
+            <div className="page-container">
+                <section className="content-padding">
+                    <div className="flex-container flex-column">
+                        <div className="flex-container flex-row">
+                            <span className="heading">Get Me Out Of Here</span>
+                            <Button className="btn-sm flex-container content-center" href="https://github.com/cbarkr/Get-Me-Out-Of-Here" target="_blank" rel="noreferrer" title="Platformer Link" variant="outline-light">
+                                <AiFillGithub title="Platformer" size={25}/>
                             </Button>
                         </div>
-                        <h4 className="comment">{'//'}Description</h4>
+                        <img className="project-image image-margin" tabIndex="-1" src={PlatformerImg} alt="Get Me Out Of Here"/> 
+                        <span className="subheading comment-alt">{'//'}Description</span>
                         <p>Rage platformer inspired by Jump King</p>
-                        <br />
                         
-                        <h4 className="comment">{'//'}Specs</h4>
+                        <span className="subheading comment-alt">{'//'}Specs</span>
                         <p>Unity, C#</p>
-                        <br />
                     </div>
-                </div>
+                </section>
             </div>
         )
     }

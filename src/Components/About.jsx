@@ -1,95 +1,76 @@
 import React from 'react';
-import Aos from 'aos';
-//import {AiFillGithub, AiFillLinkedin, AiOutlineInstagram} from 'react-icons/ai';
 import {ProgressBar} from 'react-bootstrap';
 import Scan from './Assets/Images/Scan.png';
-//import {Link} from 'react-router-dom';
-import 'aos/dist/aos.css';
-import '.././App.css';
-
-Aos.init({duration: 2000});
 
 class About extends React.Component{
     render(){
         return(
-            <div className="container">
-                <div className="author" data-aos="fade-right">
-                    <div className="profile-photo-wrapper">
-                        <img className="profile-photo" src={Scan} alt="3D Scan"></img>
+            <div className="page-container">
+                <section className="content-padding">
+                    <h2 className="heading">About</h2>
+                    <div className="flex-container flex-column">
+                        <div className="profile-photo-wrapper">
+                            <img className="profile-photo" tabIndex="-1" src={Scan} alt="3D Scan"></img>    
+                        </div>
+                        <h3 className="subheading">「Callum Barker」</h3>
+                        <p>Computing science student and software developer based in Vancouver, Canada</p>
                     </div>
-                    <div className="author-text">
-                        <h2>Callum Barker</h2>
-                            <div className="bio">
-                                <p>Coffee enthusiast and occasional programmer</p>
-                                <br />
-                                <p>Computing science student attending Simon Fraser University - Based out of Vancouver</p>
-                            </div>
-                    </div>
-                </div>
-                <div className="skills">
-                    <div className="languages" data-aos="fade-right">
-                        <h4>Languages</h4>
-                        <div className="cpp-skill" data-aos="fade-right" data-aos-duration="1000">
+                    <div className="flex-container flex-column">
+                        <span className="subheading comment-alt">Languages</span>
+                        <div>
                             <span>C/C++</span>
-                            <ProgressBar variant="info" now={80} label="80" />
+                            <ProgressBar className="skills-bar" variant="info" now={80} label="80" />
                         </div>
-                        <div className="react-skill" data-aos="fade-right" data-aos-duration="1250" data-aos-anchor="cpp-skill">
-                            <span>ReactJS</span>
-                            <ProgressBar variant="info" now={70} label="70" />
+                        <div>
+                            <span>C#</span>
+                            <ProgressBar className="skills-bar" variant="info" now={80} label="80" />
                         </div>
-                        <div className="js-skill" data-aos="fade-right" data-aos-duration="1250" data-aos-anchor="cpp-skill">
+                        <div>
                             <span>JavaScript</span>
-                            <ProgressBar variant="info" now={70} label="70" />
+                            <ProgressBar className="skills-bar" variant="info" now={80} label="80" />
                         </div>
-                        <div className="python-skill" data-aos="fade-right" data-aos-duration="1500" data-aos-anchor="cpp-skill">
+                        <div>
+                            <span>TypeScript</span>
+                            <ProgressBar className="skills-bar" variant="info" now={70} label="70" />
+                        </div>
+                        <div>
                             <span>Python</span>
-                            <ProgressBar variant="info" now={80} label="80" />
+                            <ProgressBar className="skills-bar" variant="info" now={75} label="75" />
+                        </div>
+                        <div>
+                            <span>ASP.NET</span>
+                            <ProgressBar className="skills-bar" variant="info" now={75} label="75" />
+                        </div>
+                        <div>
+                            <span>ReactJS</span>
+                            <ProgressBar className="skills-bar" variant="info" now={70} label="70" />
                         </div>
                     </div>
-                    <div className="tools" data-aos="fade-right">
-                        <h4>Tools</h4>
-                        <div className="css-skill" data-aos="fade-right" data-aos-duration="1750" data-aos-anchor="cpp-skill">
+                    <br />
+                    <div className="flex-container flex-column">
+                        <span className="subheading comment-alt">Tools</span>
+                        <div>
                             <span>CSS</span>
-                            <ProgressBar variant="info" now={80} label="80" />
+                            <ProgressBar className="skills-bar" variant="info" now={90} label="90" />
                         </div>
-                        <div className="html-skill" data-aos="fade-right" data-aos-duration="2250" data-aos-anchor="cpp-skill">
+                        <div>
                             <span>HTML</span>
-                            <ProgressBar variant="info" now={80} label="80" />
+                            <ProgressBar className="skills-bar" variant="info" now={90} label="90" />
                         </div>
-                        <div className="ps-skill" data-aos="fade-right" data-aos-duration="2500" data-aos-anchor="cpp-skill">
-                            <span> Photoshop</span>
-                            <ProgressBar variant="info" now={80} label="80" />
+                        <div>
+                            <span>Photoshop</span>
+                            <ProgressBar className="skills-bar" variant="info" now={80} label="80" />
                         </div>
-                        <div className="vs-skill" data-aos="fade-right" data-aos-duration="2750" data-aos-anchor="cpp-skill">
+                        <div>
                             <span>Visual Studio</span> 
-                            <ProgressBar variant="info" now={75} label="75" />
+                            <ProgressBar className="skills-bar" variant="info" now={75} label="75" />
                         </div>
-                        <div className="github-skill" data-aos="fade-right" data-aos-duration="3000" data-aos-anchor="cpp-skill">
-                            <span>GitHub</span> 
-                            <ProgressBar variant="info" now={70} label="70" />
-                        </div>
-                        <div className="gitlab-skill" data-aos="fade-right" data-aos-duration="3500" data-aos-anchor="cpp-skill">
-                            <span>GitLab</span> 
-                            <ProgressBar variant="info" now={70} label="70" />
+                        <div>
+                            <span>Git</span> 
+                            <ProgressBar className="skills-bar" variant="info" now={70} label="70" />
                         </div>
                     </div>
-                </div>
-                <div className="links">
-                    {/*
-                    <h5>Other places to find me</h5>
-                    <div className="icons">
-                        <a href="https://github.com/cbarkr" target="_blank" rel="noreferrer">
-                            <AiFillGithub  title="GitHub" style={{color: 'lightgrey'}} size={25} />
-                        </a>
-                        <a href="https://www.linkedin.com/in/cbarkr/" target="_blank" rel="noreferrer">
-                            <AiFillLinkedin title="LinkedIn" style={{color: 'lightgrey'}} size={25} />
-                        </a>
-                        <a href="https://www.instagram.com/cbarkr/" target="_blank" rel="noreferrer">
-                            <AiOutlineInstagram title="Instagram" style={{color: 'lightgrey'}} size={25} />
-                        </a>
-                        <Button as={Link} to="/surprise" title="Surprise" variant="outline-light">Surprise</Button>
-                    </div>*/}
-                </div>
+                </section>
             </div>
         )
     }

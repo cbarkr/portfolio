@@ -2,20 +2,16 @@ import React, {useState} from 'react';
 import {useSpring, animated} from 'react-spring';
 import {IoFingerPrint} from 'react-icons/io5';
 import {RiBracesFill} from 'react-icons/ri';
-import Aos from 'aos';
+import {FiArrowUpRight} from 'react-icons/fi';
 import HomeTitle from './Home-Title';
 import * as Icons from './Tree/Icons';
 import {useMeasure, usePrevious} from './Tree/Helpers';
 import {Frame, Content, toggle} from './Tree/Styles';
-import {FiArrowUpRight} from 'react-icons/fi';
-import {AiOutlineInstagram, AiFillMail, AiFillLinkedin} from 'react-icons/ai';
-import Pathfinding from './Assets/Images/PathfindingVisualizer.jpg';
-import FlixList from './Assets/Images/FlixList-Search.png';
-import UnityGame from './Assets/Images/GetMeOutOfHereCity.png';
+import Slideshow from './Slideshow';
+import Aos from 'aos';
 import 'aos/dist/aos.css';
-import '.././App.css';
 
-Aos.init({duration: 2000});
+Aos.init();
 
 function Tree({ children, name, style, open = false }) {
     const [isOpen, setOpen] = useState(open)
@@ -28,7 +24,7 @@ function Tree({ children, name, style, open = false }) {
     const Icon = Icons[`${children ? (isOpen ? 'Minus' : 'Plus') : 'Close'}SquareO`]
     return (
       <Frame>
-        <Icon style={{ ...toggle, opacity: children ? 1 : 0.3 }} onClick={() => setOpen(!isOpen)} />
+        <Icon style={{ ...toggle, opacity: children ? 1 : 0.3 }} tabIndex={children ? "0" : "-1"} aria-label={!isOpen ? "Expand" : "Contract"} onClick={() => setOpen(!isOpen)} onKeyDown={() => setOpen(!isOpen)} onKeyUp={() => setOpen(isOpen)}/>
         <span style={{ verticalAlign: 'middle', ...style }}>{name}</span>
         <Content style={{ opacity, height: height.to(height => (isOpen && prev === isOpen ? 'auto' : height)) }}>
           <animated.div style={{ transform }} {...bind}>
@@ -42,45 +38,54 @@ function Tree({ children, name, style, open = false }) {
 class Home extends React.Component{
     render(){
         return(
-            <div className="container">
-                <section className="intro">
+            <div className="page-container">
+                <section className="content-padding text-center" tabIndex="0">
                     <div className="static-container">
-                        <h1 className="name" style={{color: '#2aa198'}}>
-                            <HomeTitle className="author" />
-                        </h1>
+                        <h1><HomeTitle className="author" /></h1>
                     </div>
                 </section>
-
-                <section className="aboutme">
+                <section className="content-padding background-tertiary" tabIndex="0">
                     <div className="static-container" data-aos="fade-up">
-                        <div className="aboutme-wrapper">
-                            <h2>A little <a href="/about">about</a> me</h2>
-                            <p>I am a computing science student with an interest in design</p>
-                            <p>Currently working on learning back end technologies and improving front end skills</p>
+                        <h2 className="heading">A little <a href="/about" className="hidden-link">about</a> me</h2>
+                        <div className="flex-container flex-column">
+                            <p>I am a computing science student with an interest in design and web development</p>
+                            <p>Currently working on learning back end technologies and improving skills in UX design</p>
                             <p>I am open to any opportunities to develop my skills and learn :)</p>
-                            <p className="timeline">{'//'}Timeline</p>
-                            <h4 style={{float: 'left'}}>2019</h4><p> 👨‍🎓 Began studying computing science at Simon Fraser University</p>
-                            <h4 style={{float: 'left'}}>2021</h4><p> 👨‍💻 [Current] Studying and working on projects </p>
-                            <h4 style={{float: 'left'}}>2024</h4><p> 🧾 Expected graduation date </p>
+                        </div>
+                        <span className="comment">{'//'}Timeline</span>
+                        <br />
+                        <div className="flex-container flex-column">
+                            <div className="flex-container flex-row">
+                                <p>2019:&nbsp;</p><p>👨‍🎓&nbsp;</p><p>Began studying computing science at Simon Fraser University</p>
+                            </div>
+                            <div className="flex-container flex-row">
+                                <p>2021:&nbsp;</p><p>👨‍💻&nbsp;</p><p>Studying and working on projects</p>
+                            </div>
+                            <div className="flex-container flex-row">
+                                <p>2021:&nbsp;</p><p>👔&nbsp;</p><p>Completed my first co-op!</p>
+                            </div>
+                            <div className="flex-container flex-row">
+                                <p>2024:&nbsp;</p><p>🧾&nbsp;</p><p>Expected graduation</p>
+                            </div>
                         </div>
                     </div>
                 </section>
-
-                <section className="interests">
+                <section className="content-padding" tabIndex="0">
                     <div className="static-container" data-aos="fade-up">
-                        <h2>Interests</h2>
-                        <div className="interest-groups">
-                            <div className="group1" style={{color: "black"}}>
-                                <IoFingerPrint title="Personal" size={25} style={{color: '#2aa198'}} />
+                        <h2 className="heading">Interests</h2>
+                        <div className="flex-container interests">
+                            <div className="interest-item">
+                                <IoFingerPrint className="icon" size={25} aria-label="Fingerprint Icon"/>
                                 <h5>
                                     <Tree name="Fine_Art">
                                         <Tree name="Photography">
-                                            <br /><p>Focus on fashion and fine art photography</p>
                                             <br />
-                                            <a href="https://cbarkr.tumblr.com" target="_blank" rel="noreferrer">
-                                                <p style={{float: 'left'}}>Temporary portfolio</p>
-                                                <FiArrowUpRight title="FlixList" size={20} style={{color: "lightgrey"}}/>
-                                            </a><br />
+                                            <p>Focus on fashion and fine art photography</p>
+                                            <br />
+                                            <a href="https://cbarkr.tumblr.com" className="visible-link" target="_blank" rel="noreferrer">
+                                                <span className="visible-link">Temporary portfolio</span><FiArrowUpRight title="FlixList" size={20} />
+                                            </a>
+                                            <br />
                                             <br />
                                         </Tree>
                                         <Tree name="Architecture" />
@@ -96,10 +101,9 @@ class Home extends React.Component{
                                         <Tree name="Snowboarding" />
                                     </Tree>
                                 </h5>
-
                             </div>
-                            <div className="group2">
-                                <RiBracesFill title="Tech" size={25} style={{color: '#2aa198'}} />
+                            <div className="interest-item">
+                                <RiBracesFill className="icon" size={25} aria-label="Curly Braces Icon"/>
                                 <h5>
                                     <Tree name="Web_Development">
                                         <br /><p>Inspired by all things visual</p><br />
@@ -111,63 +115,17 @@ class Home extends React.Component{
                         </div>
                     </div>
                 </section>
-
-                <section className="projects">
+                <section className="content-padding background-tertiary" tabIndex="0">
                     <div className="static-container" data-aos="fade-up">
-                        <h2><a href="/work">Projects</a></h2>
-                        <div className="project-link">
-                            <a href="/work/pathfinding">
-                                <div className="project-image-wrapper">
-                                    <img className="project-image" src={Pathfinding} alt="Pathfinding"/>
-                                    <p className="project-name">Pathfinding_Visualizer</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div className="project-link">
-                            <a href="/work/flixlist">
-                                <div className="project-image-wrapper">
-                                    <img className="project-image" src={FlixList} alt="FlixList"/>
-                                    <p className="project-name">FlixList_Web_App</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div className="project-link">
-                            <a href="/work/platformer">
-                                <div className="project-image-wrapper">
-                                    <img className="project-image" src={UnityGame} alt="Get Me Out Of Here"/> 
-                                    <p className="project-name">2D_Rage_Platformer</p>
-                                </div>
-                            </a>
+                        <h2 className="heading"><a href="/work" className="hidden-link">Projects</a></h2>
+                        <div className="flex-container">
+                            <Slideshow />
                         </div>
                     </div>
                 </section>
-                <section className="contact">
-                    <div className="static-container" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
-                        <h2 className="contact-title"><a href="/contact">Contact</a></h2>
-                        <div className="contact-links-home">
-                            <h5>
-                                <a href="https://www.instagram.com/cbarkr/" target="_blank" rel="noreferrer">
-                                    <AiOutlineInstagram title="Instagram" size={25} />@cbarkr
-                                </a>
-                            </h5>
-                            <h5>
-                                <a href="mailto:callumb@sfu.ca" target="_blank" rel="noreferrer">
-                                        <AiFillMail title="Mail" size={25} />callumb@sfu.ca
-                                </a>
-                                <span style={{color: "lightgrey"}}> (school)</span>
-                            </h5>
-                            <h5>
-                                <a href="mailto:cbarkr@gmail.ca" target="_blank" rel="noreferrer">
-                                    <AiFillMail title="Mail" size={25} />cbarkr@gmail.com
-                                </a>
-                                <span style={{color: "lightgrey"}}> (personal)</span>
-                            </h5>
-                            <h5>
-                                <a href="https://www.linkedin.com/in/cbarkr/" target="_blank" rel="noreferrer">
-                                    <AiFillLinkedin title="LinkedIn" size={25} />cbarkr
-                                </a>
-                            </h5>
-                        </div>
+                <section className="content-padding" tabIndex="0">
+                    <div className="static-container text-center" data-aos="fade-up">
+                        <h5 className="subheading">Want to get in touch? <a href="/contact" className="visible-link">Contact Me</a>!</h5>
                     </div>
                 </section>
             </div>
