@@ -15,7 +15,7 @@
       "function": {
         "callumbarker8b4a4ad8": {
           "deploymentBucketName": "amplify-callumbarker-master-43415-deployment",
-          "s3Key": "amplify-builds/callumbarker8b4a4ad8-457032794177445a7043-build.zip"
+          "s3Key": "amplify-builds/callumbarker8b4a4ad8-6f33624e62687a355234-build.zip"
         }
       }
     }
