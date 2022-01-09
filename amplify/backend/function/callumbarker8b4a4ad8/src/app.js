@@ -1,8 +1,8 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
+const { google } = require('googleapis');
 var awsServerlessExpressMiddleware = require('aws-serverless-express/middleware');
-require('dotenv').config();
 
 const PORT = process.env.PORT || 3000;
 
@@ -10,6 +10,19 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 app.use(bodyParser.json())
 app.use(awsServerlessExpressMiddleware.eventContext())
+
+// Retrieve OAuth2 information
+const oauth2client = new google.auth.OAuth2 (
+    process.env.CLIENT_ID,
+    process.env.CLIENT_SECRET,
+    "https://developers.google.com/oauthplayground"
+);
+
+oauth2Client.setCredentials({
+    refresh_token: process.env.REFRESH_TOKEN
+});
+
+const accessToken = oauth2Client.getAccessToken();
 
 // Enable CORS for all methods
 app.use(function(req, res, next) {
@@ -45,11 +58,11 @@ app.post('/contact/send', (req, res) => {
 
   // Setup email
   var mail = {
-      from: email,
+      from: process.env.GOOGLE_CLIENT_EMAIL,
       to: process.env.OUTGOING_EMAIL,
-      subject: 'New contact form submission',
+      subject: "New Contact Form Submission",
       text: content
-  };
+    };
 
   // Setup transport
   var transport = {
@@ -60,7 +73,10 @@ app.post('/contact/send', (req, res) => {
           clientId: process.env.CLIENT_ID,
           clientSecret: process.env.CLIENT_SECRET,
           refreshToken: process.env.REFRESH_TOKEN,
-          accessToken: process.env.ACCESS_TOKEN
+          accessToken: accessToken
+      },
+      tls: {
+        rejectUnauthorized: false
       }
   }
   
@@ -103,7 +119,7 @@ app.post('/contact/send/*', (req, res) => {
 
   // Setup email
   var mail = {
-      from: email,
+      from: process.env.GOOGLE_CLIENT_EMAIL,
       to: process.env.OUTGOING_EMAIL,
       subject: 'New contact form submission',
       text: content
@@ -118,7 +134,10 @@ app.post('/contact/send/*', (req, res) => {
           clientId: process.env.CLIENT_ID,
           clientSecret: process.env.CLIENT_SECRET,
           refreshToken: process.env.REFRESH_TOKEN,
-          accessToken: process.env.ACCESS_TOKEN
+          accessToken: accessToken
+      },
+      tls: {
+        rejectUnauthorized: false
       }
   }
   
