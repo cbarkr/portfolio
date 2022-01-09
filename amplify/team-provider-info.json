@@ -1,4 +1,25 @@
 {
+  "master": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-callumbarker-master-43415-authRole",
+      "UnauthRoleArn": "arn:aws:iam::172542527290:role/amplify-callumbarker-master-43415-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::172542527290:role/amplify-callumbarker-master-43415-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-callumbarker-master-43415-deployment",
+      "UnauthRoleName": "amplify-callumbarker-master-43415-unauthRole",
+      "StackName": "amplify-callumbarker-master-43415",
+      "StackId": "arn:aws:cloudformation:us-east-2:172542527290:stack/amplify-callumbarker-master-43415/be0e68c0-6de0-11ec-83e3-0619028c6e74",
+      "AmplifyAppId": "d1geb9dzqopulq"
+    },
+    "categories": {
+      "function": {
+        "callumbarker8b4a4ad8": {
+          "deploymentBucketName": "amplify-callumbarker-master-43415-deployment",
+          "s3Key": "amplify-builds/callumbarker8b4a4ad8-6f33624e62687a355234-build.zip"
+        }
+      }
+    }
+  },
   "staging": {
     "awscloudformation": {
       "AuthRoleName": "amplify-amplifyd6e422173f8d4-staging-181230-authRole",
@@ -15,7 +36,7 @@
       "function": {
         "callumbarker8b4a4ad8": {
           "deploymentBucketName": "amplify-amplifyd6e422173f8d4-staging-181230-deployment",
-          "s3Key": "amplify-builds/callumbarker8b4a4ad8-4177696e64715a546859-build.zip"
+          "s3Key": "amplify-builds/callumbarker8b4a4ad8-754d474532586755494f-build.zip"
         }
       }
     }
