@@ -12,18 +12,18 @@ class Contact extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            name: '',
-            email: '',
-            message: ''
+            name: "",
+            email: "",
+            message: ""
         }
     }
 
     handleSubmit = async(e) => {
         e.preventDefault();
         await API.post(myAPI, '/contact/send', {
-            name: this.state.name,
-            email: this.state.email,
-            message: this.state.message
+            "name": this.state.name,
+            "email": this.state.email,
+            "message": this.state.message
         })
         .then((response) => {
             if (response.status === 200){
