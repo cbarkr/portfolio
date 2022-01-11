@@ -12,7 +12,7 @@ app.use(bodyParser.json())
 app.use(awsServerlessExpressMiddleware.eventContext())
 
 // Retrieve OAuth2 information
-const oauth2client = new google.auth.OAuth2 (
+const oauth2Client = new google.auth.OAuth2 (
     process.env.CLIENT_ID,
     process.env.CLIENT_SECRET,
     "https://developers.google.com/oauthplayground"
