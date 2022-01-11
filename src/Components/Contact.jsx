@@ -1,12 +1,8 @@
 import React from 'react';
-import Amplify, {API} from 'aws-amplify';
-import awsExports from "../aws-exports";
+import {API} from 'aws-amplify';
 
-Amplify.configure(awsExports);
-
-//var getUrl = window.location;
-//var baseUrl = getUrl.protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
 var myAPI = "ContactAPI";
+var path = '/contact/send';
 
 class Contact extends React.Component{
     constructor(props){
@@ -20,7 +16,7 @@ class Contact extends React.Component{
 
     handleSubmit = async(e) => {
         e.preventDefault();
-        await API.post(myAPI, '/contact/send', {
+        await API.post(myAPI, path, {
             "name": this.state.name,
             "email": this.state.email,
             "message": this.state.message
