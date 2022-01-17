@@ -16,18 +16,24 @@ class Contact extends React.Component{
 
     handleSubmit = async(e) => {
         e.preventDefault();
-        await API.post(myAPI, path, {
-            "name": this.state.name,
-            "email": this.state.email,
-            "message": this.state.message
-        })
+        var myInit = {
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: {
+                name: this.state.name,
+                email: this.state.email,
+                message: this.state.message
+            }
+        }
+        await API.post(myAPI, path, myInit)
         .then((response) => {
             if (response.status === 200){
                 alert("Message Sent");
-                this.formReset()
+                this.formReset();
             }
             else {
-                alert("Message failed to send :(")
+                alert("Message failed to send :(");
             }
         }, (err) => {
             console.log(err);
@@ -35,7 +41,7 @@ class Contact extends React.Component{
     }
 
     formReset(){
-        this.setState({name: '', email: '', message: ''})
+        this.setState({name: "", email: "", message: ""})
     }
 
     onNameChange(e){
