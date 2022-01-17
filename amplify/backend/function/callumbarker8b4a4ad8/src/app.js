@@ -58,10 +58,10 @@ app.post('/contact/send', (req, res) => {
 
   // Setup email
   var mail = {
-      from: process.env.GOOGLE_CLIENT_EMAIL,
-      to: process.env.OUTGOING_EMAIL,
+      from: process.env.GOOGLE_CLIENT_EMAIL.toString(),
+      to: process.env.OUTGOING_EMAIL.toString(),
       subject: "New Contact Form Submission",
-      text: content
+      text: content.toString()
     };
 
   // Setup transport
@@ -111,64 +111,7 @@ app.post('/contact/send', (req, res) => {
 })
 
 app.post('/contact/send/*', (req, res) => {
-  console.log(req.body);
-  var name = req.body.name;
-  var email = req.body.email;
-  var message = req.body.message;
-  var content = `name: ${name}\nemail: ${email}\nmessage: ${message}`;
-
-  // Setup email
-  var mail = {
-      from: process.env.GOOGLE_CLIENT_EMAIL,
-      to: process.env.OUTGOING_EMAIL,
-      subject: 'New contact form submission',
-      text: content
-  };
-
-  // Setup transport
-  var transport = {
-      service: 'gmail',
-      auth: {
-          type: 'OAuth2',
-          user: process.env.EMAIL,
-          clientId: process.env.CLIENT_ID,
-          clientSecret: process.env.CLIENT_SECRET,
-          refreshToken: process.env.REFRESH_TOKEN,
-          accessToken: accessToken
-      },
-      tls: {
-        rejectUnauthorized: false
-      }
-  }
-  
-  // Setup transporter
-  var transporter = nodemailer.createTransport(transport);
-
-  transporter.verify((err) => {
-      if (err){
-          console.log(err);
-      }
-
-      else{
-          console.log('Server is ready to take messages');
-      }
-  })
-
-  // Act
-  transporter.sendMail(mail, (err) => {
-      if (err){
-          console.log(err);
-          res.json({
-              status: 'fail',
-              error: err
-          })
-      }
-      else{
-          res.json({
-              status: 'success'
-          })
-      }
-  })
+    res.json({fail: 'Incorrect post attempt'});
 })
 
 /* Put */
