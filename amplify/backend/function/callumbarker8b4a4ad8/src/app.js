@@ -50,18 +50,13 @@ app.get('/contact/send/*', function(req, res) {
 
 /* Post */
 app.post('/contact/send', (req, res) => {
-  console.log(req.body);
-  var name = req.body.name;
-  var email = req.body.email;
-  var message = req.body.message;
-  var content = `name: ${name}\nemail: ${email}\nmessage: ${message}`;
 
   // Setup email
   var mail = {
-      from: process.env.GOOGLE_CLIENT_EMAIL.toString(),
-      to: process.env.OUTGOING_EMAIL.toString(),
-      subject: "New Contact Form Submission",
-      text: content.toString()
+      from: `${req.body.email}`,
+      to: process.env.OUTGOING_EMAIL,
+      subject: `Contact Form Submission from: ${req.body.email}`,
+      text: `${req.body.message}`
     };
 
   // Setup transport
@@ -94,19 +89,21 @@ app.post('/contact/send', (req, res) => {
   })
 
   // Act
-  transporter.sendMail(mail, (err) => {
-      if (err){
-          console.log(err);
-          res.json({
-              status: 'fail',
-              error: err
-          })
-      }
-      else{
-          res.json({
-              status: 'success'
-          })
-      }
+  transporter.sendMail(mail, (err, res) => {
+    if (err){
+        console.log(err);
+        res.json({
+            status: 'fail',
+            error: err
+        })
+    }
+    else{
+      console.log(res);
+        res.json({
+            status: 200
+        })
+    }
+    transporter.close();
   })
 })
 
