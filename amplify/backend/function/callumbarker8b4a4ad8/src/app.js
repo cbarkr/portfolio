@@ -55,7 +55,7 @@ app.post('/contact/send', (req, res) => {
       from: process.env.GOOGLE_CLIENT_EMAIL,
       to: process.env.OUTGOING_EMAIL,
       subject: `Contact Form Submission from: ${req.body.email}`,
-      text: `${req.body.message}`
+      text: `name: ${req.body.name}\nmessage: ${req.body.message}`
     };
 
   // Setup transport
