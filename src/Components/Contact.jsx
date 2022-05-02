@@ -27,11 +27,9 @@ class Contact extends React.Component{
             }
         }
         await API.post(myAPI, path, myInit)
-        .then((res) => res.json())
-        .then(async (res) => {
-            const response = await res;
+        .then(response => {
             console.log(response);
-            if (response.status === 200){
+            if (response.data.status === 200){
                 alert("Message Sent");
                 this.formReset();
             }
