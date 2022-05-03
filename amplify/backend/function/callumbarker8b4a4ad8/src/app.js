@@ -90,20 +90,18 @@ app.post('/contact/send', (req, res) => {
   // Act
   transporter.sendMail(mail, (err, res) => {
     if (err){
-        console.log(err);
         res.json({
             status: 'fail',
             error: err
         })
     }
     else{
-      console.log(res);
-        res.json({
-            status: 200
-        })
+        res.status(200).json({})
     }
     transporter.close();
   })
+
+  res.status(200).json({})
 })
 
 app.post('/contact/send/*', (req, res) => {
