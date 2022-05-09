@@ -33,9 +33,9 @@ app.use(function(req, res, next) {
   next()
 });
 
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`)
-})
+// app.listen(PORT, () => {
+//     console.log(`Server running on port ${PORT}`)
+// })
 
 /* Get */ 
 app.get('/contact/send', function(req, res) {
@@ -98,9 +98,9 @@ app.post('/contact/send', (req, res) => {
     else{
         res.status(200).json({})
     }
-    transporter.close();
   })
 
+  transporter.close();
   res.status(200).json({})
 })
 
