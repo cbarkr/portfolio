@@ -14,7 +14,7 @@ class Contact extends React.Component{
         }
     }
 
-    handleSubmit = async(e) => {
+    handleSubmit = (e) => {
         e.preventDefault();
         var myInit = {
             headers: {
@@ -75,7 +75,7 @@ class Contact extends React.Component{
                             <label htmlFor="message">Message</label>
                             <textarea className="form-control" rows="5" placeholder="Message goes here!" onChange={this.onMessageChange.bind(this)}></textarea>
                         </div>
-                        <button type="submit" className="btn large btn-outline-light" onSubmit={this.handleSubmit.bind(this)}>Send</button>
+                        <button type="submit" className="btn large btn-outline-light">Send</button>
                     </form>
                 </section>
             </div>
