@@ -26,7 +26,7 @@ class Contact extends React.Component{
                 message: this.state.message
             }
         }
-        await API.post(myAPI, path, myInit)
+        API.post(myAPI, path, myInit)
         .then((res) => {
             console.log(res);
             if (res.status == 200){
