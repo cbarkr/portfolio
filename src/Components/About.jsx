@@ -30,12 +30,12 @@ class About extends React.Component{
                             <ProgressBar className="skills-bar" variant="info" now={80} label="80" />
                         </div>
                         <div>
-                            <span>TypeScript</span>
-                            <ProgressBar className="skills-bar" variant="info" now={70} label="70" />
-                        </div>
-                        <div>
                             <span>Python</span>
                             <ProgressBar className="skills-bar" variant="info" now={75} label="75" />
+                        </div>
+                        <div>
+                            <span>SQL</span>
+                            <ProgressBar className="skills-bar" variant="info" now={70} label="70" />
                         </div>
                         <div>
                             <span>ASP.NET</span>
@@ -51,7 +51,7 @@ class About extends React.Component{
                         <span className="subheading comment-alt">Tools</span>
                         <div>
                             <span>CSS</span>
-                            <ProgressBar className="skills-bar" variant="info" now={90} label="90" />
+                            <ProgressBar className="skills-bar" variant="info" now={85} label="85" />
                         </div>
                         <div>
                             <span>HTML</span>
