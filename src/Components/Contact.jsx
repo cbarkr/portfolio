@@ -1,5 +1,7 @@
 import React from 'react';
 import {API} from 'aws-amplify';
+import {ToastContainer, toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 var myAPI = "ContactAPI";
 var path = '/contact/send';
@@ -14,7 +16,7 @@ class Contact extends React.Component{
         }
     }
 
-    handleSubmit = (e) => {
+    handleSubmit = async e => {
         e.preventDefault();
         var myInit = {
             headers: {
@@ -26,15 +28,23 @@ class Contact extends React.Component{
                 message: this.state.message
             }
         }
-        API.post(myAPI, path, myInit)
+        await API.post(myAPI, path, myInit)
         .then((res) => {
             console.log(res);
-            if (res.status == 200){
-                alert("Message Sent!");
+            if (res.status === 200){
+                toast.success("Message Sent!", {
+                    position: 'bottom-right',
+                    hideProgressBar: true,
+                    progress: undefined,
+                });
                 this.formReset();
             }
             else {
-                alert("Message failed to send :(");
+                toast.error("Message failed to send :(", {
+                    position: 'bottom-right',
+                    hideProgressBar: true,
+                    progress: undefined,
+                });
             }
         }, (err) => {
             console.log(err);
@@ -60,6 +70,10 @@ class Contact extends React.Component{
     render(){
         return(
             <div className="page-container">
+                <ToastContainer />
+                <div className="top-banner">
+                    <h4 className="text-center">🚧 Under construction 🚧</h4>
+                </div>
                 <section className="content-padding">
                     <h2 className="heading">Contact</h2>
                     <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">

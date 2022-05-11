@@ -98,9 +98,12 @@ app.post('/contact/send', (req, res) => {
     else{
         res.status(200).json({})
     }
+
+    transporter.close();
   })
 
-  transporter.close();
+  
+
   res.status(200).json({})
 })
 

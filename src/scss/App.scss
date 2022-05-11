@@ -388,6 +388,13 @@ html {
 
 /****** Start Contact Styles ******/
 
+.top-banner {
+    background-color: map-get($palette, "accessory");
+    height: 5vh;
+    margin: 0 0 2vw 0;
+    padding: 1vw 0 0 0;
+}
+
 /****** End Contact Styles ******/
 
 /****** Start Media Queries ******/
