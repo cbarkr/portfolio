@@ -13,14 +13,14 @@
     <!-- About header -->
     <div class="flex flex-row justify-between">
       <div class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">ABOUT</div>
-      <div class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">🡡</div>
+      <div class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">&#129121;</div>
     </div>
 
     <!-- Project header -->
     <router-link to="/projects">
       <div class="flex flex-row justify-between">
         <div class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">PROJECTS</div>
-        <div class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">🡥</div>
+        <div class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">&#129125;</div>
       </div>
     </router-link>
 
@@ -28,7 +28,7 @@
     <router-link to="/photos">
       <div class="flex flex-row justify-between">
         <div class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">PHOTOS</div>
-        <div class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">🡢</div>
+        <div class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">&#129122;</div>
       </div>
     </router-link>
     
@@ -36,14 +36,14 @@
     <router-link to="/words">
       <div class="flex flex-row justify-between">
         <div class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">WORDS</div>
-        <div class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">🡦</div>
+        <div class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">&#129126;</div>
       </div>
     </router-link>
 
     <!-- Contact header -->
     <div class="flex flex-row justify-between">
       <div class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">CONTACT</div>
-      <div class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">🡣</div>
+      <div class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">&#129123;</div>
     </div>
 
     <!-- Contact -->
@@ -51,7 +51,7 @@
       <div v-for="item in about.links">
         <a :href="item.link" class="text-l md:text-xl" target="_blank" rel="noopener noreferrer">
           {{ item.text }}
-          🡥
+          &#129125;
         </a>
       </div>
     </div>

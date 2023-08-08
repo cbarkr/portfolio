@@ -2,7 +2,7 @@
   <div class="flex flex-col sm:flex-row">
     <!-- Contents -->
     <div class="flex flex-col flex-wrap basis-1/2 mx-4">
-      <h1 class="text-2xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl mb-8">CONTENTS 🡣</h1>
+      <h1 class="text-2xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl mb-8">CONTENTS &#129123;</h1>
       <div v-for="(c, index) in content" @mouseover="handleContent(index)" @click="handleContent(index)" class="text-l md:text-xl hover:cursor-crosshair hover:underline">
         {{ c.name }}
         <hr class="my-2"/>
@@ -11,11 +11,11 @@
 
     <!-- Content -->
     <div class="py-8 sm:py-0 flex flex-col flex-wrap basis-1/2 mx-4">
-      <h1 class="sm:flex sm:justify-end text-2xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl mb-8">🡣 CONTENT</h1>
+      <h1 class="sm:flex sm:justify-end text-2xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl mb-8">&#129123; CONTENT</h1>
       <div :id="currentContent.id" class="text-l md:text-xl mb-4">{{ currentContent.name }}</div>
       <a :href="currentContent.link" class="text-l md:text-xl mb-4" target="_blank" rel="noopener noreferrer">
         PROJECT REPO
-        🡥
+        &#129125;
       </a>
       <div class="text-md lg:text-l xl:text-xl mb-4">{{ currentContent.description }}</div>
       <div class="mb-4">
