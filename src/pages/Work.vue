@@ -24,18 +24,19 @@
         </svg>
         CONTENT
       </h1>
-      <div :id="currentContent.id" class="text-l md:text-xl mb-4">{{ currentContent.name }}</div>
-      <a :href="currentContent.link" class="flex flex-row text-l md:text-xl mb-4" target="_blank" rel="noopener noreferrer">
-        PROJECT REPO
+      <div :id="currentContent.id" class="text-l md:text-xl">{{ currentContent.name }}</div>
+      <hr class="my-2"/>
+      <a :href="currentContent.link" class="flex flex-row text-l md:text-xl" target="_blank" rel="noopener noreferrer">
+        Project Repo
         <!-- Arrow up right -->
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
         </svg>
       </a>
-      <div class="text-md lg:text-l xl:text-xl mb-4">{{ currentContent.description }}</div>
-      <div class="mb-4">
-        <img :src="currentContent.image" alt="project image" class="object-cover h-64 w-80"/>
-      </div>
+      <hr class="my-2"/>
+      <div class="text-l md:text-xl">{{ currentContent.description }}</div>
+      <hr class="my-2"/>
+      <img :src="currentContent.image" alt="project image" class="object-cover w-full h-80"/>
     </div>
   </div>
 </template>
@@ -47,7 +48,7 @@
   import pathfindingImage from '../assets/images/projects/pathfinding/pathfinding1.jpg'
   
   export default {
-    name: 'Nav',
+    name: 'Work',
     data() {
       return {
         currentContent: {},
