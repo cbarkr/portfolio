@@ -5,11 +5,13 @@
     >
       CLICK TO PLACE IMAGES
     </div>
-    <div
-      @click="switchViewMode"
-      class="flex align-center justify-center hover:underline text-l md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
-    >
-      VIEW AS GALLERY?
+    <div class="flex align-center justify-center">
+      <div
+        @click="switchViewMode"
+        class="hover:underline text-l md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
+      >
+        VIEW AS GALLERY?
+      </div>
     </div>
   </div>
 
