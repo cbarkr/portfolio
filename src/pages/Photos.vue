@@ -1,5 +1,10 @@
 <template>
-  <div v-for="(p, index) in photos" class="md:mx-24 lg:mx-48 mb-8 h-4/5 max-h-full">
+  <div v-if="viewMode" @click="handleClick" :id="parentId" class="h-[95%] relative overflow-hidden">
+    <div class="flex align-center justify-center text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">CLICK TO PLACE IMAGES</div>
+    <div @click="switchViewMode" class="flex align-center justify-center hover:underline text-l md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl">VIEW AS GALLERY?</div>
+  </div>
+  
+  <div v-else v-for="(p, index) in photos" class="md:mx-24 lg:mx-48 mb-8 h-4/5 max-h-full">
     <!-- (Pseudo-)Right-aligned images -->
     <div v-if="index % 2 == 0" class="flex flex-col xs:flex-row-reverse h-4/5 max-h-full">
       <img :src="p.img" class="object-contain" />
@@ -34,72 +39,106 @@
     name: 'Photos',
     data() {
       return {
+        viewMode: true, // here, true represents 'click' mode, 'false' represents 'gallery'
+        parentId: 'photoParent',
+        current: 0,
         photos: [
           {
             img: image1,
-            tags: [],
           },
           {
             img: image2,
-            tags: [],
           },
           {
             img: image3,
-            tags: [],
           },
           {
             img: image4,
-            tags: ['concert'],
           },
           {
             img: image5,
-            tags: ['concert'],
           },
           {
             img: image6,
-            tags: ['concert'],
           },
           {
             img: image7,
-            tags: [],
           },
           {
             img: image8,
-            tags: [],
           },
           {
             img: image9,
-            tags: [],
           },
           {
             img: image10,
-            tags: ['concert'],
           },
           {
             img: image11,
-            tags: [],
           },
           {
             img: image12,
-            tags: [],
           },
           {
             img: image13,
-            tags: [],
           },
           {
             img: image14,
-            tags: [],
           },
           {
             img: image15,
-            tags: [],
           },
           {
             img: image16,
-            tags: ['concert'],
           },
         ]
+      }
+    },
+    methods: {
+      switchViewMode() {
+        this.viewMode = !this.viewMode
+      },
+      async handleClick(event) {
+        if (!event) return 
+        if (this.current >= this.photos.length) return
+
+        // Create new image from
+        const image = new Image()
+        image.src = this.photos[this.current].img
+        await image.decode()
+
+        // Get dimensions and such
+        const [x, y] = [event.clientX, event.clientY]
+        const [screenW, screenH] = [window.screen.width, window.screen.height]
+        const [imageW, imageH] = [image.width, image.height]
+
+        // Calculate image offset
+        // Note: Image height later set to 96rem == 384px
+        const ratio = 384 / imageH
+        const heightCalc = 384/2
+        const widthCalc = (ratio * imageW) / 2
+
+        const offsetTop = y - heightCalc % screenH
+        const offsetLeft = x - widthCalc % screenW
+
+        const parent = document.getElementById(this.parentId)
+        const newImage = document.createElement("img")
+
+        // Assign classes, attributes, and styles necessary to place image at cursor
+        const classes = ["absolute", "max-h-96"]
+        const attributes = new Map([["src", image.src],])
+        const styles = new Map([
+          ["top", offsetTop],  
+          ["left", offsetLeft],
+        ])
+        
+        classes.forEach((c) => newImage.classList.add(c))
+        attributes.forEach((v, k) => newImage.setAttribute(k, v))
+        styles.forEach((v, k) => newImage.style[k] = `${v}px`)
+
+        parent.appendChild(newImage)
+
+        this.current++
       }
     }
   }
