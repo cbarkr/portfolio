@@ -105,6 +105,11 @@
         // Create new image
         const image = new Image()
         image.src = this.photos[this.current].img
+        
+        // Increment current image for next click
+        this.current++
+
+        // Wait for image to load
         await image.decode()
 
         // Get dimensions and such
@@ -138,9 +143,6 @@
 
         // Add the image to the DOM!
         parent.appendChild(newImage)
-
-        // Increment current image for next click
-        this.current++
       }
     }
   }
