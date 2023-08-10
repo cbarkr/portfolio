@@ -4,7 +4,7 @@
     <div @click="switchViewMode" class="flex align-center justify-center hover:underline text-l md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl">VIEW AS GALLERY?</div>
   </div>
   
-  <div v-else v-for="(p, index) in photos" class="md:mx-24 lg:mx-48 mb-8 h-4/5 max-h-full">
+  <div v-else v-for="(p, index) in photos" :key="p.id" class="md:mx-24 lg:mx-48 mb-8 h-4/5 max-h-full">
     <!-- (Pseudo-)Right-aligned images -->
     <div v-if="index % 2 == 0" class="flex flex-col xs:flex-row-reverse h-4/5 max-h-full">
       <img :src="p.img" class="object-contain" />

@@ -60,7 +60,7 @@
 
     <!-- Contact -->
     <div class="w-full py-8">
-      <div v-for="item in about.links">
+      <div v-for="item in about.links" :key="item.id">
         <a :href="item.link" class="flex flex-row text-l md:text-xl" target="_blank" rel="noopener noreferrer">
           {{ item.text }}
           <!-- Arrow up right -->
