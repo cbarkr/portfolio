@@ -6,3 +6,9 @@
     Please check in later :)
   </div>
 </template>
+
+<script>
+export default {
+  name: 'WordsPage'
+}
+</script>
