@@ -102,7 +102,7 @@
         if (!event) return 
         if (this.current >= this.photos.length) return
 
-        // Create new image from
+        // Create new image
         const image = new Image()
         image.src = this.photos[this.current].img
         await image.decode()
@@ -136,8 +136,10 @@
         attributes.forEach((v, k) => newImage.setAttribute(k, v))
         styles.forEach((v, k) => newImage.style[k] = `${v}px`)
 
+        // Add the image to the DOM!
         parent.appendChild(newImage)
 
+        // Increment current image for next click
         this.current++
       }
     }
