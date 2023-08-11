@@ -153,8 +153,8 @@ export default {
     return {
       about: {
         bio: `
-            I am Callum Barker: a computing science student, software developer, and photographer from Vancouver, BC.
-            Interested in fashion, photography, music, design, architecture, utilitarianism, etc.
+            I am Callum Barker: a computing science student, software developer, and photographer from Vancouver, BC;
+            interested in fashion, photography, music, design, architecture, utilitarianism, etc.
             Searching for the intersection between fashion and technology.
           `,
         links: [
