@@ -33,7 +33,7 @@
     </div>
 
     <!-- Content -->
-    <div class="py-8 sm:py-0 flex flex-col flex-wrap basis-1/2 mx-4">
+    <div class="my-8 sm:my-0 flex flex-col flex-wrap basis-1/2 mx-4">
       <h1
         class="flex flex-row sm:flex sm:justify-end text-2xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl mb-8"
       >

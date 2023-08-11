@@ -5,7 +5,7 @@ import { RouterLink } from 'vue-router'
 <template>
   <div class="sm:px-16">
     <!-- Bio -->
-    <div class="flex justify-center text-lg sm:flex sm:flex-row lg:text-xl xl:text-2xl py-8">
+    <div class="flex justify-center text-lg lg:text-xl xl:text-2xl mb-8">
       {{ about.bio.toUpperCase() }}
     </div>
 
@@ -116,7 +116,7 @@ import { RouterLink } from 'vue-router'
     </div>
 
     <!-- Contact -->
-    <div class="w-full py-8">
+    <div class="w-full my-8">
       <div v-for="item in about.links" :key="item.id">
         <a
           :href="item.link"

@@ -1,14 +1,14 @@
 <template>
   <div v-if="viewMode" @click="handleClick" :id="parentId" class="h-[95%] relative overflow-hidden">
     <div
-      class="flex align-center justify-center text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl"
+      class="flex align-center justify-center text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl mb-8"
     >
       CLICK TO PLACE IMAGES
     </div>
     <div class="flex align-center justify-center">
       <div
         @click="switchViewMode"
-        class="hover:underline text-l md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
+        class="border hover:underline text-l md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl p-4 mb-8"
       >
         VIEW AS GALLERY?
       </div>
