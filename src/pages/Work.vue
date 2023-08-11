@@ -1,4 +1,5 @@
 <template>
+  <!-- TODO: Rework layout -->
   <div class="flex flex-col sm:flex-row">
     <!-- Contents -->
     <div class="flex flex-col flex-wrap basis-1/2 mx-4">

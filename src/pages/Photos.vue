@@ -140,9 +140,11 @@ export default {
   name: 'PhotosPage',
   data() {
     return {
+      // TODO: Represent viewMode better
       viewMode: true, // here, true represents 'click' mode, 'false' represents 'gallery'
       parentId: 'photoParent',
       current: 0,
+      // TODO: Add tags for each photo
       photos: [
         {
           img: image1
@@ -259,6 +261,7 @@ export default {
 
       // Calculate image offset
       // Note: Image height later set to 96rem == 384px
+      // TODO: Use relative units
       const ratio = 384 / imageH
       const heightCalc = 384 / 2
       const widthCalc = (ratio * imageW) / 2
