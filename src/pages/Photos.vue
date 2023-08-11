@@ -1,17 +1,89 @@
 <template>
-  <div v-if="viewMode" @click="handleClick" :id="parentId" class="h-[95%] relative overflow-hidden">
-    <div
-      class="flex align-center justify-center text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl mb-8"
-    >
-      CLICK TO PLACE IMAGES
-    </div>
-    <div class="flex align-center justify-center">
-      <div
-        @click="switchViewMode"
-        class="border hover:underline text-l md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl p-4 mb-8"
+  <div v-if="viewMode" @click="handleClick" :id="parentId" class="h-[95%] relative overflow-hidden flex flex-col justify-center">
+    <div class="flex justify-center my-8">
+      <!-- Arrow up -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-18 xl:h-18"
       >
-        VIEW AS GALLERY?
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18"
+        />
+      </svg>
+    </div>
+    <!-- Middle -->
+    <div class="flex flex-row justify-center my-8">
+      <div class="flex self-center mx-8">
+        <!-- Left arrow -->
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          fill="none" viewBox="0 0 24 24" 
+          stroke-width="1.5" 
+          stroke="currentColor" 
+          class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-18 xl:h-18"
+        >
+          <path 
+            stroke-linecap="round" 
+            stroke-linejoin="round" 
+            d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" 
+          />
+        </svg>
       </div>
+      <div class="flex flex-col mx-8">
+        <div
+          class="flex align-center justify-center text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl mb-8"
+        >
+          CLICK TO PLACE IMAGES
+        </div>
+        <div class="flex align-center justify-center">
+          <div
+            @click="switchViewMode"
+            class="border hover:bg-current text-l md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl p-4 mb-8"
+          >
+            GALLERY VIEW
+          </div>
+        </div>
+      </div>
+      <div class="flex self-center mx-8">
+        <!-- Arrow right -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-18 xl:h-18"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+          />
+        </svg>
+      </div>
+    </div>
+    <div class="flex justify-center my-8">
+      <!-- Arrow down -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-18 xl:h-18"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3"
+        />
+      </svg>
     </div>
   </div>
 
