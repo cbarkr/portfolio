@@ -1,21 +1,33 @@
 <template>
   <div class="sm:px-16">
     <hr />
-    <div
-      v-for="(c, index) in content"
-      :key="c.id"
-    >
+    <div v-for="(c, index) in content" :key="c.id">
       <div @click="handleClick(index)" class="flex flex-row justify-between my-4 hover:underline">
-        <div class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">{{c.name}}</div>
+        <div class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">{{ c.name }}</div>
         <!-- Plus -->
-        <svg v-if="!isActive(index)" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-18 xl:h-18">
+        <svg
+          v-if="!isActive(index)"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-18 xl:h-18"
+        >
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
         </svg>
         <!-- Minus -->
-        <svg v-else xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-18 xl:h-18">
+        <svg
+          v-else
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-18 xl:h-18"
+        >
           <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15" />
         </svg>
-
       </div>
       <div v-show="isActive(index)" class="flex flex-col justify-between">
         <div class="flex flex-row">
@@ -111,14 +123,13 @@ export default {
     handleClick(index) {
       if (this.isActive(index)) {
         this.activeContent.delete(index)
-      }
-      else {
+      } else {
         this.activeContent.add(index)
       }
     },
     isActive(index) {
       return this.activeContent.has(index)
-    },
-  },
+    }
+  }
 }
 </script>
