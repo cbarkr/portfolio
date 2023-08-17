@@ -17,6 +17,7 @@ export const useWordsStore = defineStore('words', () => {
     }
 
     try {
+      // TODO: Improve
       const wordsImport = await import(`../words/${newId}.txt?raw`)
       const wordsTxt = wordsImport.default
       const wordsTxtSplit = wordsTxt.split('\n')
