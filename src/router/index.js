@@ -10,7 +10,7 @@ const router = createRouter({
 
 router.beforeEach((to) => {
   // Redirect home if path doesn't exist
-  if (!paths.includes(to.path)) {
+  if (to.name != 'wordscontent' && !paths.includes(to.path)) {
     return '/'
   }
 })
