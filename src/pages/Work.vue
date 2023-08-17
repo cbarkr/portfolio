@@ -81,9 +81,10 @@ export default {
           name: 'PIP-BOY 3000 MK? PROTO',
           id: 'pipboy',
           description: `
-              Hardware based on Pip-Boy 3000 from Fallout 3, software based on the Pip-OS v7.1.0.8 from Fallout 4.
-              Created with Android and Kotlin. 
-            `,
+            Prototype of a Pip-Boy from the fallout series.
+            3D-printed shell based on the Pip-Boy 3000 from Fallout 3, software based on the Pip-OS v7.1.0.8 from Fallout 4.
+            Created with Android and Kotlin. 
+          `,
           link: 'https://github.com/cmpt469-su23-group3/PipBoy_Android',
           image: pipboyImage
         },
@@ -91,10 +92,10 @@ export default {
           name: 'GPSUTILS',
           id: 'gpsutils',
           description: `
-              Basic GPS module for Python 3.5+. 
-              Designed to be short and simple.
-              Documentation made with Sphinx.
-            `,
+            Basic GPS module for Python 3.5+. 
+            Designed to be short and simple.
+            Documentation made with Sphinx.
+          `,
           link: 'https://github.com/cbarkr/gpsutils',
           image: gpsutilsImage
         },
@@ -102,9 +103,9 @@ export default {
           name: 'FLIXLIST',
           id: 'flixlist',
           description: `
-              Social movie reviewing site.
-              Frontend made with React, backend made with Express, integrated IMDB API, data stored in Mongo.
-            `,
+            A social movie reviewing site.
+            React frontend, Express backend, Mongo database, and IMDB API integration.
+          `,
           link: 'https://github.com/cbarkr/FlixList',
           image: flixlistImage
         },
@@ -112,9 +113,9 @@ export default {
           name: 'PATHFINDING VISUALIZER',
           id: 'pathfinding',
           description: `
-              Visualizer for A*, Dijkstra, and BFS pathfinding algorithms. 
-              Made in Python and Pygame.
-            `,
+            Visualizer for A*, Dijkstra, and BFS pathfinding algorithms. 
+            Made in Python and Pygame.
+          `,
           link: 'https://github.com/cbarkr/PathfindingVisualizer',
           image: pathfindingImage
         }
