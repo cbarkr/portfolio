@@ -1,5 +1,5 @@
-import hello from './hello.txt'
+import intro from './intro.txt'
 
 export default {
-    hello
+    intro
 }

@@ -32,8 +32,8 @@ export default {
     return {
       words: [
         {
-          title: 'HELLO',
-          id: 'hello',
+          title: 'INTRO',
+          id: 'intro',
         },
       ]
     }
