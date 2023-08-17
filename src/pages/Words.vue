@@ -26,50 +26,21 @@
 </template>
 
 <script>
-import { storeToRefs } from 'pinia'
-import { useWordsStore } from '../stores/words'
-import WordsContent from '../components/WordsContent.vue'
-import test1Text from '../words/test1.txt?raw'
-import test2Text from '../words/test2.txt?raw'
-import test3Text from '../words/test3.txt?raw'
-
-const store = useWordsStore()
-
 export default {
   name: 'WordsPage',
-  components: {
-    WordsContent
-  },
   data() {
     return {
       words: [
         {
-          title: 'TEST TITLE',
-          id: 'test-title',
-          content: test1Text
-        },
-        {
-          title: 'TEST TITLE 2',
-          id: 'test-title-2',
-          content: test2Text
-        },
-        {
-          title: 'TEST TITLE 3',
-          id: 'test-title-3',
-          content: test3Text
+          title: 'HELLO',
+          id: 'hello',
         },
       ]
     }
   },
   methods: {
     handleClick(index) {
-      const wordsContent = this.words[index]
-
-      const { words } = storeToRefs(store)
-      words.title = wordsContent.title
-      words.content = wordsContent.content
-
-      this.$router.push(`words/${wordsContent.id}`)
+      this.$router.push(`words/${this.words[index].id}`)
     }
   }
 }

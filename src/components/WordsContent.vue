@@ -3,7 +3,7 @@
     <div class="sm:px-16">
       <div class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl mb-8">{{ title }}</div>
       <!-- TODO: Add image? -->
-      <div v-for="paragraph in parsedContent" class="text-lg lg:text-xl xl:text-2xl mb-2">{{ paragraph }}</div>
+      <div v-for="paragraph in content" class="text-lg lg:text-xl xl:text-2xl mb-2">{{ paragraph }}</div>
     </div>
 </template>
 
@@ -18,16 +18,16 @@ export default {
   data() {
     return {
       title: '',
-      content: '',
-      parsedContent: ''
+      content: [],
     }
   },
   mounted() {
     const { words } = storeToRefs(store)
 
-    this.title = words.title
-    this.content = words.content
-    this.parsedContent = this.content.split('\n')
+    if (this.$route.params.id == words.id) {
+      this.title = words.title
+      this.content = words.content
+    }
   }
 }
 </script>
