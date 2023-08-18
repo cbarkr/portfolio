@@ -46,7 +46,7 @@
         <div class="text-lg lg:text-xl xl:text-2xl mb-4">{{ c.description }}</div>
         <a
           :href="c.link"
-          class="flex flex-row text-l md:text-xl mb-4"
+          class="flex flex-row text-lg md:text-xl mb-4"
           target="_blank"
           rel="noopener noreferrer"
         >
