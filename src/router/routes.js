@@ -19,12 +19,13 @@ const routes = [
   {
     path: '/words',
     name: 'words',
-    component: () => import(/* webpackChunkName: "words" */ '../pages/Words.vue'),
+    component: () => import(/* webpackChunkName: "words" */ '../pages/Words.vue')
   },
   {
     path: '/words/:id',
     name: 'wordscontent',
-    component: () => import(/* webpackChunkName: "wordscomponent" */ '../components/WordsContent.vue'),
+    component: () =>
+      import(/* webpackChunkName: "wordscomponent" */ '../components/WordsContent.vue')
   }
 ]
 

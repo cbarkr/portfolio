@@ -21,13 +21,11 @@ export const useWordsStore = defineStore('words', () => {
       const wordsImport = await import(`../words/${newId}.txt?raw`)
       const wordsTxt = wordsImport.default
       const wordsTxtSplit = wordsTxt.split('\n')
-  
+
       words.id = newId
       words.title = wordsTxtSplit[0]
       words.content = wordsTxtSplit.slice(1)
-    }
-    
-    catch (e) {
+    } catch (e) {
       return false
     }
 

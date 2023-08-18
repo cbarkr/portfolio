@@ -33,8 +33,8 @@ export default {
       words: [
         {
           title: 'INTRO',
-          id: 'intro',
-        },
+          id: 'intro'
+        }
       ]
     }
   },
