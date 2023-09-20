@@ -112,7 +112,7 @@ export default {
           id: 'flixlist',
           description: `
             A social movie reviewing site.
-            React frontend, Express backend, Mongo database, and IMDB API integration.
+            React frontend, Express backend, Mongo database, IMDB API integration.
           `,
           link: 'https://github.com/cbarkr/FlixList',
           image: flixlistImage
