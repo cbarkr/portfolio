@@ -1,4 +1,5 @@
 import { fileURLToPath, URL } from 'node:url'
+import path from 'node:path'
 
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
@@ -11,7 +12,8 @@ export default defineConfig({
   assetsInclude: ['**/*.md'],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+      '@assets': path.resolve(__dirname, 'src/assets'),
     }
   }
 })

@@ -95,7 +95,7 @@
 
   <div
     v-else
-    v-for="(p, index) in photos"
+    v-for="(p, index) in gallery"
     :key="p.id"
     class="md:mx-24 lg:mx-48 mb-8 h-4/5 max-h-full"
   >
@@ -112,39 +112,6 @@
 </template>
 
 <script>
-import image1 from '../assets/images/photography/0779f548dc7b937f879355f9f0b5f6d4_94e0904b_1280.jpg'
-import image2 from '../assets/images/photography/d7293b641aca702d4b02f4af7ab88e36_582333f9_1280.jpg'
-import image3 from '../assets/images/photography/ef42afa64dee5182393693ea830fecc5_d75c9156_1280.jpg'
-import image4 from '../assets/images/photography/37c244a3cef23d6b9458e985f8f191f0_84772b30_1280.jpg'
-import image5 from '../assets/images/photography/848745eecd81204bfd80a112e5ff1454_ef51d41c_1280.jpg'
-import image6 from '../assets/images/photography/f2be43958b925afe7128d0fa20bc1761_382dce1b_1280.jpg'
-import image7 from '../assets/images/photography/e4d197e25cf058767d7639ea8b76a16a_c1973aa7_1280.jpg'
-import image8 from '../assets/images/photography/3df3e78d40d236c5ad2fbb6c850f2b5a_a6005add_1280.jpg'
-import image9 from '../assets/images/photography/b94efdf8cab1f371db627169ba6b967b_12bbd524_1280.jpg'
-import image10 from '../assets/images/photography/b821dcdc270268f72f859c6b46b9e6ec_6d0704be_1280.jpg'
-import image11 from '../assets/images/photography/1825e69032fc21db0bdccce859760cf9_06493408_1280.jpg'
-import image12 from '../assets/images/photography/382308ef751b86a08441c401c40eecb2_9a2fe60c_1280.jpg'
-import image13 from '../assets/images/photography/d01132b7e889b2cd961e1cece3b2385f_37392f01_1280.jpg'
-import image14 from '../assets/images/photography/a375caf18e924b6f724e362fbfc40f57_be314628_1280.jpg'
-import image15 from '../assets/images/photography/123148408f88b3237e728f399b32d074_5c59250f_1280.jpg'
-import image16 from '../assets/images/photography/a6661a1b5955eef77ef75d87c790091a_46bbbd2b_1280.jpg'
-import image17 from '../assets/images/photography/b75b5841c06dea496caf0a5528aedffb_690b5cd4_1280.jpg'
-import image18 from '../assets/images/photography/f381c65017029d22bc401e83ffc1dc0e_2a4dd152_1280.jpg'
-import image19 from '../assets/images/photography/2efdd1479a83862dfa6739c0a0b2c74d_2b9c6078_1280.jpg'
-import image20 from '../assets/images/photography/3daaab3fb3e1d1c5bc92a01e7155f372_36c1c114_1280.jpg'
-import image21 from '../assets/images/photography/c005f2f8b98a21bc55b81671472c0ddd_7fccdbb0_1280.jpg'
-import image22 from '../assets/images/photography/f3bb231249e8dc03279947883bde03b4_be7dfd7d_1280.jpg'
-import image23 from '../assets/images/photography/d55e0ad9947fb48e1fc814955a9562dc_73e16b81_1280.jpg'
-import image24 from '../assets/images/photography/0e4d926377a6f9ae603fa3b2864ac554_83de195e_1280.jpg'
-import image25 from '../assets/images/photography/42b2e66ae1b42c5a38daead63c5798e9_63abcf40_1280.jpg'
-import image26 from '../assets/images/photography/6385dccce49b514acdb4e5fd38afd708_2624e772_1280.jpg'
-import image27 from '../assets/images/photography/a9c9e73953fb3f45fcc6958583761135_ad76c0ed_1280.jpg'
-import image28 from '../assets/images/photography/1415438f9de9bd0ce90562475f81819e_fc9de077_1280.jpg'
-import image29 from '../assets/images/photography/eb8d29e602fc5b74fc9ddad0b3c03bb9_bd63f8b0_1280.jpg'
-import image30 from '../assets/images/photography/b4f3d7d2618b4188b4196eebb49081d8_d92e7ec5_2048.jpg'
-import image31 from '../assets/images/photography/a47f66c2ae7012e74f3290f530bbc1d9_e7d952a2_2048.jpg'
-import image32 from '../assets/images/photography/e06d955e4e0c53bccc1d36ca10545aa0_ebd4f6d5_2048.jpg'
-
 export default {
   name: 'PhotosPage',
   data() {
@@ -154,105 +121,17 @@ export default {
       parentId: 'photoParent',
       current: 0,
       // TODO: Add tags for each photo
-      photos: [
-        {
-          img: image1
-        },
-        {
-          img: image2
-        },
-        {
-          img: image3
-        },
-        {
-          img: image4
-        },
-        {
-          img: image5
-        },
-        {
-          img: image6
-        },
-        {
-          img: image7
-        },
-        {
-          img: image8
-        },
-        {
-          img: image9
-        },
-        {
-          img: image10
-        },
-        {
-          img: image11
-        },
-        {
-          img: image12
-        },
-        {
-          img: image13
-        },
-        {
-          img: image14
-        },
-        {
-          img: image15
-        },
-        {
-          img: image16
-        },
-        {
-          img: image17
-        },
-        {
-          img: image18
-        },
-        {
-          img: image19
-        },
-        {
-          img: image20
-        },
-        {
-          img: image21
-        },
-        {
-          img: image22
-        },
-        {
-          img: image23
-        },
-        {
-          img: image24
-        },
-        {
-          img: image25
-        },
-        {
-          img: image26
-        },
-        {
-          img: image27
-        },
-        {
-          img: image28
-        },
-        {
-          img: image29
-        },
-        {
-          img: image30
-        },
-        {
-          img: image31
-        },
-        {
-          img: image32
-        }
-      ]
+      photos: [],
+      gallery: []
     }
+  },
+  mounted() { 
+    this.photos = Object.values(import.meta.glob('@assets/images/photography/*.{png,jpg,jpeg,PNG,JPEG}', { eager: true, as: 'url' }))
+    this.photos.forEach(v => {
+      const temp = {}
+      Object.assign(temp, {'img': v})
+      this.gallery.push(temp)
+    })
   },
   methods: {
     switchViewMode() {
@@ -260,11 +139,11 @@ export default {
     },
     async handleClick(event) {
       if (!event) return
-      if (this.current >= this.photos.length) return
+      if (this.current >= this.gallery.length) return
 
       // Create new image
       const image = new Image()
-      image.src = this.photos[this.current].img
+      image.src = this.gallery[this.current].img
 
       // Increment current image for next click
       this.current++
