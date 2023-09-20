@@ -1,7 +1,7 @@
 <template>
   <div class="sm:px-16">
     <!-- HTML pre-sanitized -->
-    <div v-html="this.content" class="text-lg lg:text-xl xl:text-2xl mb-2">
+    <div v-html="this.content" class="text-lg lg:text-xl xl:text-2xl">
     </div>
   </div>
 </template>
