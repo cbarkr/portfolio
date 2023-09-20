@@ -141,6 +141,9 @@ import image26 from '../assets/images/photography/6385dccce49b514acdb4e5fd38afd7
 import image27 from '../assets/images/photography/a9c9e73953fb3f45fcc6958583761135_ad76c0ed_1280.jpg'
 import image28 from '../assets/images/photography/1415438f9de9bd0ce90562475f81819e_fc9de077_1280.jpg'
 import image29 from '../assets/images/photography/eb8d29e602fc5b74fc9ddad0b3c03bb9_bd63f8b0_1280.jpg'
+import image30 from '../assets/images/photography/b4f3d7d2618b4188b4196eebb49081d8_d92e7ec5_2048.jpg'
+import image31 from '../assets/images/photography/a47f66c2ae7012e74f3290f530bbc1d9_e7d952a2_2048.jpg'
+import image32 from '../assets/images/photography/e06d955e4e0c53bccc1d36ca10545aa0_ebd4f6d5_2048.jpg'
 
 export default {
   name: 'PhotosPage',
@@ -238,6 +241,15 @@ export default {
         },
         {
           img: image29
+        },
+        {
+          img: image30
+        },
+        {
+          img: image31
+        },
+        {
+          img: image32
         }
       ]
     }
