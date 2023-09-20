@@ -127,11 +127,7 @@ export default {
   },
   mounted() { 
     this.photos = Object.values(import.meta.glob('@assets/images/photography/*.{png,jpg,jpeg,PNG,JPEG}', { eager: true, as: 'url' }))
-    this.photos.forEach(v => {
-      const temp = {}
-      Object.assign(temp, {'img': v})
-      this.gallery.push(temp)
-    })
+    this.photos.forEach(v => this.gallery.push({'img': v}))
   },
   methods: {
     switchViewMode() {
