@@ -9,7 +9,7 @@ const routes = [
   {
     path: '/work',
     name: 'work',
-    component: () => import(/* webpackChunkName: "words" */ '../pages/Work.vue')
+    component: () => import(/* webpackChunkName: "work" */ '../pages/Work.vue')
   },
   {
     path: '/photos',
@@ -25,7 +25,7 @@ const routes = [
     path: '/words/:id',
     name: 'wordscontent',
     component: () =>
-      import(/* webpackChunkName: "wordscomponent" */ '../components/WordsContent.vue')
+      import(/* webpackChunkName: "wordscontent" */ '../components/WordsContent.vue')
   }
 ]
 
