@@ -101,12 +101,12 @@
   >
     <!-- (Pseudo-)Right-aligned images -->
     <div v-if="index % 2 == 0" class="flex flex-col xs:flex-row-reverse h-4/5 max-h-full">
-      <img :src="p.img" class="object-contain" />
+      <img :src="p.img.src" class="object-contain" />
     </div>
 
     <!-- Left-aligned images -->
     <div v-else class="flex flex-col xs:flex-row h-4/5 max-h-full">
-      <img :src="p.img" class="object-contain" />
+      <img :src="p.img.src" class="object-contain" />
     </div>
   </div>
 </template>
@@ -120,14 +120,22 @@ export default {
       viewMode: true, // here, true represents 'click' mode, 'false' represents 'gallery'
       parentId: 'photoParent',
       current: 0,
-      // TODO: Add tags for each photo
       photos: [],
       gallery: []
     }
   },
-  mounted() { 
-    this.photos = Object.values(import.meta.glob('@assets/images/photography/*.{png,jpg,jpeg,PNG,JPEG}', { eager: true, as: 'url' }))
-    this.photos.forEach(v => this.gallery.push({'img': v}))
+  mounted() {
+    this.photos = Object.values(
+      import.meta.glob('@assets/images/photography/*.{png,jpg,jpeg,PNG,JPEG}', {
+        eager: true,
+        as: 'url'
+      })
+    )
+    this.photos.forEach((v) => {
+      const img = new Image()
+      img.src = v
+      this.gallery.push({ 'img': img })
+    })
   },
   methods: {
     switchViewMode() {
@@ -136,10 +144,9 @@ export default {
     async handleClick(event) {
       if (!event) return
       if (this.current >= this.gallery.length) return
+      if (!document.getElementById(this.parentId)) return
 
-      // Create new image
-      const image = new Image()
-      image.src = this.gallery[this.current].img
+      const image = this.gallery[this.current].img
 
       // Increment current image for next click
       this.current++
