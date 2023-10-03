@@ -119,23 +119,36 @@ export default {
       // TODO: Represent viewMode better
       viewMode: true, // here, true represents 'click' mode, 'false' represents 'gallery'
       parentId: 'photoParent',
-      current: 0,
+      currentIndex: 0,
+      preloadBatchSize: 0,
       photos: [],
       gallery: []
     }
   },
-  mounted() {
+  created() {
     this.photos = Object.values(
       import.meta.glob('@assets/images/photography/*.{png,jpg,jpeg,PNG,JPEG}', {
         eager: true,
         as: 'url'
       })
     )
-    this.photos.forEach((v) => {
+
+    this.preloadBatchSize = Math.round(this.photos.length / 4)
+    
+    // Load the first batch of photos on creation
+    for (let i = 0; i < this.preloadBatchSize; i++) {
       const img = new Image()
-      img.src = v
+      img.src = this.photos[i]
       this.gallery.push({ 'img': img })
-    })
+    }
+  },
+  mounted() {
+    // Load the rest of the photos on mount
+    for (let i = this.preloadBatchSize; i < this.photos.length; i++) {
+      const img = new Image()
+      img.src = this.photos[i]
+      this.gallery.push({ 'img': img })
+    }
   },
   methods: {
     switchViewMode() {
@@ -143,13 +156,13 @@ export default {
     },
     async handleClick(event) {
       if (!event) return
-      if (this.current >= this.gallery.length) return
+      if (this.currentIndex >= this.gallery.length) return
       if (!document.getElementById(this.parentId)) return
 
-      const image = this.gallery[this.current].img
+      const image = this.gallery[this.currentIndex].img
 
       // Increment current image for next click
-      this.current++
+      this.currentIndex++
 
       // Wait for image to load
       await image.decode()
