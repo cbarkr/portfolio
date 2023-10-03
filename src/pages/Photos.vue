@@ -133,7 +133,7 @@ export default {
       })
     )
 
-    this.preloadBatchSize = Math.round(this.photos.length / 4)
+    this.preloadBatchSize = Math.round(this.photos.length / 10)
     
     // Load the first batch of photos on creation
     for (let i = 0; i < this.preloadBatchSize; i++) {
