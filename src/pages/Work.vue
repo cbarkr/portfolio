@@ -41,7 +41,7 @@
       </div>
       <div v-show="isActive(index)" class="flex flex-col justify-between">
         <div class="flex flex-row">
-          <img :src="c.image" alt="project image" class="object-cover max-h-80 mb-4" />
+          <img :src="c.image.src" alt="project image" class="object-cover max-h-80 mb-4" />
         </div>
         <div class="text-lg lg:text-xl xl:text-2xl mb-4">{{ c.description }}</div>
         <a
@@ -74,10 +74,10 @@
 </template>
 
 <script>
-import pipboyImage from '../assets/images/projects/pipboy/pipboy1.jpg'
-import gpsutilsImage from '../assets/images/projects/gpsutils/gpsutils1.png'
-import flixlistImage from '../assets/images/projects/flixlist/flixlist1.png'
-import pathfindingImage from '../assets/images/projects/pathfinding/pathfinding1.jpg'
+import pipboyImageURL from '../assets/images/projects/pipboy/pipboy1.jpg'
+import gpsutilsImageURL from '../assets/images/projects/gpsutils/gpsutils1.png'
+import flixlistImageURL from '../assets/images/projects/flixlist/flixlist1.png'
+import pathfindingImageURL from '../assets/images/projects/pathfinding/pathfinding1.jpg'
 
 export default {
   name: 'WorkPage',
@@ -94,7 +94,7 @@ export default {
             Created with Android and Kotlin. 
           `,
           link: 'https://github.com/cmpt469-su23-group3/PipBoy_Android',
-          image: pipboyImage
+          image: '',
         },
         {
           name: 'GPSUTILS',
@@ -105,7 +105,7 @@ export default {
             Documentation made with Sphinx.
           `,
           link: 'https://github.com/cbarkr/gpsutils',
-          image: gpsutilsImage
+          image: '',
         },
         {
           name: 'FLIXLIST',
@@ -115,7 +115,7 @@ export default {
             React frontend, Express backend, Mongo database, IMDB API integration.
           `,
           link: 'https://github.com/cbarkr/FlixList',
-          image: flixlistImage
+          image: '',
         },
         {
           name: 'PATHFINDING VISUALIZER',
@@ -125,9 +125,33 @@ export default {
             Made in Python and Pygame.
           `,
           link: 'https://github.com/cbarkr/PathfindingVisualizer',
-          image: pathfindingImage
+          image: '',
         }
       ]
+    }
+  },
+  created() {
+    // Preload project images
+    // TODO: Do this more programmatically
+    for (const c of this.content) {
+      const img = new Image()
+
+      switch(c.id) {
+        case 'pipboy':
+          img.src = pipboyImageURL
+          break
+        case 'gpsutils':
+          img.src = gpsutilsImageURL
+          break
+        case 'flixlist':
+          img.src = flixlistImageURL
+          break
+        case 'pathfinding':
+          img.src = pathfindingImageURL
+          break
+      }
+
+      c.image = img
     }
   },
   methods: {
