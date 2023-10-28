@@ -3,7 +3,7 @@
     <hr />
     <div v-for="(c, index) in content" :key="c.id">
       <div @click="handleClick(index)" class="flex flex-row justify-between my-4 hover:underline">
-        <div class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">{{ c.name }}</div>
+        <div class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">{{ c.name.toUpperCase() }}</div>
         <div>
           <!-- Arrow down -->
           <svg
@@ -41,7 +41,7 @@
       </div>
       <div v-show="isActive(index)" class="flex flex-col justify-between">
         <div class="flex flex-row">
-          <img :src="c.image.src" alt="project image" class="object-cover max-h-80 mb-4" />
+          <img :src="c.image.src" alt="project image (coming soon)" class="object-cover max-h-80 mb-4" />
         </div>
         <div class="text-lg lg:text-xl xl:text-2xl mb-4">{{ c.description }}</div>
         <a
@@ -74,6 +74,7 @@
 </template>
 
 <script>
+import transmissImageURL from '../assets/images/projects/transmiss/transmiss1.png'
 import pipboyImageURL from '../assets/images/projects/pipboy/pipboy1.jpg'
 import gpsutilsImageURL from '../assets/images/projects/gpsutils/gpsutils1.png'
 import flixlistImageURL from '../assets/images/projects/flixlist/flixlist1.png'
@@ -86,7 +87,17 @@ export default {
       activeContent: new Set(),
       content: [
         {
-          name: 'PIP-BOY 3000 MK? PROTO',
+          name: 'Transmiss',
+          id: 'transmiss',
+          description: `
+            A web app for reporting transit "misses" like full busses and no-shows.
+            Built with Next.js, Tailwind, TypeScript, DynamoDB, and Translink's Real-time Transit Info API.
+          `,
+          link: 'https://transmiss.ca',
+          image: '',
+        },
+        {
+          name: 'Pip-Boy 3000 MK? Proto',
           id: 'pipboy',
           description: `
             Prototype of a Pip-Boy from the fallout series.
@@ -97,7 +108,7 @@ export default {
           image: '',
         },
         {
-          name: 'GPSUTILS',
+          name: 'GPSUtils',
           id: 'gpsutils',
           description: `
             Basic GPS module for Python 3.5+. 
@@ -108,17 +119,17 @@ export default {
           image: '',
         },
         {
-          name: 'FLIXLIST',
+          name: 'FlixList',
           id: 'flixlist',
           description: `
             A social movie reviewing site.
-            React frontend, Express backend, Mongo database, IMDB API integration.
+            Built with React, Express.js, MongoDB, and IMDb API.
           `,
           link: 'https://github.com/cbarkr/FlixList',
           image: '',
         },
         {
-          name: 'PATHFINDING VISUALIZER',
+          name: 'Pathfinding Visualizer',
           id: 'pathfinding',
           description: `
             Visualizer for A*, Dijkstra, and BFS pathfinding algorithms. 
@@ -137,6 +148,9 @@ export default {
       const img = new Image()
 
       switch(c.id) {
+        case 'transmiss':
+          img.src = transmissImageURL
+          break
         case 'pipboy':
           img.src = pipboyImageURL
           break
