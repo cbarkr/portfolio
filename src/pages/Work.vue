@@ -90,8 +90,8 @@ export default {
           name: 'Transmiss',
           id: 'transmiss',
           description: `
-            A web app for reporting transit "misses" like full busses and no-shows.
-            Built with Next.js, Tailwind, TypeScript, DynamoDB, and Translink's Real-time Transit Info API.
+            A web app for reporting when transit misses the mark.
+            Built with Next.js, Tailwind, TypeScript, DynamoDB, and TransLink's Real-Time Transit Info API.
           `,
           link: 'https://transmiss.ca',
           image: '',
