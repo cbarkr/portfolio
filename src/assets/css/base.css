@@ -43,13 +43,29 @@
   font-weight: normal;
 }
 
+@font-face {
+  font-family: "Geist";
+  src:  url('../fonts/Geist/Geist-Regular.otf') format('opentype'),
+        url('../fonts/Geist/Geist-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Geist";
+  src:  url('../fonts/Geist/Geist-Bold.otf') format('opentype'),
+        url('../fonts/Geist/Geist-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+
 body {
   min-height: 100vh;
   color: var(--color-text);
   background: var(--color-background);
   transition: color 0.5s, background-color 0.5s;
   line-height: 1.6;
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: 'Geist', 'Helvetica Neue', sans-serif;
   font-size: 16px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
