@@ -1,7 +1,8 @@
 <template>
-  <div class="sm:px-16">
-    <!-- HTML pre-sanitized -->
-    <div v-html="this.content" class="text-lg lg:text-xl xl:text-2xl lg:mx-[25dvw]">
+  <div class="flex flex-row justify-center">
+    <div class="flex flex-col">
+      <!-- Pre-sanitized HTML -->
+      <div v-html="this.content" class="text-lg lg:text-xl max-w-xl" />
     </div>
   </div>
 </template>
