@@ -34,7 +34,11 @@ export default {
         {
           title: 'INTRO',
           id: 'intro'
-        }
+        },
+        {
+          title: 'KOANS FOR DUMMIES',
+          id: 'koansfordummies'
+        },
       ]
     }
   },
