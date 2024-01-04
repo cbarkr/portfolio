@@ -1,5 +1,7 @@
 # Koans for Dummies
 
+*(I am the dummy)*
+
 ## Who are you?
 
 Obviously I am me, myself.
