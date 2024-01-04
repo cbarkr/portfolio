@@ -59,7 +59,7 @@ I let the question "who am I?" float around my head like incense smoke. It dangl
 
 The only thing I could do was carry on and hope that feeling returned. It was not some conscious process that I could simply resume, it had to return itself to me. Again, it was silent.
 
-Slowly, that feeling crept up on me once more. This time quicker that the last, I felt like I was really on to something. Or rather, something was on to me?
+Slowly, that feeling crept up on me once more. This time quicker than the last, I felt like I was really on to something. Or rather, something was on to me?
 
 And it was. At last, it made sense. As elusive as it was attainable; as silent as it was loud and clear: the complete nothingness, expressed in such clarity by my subconscious, was the answer all along. It was a profound realization. I am not somebody, nor nobody, nor some paradoxical combination or negation of the two. I just _am_. Much like the flora and fauna inhabiting this earth long before I, I am present; but there need not be concern for the _I_ alone.
 
