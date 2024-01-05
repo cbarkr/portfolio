@@ -36,7 +36,7 @@ export default {
   name: 'WordsPage',
   data() {
     return {
-      words: words.value
+      words: words.value.toReversed()
     }
   },
   methods: {
