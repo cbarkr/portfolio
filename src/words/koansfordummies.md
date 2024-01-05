@@ -16,7 +16,7 @@ I knew this, yet for days, perhaps weeks, I kept trying. With this black box cal
 
 I then asked _what_ "I" really is. Is my _self_ my body? my mind? my consciousness? I rediscovered the mind-body problem. Recalling Clark and Chalmer's _extended mind thesis_ (EMT), I thought that the _self_ may overflow from one's body, mind, or consciousness. "I" may exist, at least partially, in a notebook or someone else's mind. From this perspective, selfhood appears to be a contradiction; I mean, if I extend past myself, am I really me? Rather, does not this contradiction imply the nonexistence of the _self_ in the first place? Am I _nobody_?
 
-Unbecoming (i.e. dissolution of the self; ego-death) is sought in Zen practice. Since my conclusion vaguely aligned with the idea of unbecoming, I assumed it was correct. Relieved, I considered this my first _kensho_ (insight, awakening, etc.) and carried on.
+Unbecoming (i.e. dissolution of the self; ego-death) is sought in Zen practice. Since my conclusion vaguely aligned with the idea of unbecoming, I assumed it was correct. Relieved, I considered this my first _kensho_ (insight; awakening) and carried on.
 
 However, I grew dissatisfied with my answer. It was not some "ah-ha!" or "eureka!" moment. It was merely the recollection of a thought once past in a philosophy class.
 
@@ -34,7 +34,7 @@ The statement itself is paradoxical, I think that much is clear. What remains tr
 
 To answer the question: no. One cannot not be one. To observe one, as oneself, is to confirm one's existence and thereby disprove one's nonexistence.
 
-Metaphorically speaking, however, one can be paradoxical. Consider the following examples:
+With a bit of dramatic irony, however, one can be a (metaphorical) paradox. Consider the following examples:
 
 1. Fictional characters are personified to the extent that viewers relate to and/or care about them, and speak of them as if they are real. In the mind of the viewer, the nonexistent is existent.
 2. Suppose there exists some hyper-realistic AI model that, in real-time, outputs video and audio that looks and sounds like a real person, and possesses both memory and (simulated) consciousness. If one were to unknowingly communicate and develop relations with this AI model (i.e. part of the model's "_self_" exists within this person), would not the person interacting with the AI model also believe it to be a person?
@@ -59,7 +59,7 @@ I let the question "who am I?" float around my head like incense smoke. It dangl
 
 The only thing I could do was carry on and hope that feeling returned. It was not some conscious process that I could simply resume, it had to return itself to me. Again, it was silent.
 
-Slowly, that feeling crept up on me once more. This time quicker than the last, I felt like I was really on to something. Or rather, something was on to me?
+Slowly, that feeling crept up on me once more. This time quicker than the last. I felt like I was really on to something. Or rather, something was on to me?
 
 And it was. At last, it made sense. As elusive as it was attainable; as silent as it was loud and clear: the complete nothingness, expressed in such clarity by my subconscious, was the answer all along. It was a profound realization. I am not somebody, nor nobody, nor some paradoxical combination or negation of the two. I just _am_. Much like the flora and fauna inhabiting this earth long before I, I am present; but there need not be concern for the _I_ alone.
 
