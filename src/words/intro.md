@@ -1,4 +1,4 @@
-# INTRO
+# Intro
 
 Hi! Welcome to my website!
 
