@@ -1,46 +1,44 @@
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
-import { marked } from 'marked'
-import DOMPurify from 'dompurify'
-import renderer from '../utils/renderer'
 import * as wordsExports from '../words'
+import { cleaner } from '../utils/cleaner'
 
-const wordsList = Object.keys(wordsExports.default)
+class Word {
+  constructor(id, title, content) {
+    this.id = id
+    this.title = title
+    this.content = content
+  }
+}
 
-marked.use({ renderer });
+export const wordsList = Object.keys(wordsExports.default)
 
 export const useWordsStore = defineStore('words', () => {
-  const words = ref({
-    id: '',
-    content: ''
-  })
+  const words = ref([])
 
-  async function update(newId) {
-    if (!wordsList.includes(newId)) {
-      return false
+  async function populate() {
+    for (const w of wordsList) {
+      await update(w)
     }
-
-    try {
-      // Note: The filename must match its id
-      const wordsImport = await import(`../words/${newId}.md`)
-      
-      fetch(wordsImport.default)
-      .then((res) => res.text())
-      .then((text) => {
-        // 1. Replace special zero width unicode characters
-        // 2. Parse MD content to HTML string
-        // 3. Sanitize HTML string
-        words.content = DOMPurify.sanitize(
-          marked.parse(text.replace(/^[\u200B\u200C\u200D\u200E\u200F\uFEFF]/, ''))
-        )
-        words.id = newId
-      })
-    } catch (e) {
-      return false
-    }
-
-    return true
   }
 
-  return { words, update }
+  async function update(newId) {
+    // Note: The filename must match its id
+    const wordsImport = await import(`../words/${newId}.md`)
+
+    fetch(wordsImport.default)
+      .then((res) => res.text())
+      .then((text) => {
+        const id = newId
+        const title = text.split('\n')[0].replace(/#/g, '')
+        const content = cleaner(text)
+
+        const word = new Word(id, title, content)
+        words.value.push(word)
+      })
+
+    return words
+  }
+
+  return { words, populate, update }
 })

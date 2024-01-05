@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import { useWordsStore } from '../stores/words'
+import { wordsList } from '../stores/words'
 import routes from './routes'
 
 const paths = routes.map((r) => r.path)
@@ -10,12 +10,13 @@ const router = createRouter({
 })
 
 router.beforeEach(async (to) => {
-  const store = useWordsStore()
-
-  // Update store before routing to words page
+  // Check if content exists
   if (to.name == 'wordscontent') {
-    const result = await store.update(to.params.id)
-    return result ? true : '/words'
+    if (!wordsList.includes(to.params.id)) {
+      return '/words'
+    }
+    
+    return true
   }
 
   // Redirect home if path doesn't exist

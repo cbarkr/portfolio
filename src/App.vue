@@ -7,3 +7,14 @@ import { RouterView } from 'vue-router'
   <Nav />
   <router-view></router-view>
 </template>
+
+<script>
+import { useWordsStore } from './stores/words'
+
+export default {
+  async mounted() {
+    await useWordsStore().populate()
+  }
+}
+
+</script>

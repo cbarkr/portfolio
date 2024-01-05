@@ -12,20 +12,17 @@ import { storeToRefs } from 'pinia'
 import { useWordsStore } from '../stores/words'
 
 const store = useWordsStore()
+const { words } = storeToRefs(store)
 
 export default {
   name: 'WordsContentComponent',
   data() {
     return {
-      content: ""
+      content: ''
     }
   },
   mounted() {
-    const { words } = storeToRefs(store)
-
-    if (this.$route.params.id == words.id) {
-      this.content = words.content
-    }
+    this.content = words.value.find((word) => word.id === this.$route.params.id).content
   }
 }
 </script>
