@@ -26,20 +26,17 @@
 </template>
 
 <script>
+import { storeToRefs } from 'pinia'
+import { useWordsStore } from '../stores/words'
+
+const store = useWordsStore()
+const { words } = storeToRefs(store)
+
 export default {
   name: 'WordsPage',
   data() {
     return {
-      words: [
-        {
-          title: 'INTRO',
-          id: 'intro'
-        },
-        {
-          title: 'KOANS FOR DUMMIES',
-          id: 'koansfordummies'
-        },
-      ]
+      words: words.value
     }
   },
   methods: {
