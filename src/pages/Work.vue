@@ -93,7 +93,7 @@ export default {
             A web app for reporting when transit misses the mark.
             Built with Next.js, Tailwind, TypeScript, DynamoDB, and TransLink's Real-Time Transit Info API.
           `,
-          link: 'https://transmiss.ca',
+          link: 'https://github.com/cbarkr/transmiss',
           image: '',
         },
         {
@@ -102,7 +102,7 @@ export default {
           description: `
             Prototype of a Pip-Boy from the fallout series.
             3D-printed shell based on the Pip-Boy 3000 from Fallout 3, software based on the Pip-OS v7.1.0.8 from Fallout 4.
-            Created with Android and Kotlin. 
+            Created with Android and Kotlin.
           `,
           link: 'https://github.com/cmpt469-su23-group3/PipBoy_Android',
           image: '',
