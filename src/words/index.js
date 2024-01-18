@@ -1,7 +1,7 @@
 import intro from './intro.md'
-import koansfordummies from './koansfordummies.md'
+import whoami from './whoami.md'
 
 export default {
   intro,
-  koansfordummies
+  whoami
 }

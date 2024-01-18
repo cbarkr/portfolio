@@ -1,6 +1,8 @@
-# Koans for Dummies
+# Who am I?
 
-_(I am the dummy)_
+_Previously titled "Koans for Dummies"_
+
+This is not a autobiography or anything of the sort. Rather, it is a collection of thoughts I had while wrestling with the koan _who are you?_
 
 ## Who are you?
 
@@ -62,8 +64,6 @@ The only thing I could do was carry on and hope that feeling returned. It was no
 Slowly, that feeling crept up on me once more. This time quicker than the last. I felt like I was really on to something. Or rather, something was on to me?
 
 And it was. At last, it made sense. As elusive as it was attainable; as silent as it was loud and clear: the complete nothingness, expressed in such clarity by my subconscious, was the answer all along. It was a profound realization. I am not somebody, nor nobody, nor some paradoxical combination or negation of the two. I just _am_. Much like the flora and fauna inhabiting this earth long before I, I am present; but there need not be concern for the _I_ alone.
-
-Beyond reason, it may be, but this explanation felt more reasonable than any feeble logic I could construct. Consider it intuition. I sure as hell will not be able to explain it anytime soon.
 
 ### Layer:05
 
