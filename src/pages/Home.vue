@@ -155,8 +155,7 @@ export default {
         bio: `
           I am Callum Barker, a computing science student, software developer, and photographer based in Vancouver;
           interested in technology (particularly security and privacy), fashion, design, architecture, music, sights, sounds, tastes, experiences, lists;
-          outside of work and school, I can be found in thrift stores around town, at my local Muay Thai gym, on my bicycle, or at home organizing my Pinterest boards;
-          currently reading Superintelligence by Nick Bostrom and watching Sousou no Frieren.
+          outside of work and school, I can be found in thrift stores around town, at my local Muay Thai gym, on my bicycle, or at home organizing my Pinterest boards.
           `,
         links: [
           {
