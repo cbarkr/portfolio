@@ -3,7 +3,7 @@
     <hr />
     <div v-for="(c, index) in content" :key="c.id">
       <div @click="handleClick(index)" class="flex flex-row justify-between my-4 hover:underline">
-        <div class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">{{ c.name.toUpperCase() }}</div>
+        <div class="text-4xl md:text-5xl lg:text-6xl">{{ c.name.toUpperCase() }}</div>
         <div>
           <!-- Arrow down -->
           <svg
@@ -43,7 +43,7 @@
         <div class="flex flex-row">
           <img :src="c.image.src" alt="project image (coming soon)" class="object-cover max-h-80 mb-4" />
         </div>
-        <div class="text-lg lg:text-xl xl:text-2xl mb-4">{{ c.description }}</div>
+        <div class="text-lg lg:text-xl mb-4">{{ c.description }}</div>
         <a
           :href="c.link"
           class="flex flex-row text-lg md:text-xl mb-4"

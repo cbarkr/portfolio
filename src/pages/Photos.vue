@@ -43,14 +43,14 @@
       </div>
       <div class="flex flex-col mx-8">
         <div
-          class="flex align-center justify-center text-center text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl mb-8"
+          class="flex align-center justify-center text-center text-4xl md:text-5xl lg:text-6xl mb-8"
         >
           CLICK TO PLACE IMAGES
         </div>
         <div class="flex align-center justify-center">
           <div
             @click="switchViewMode"
-            class="border hover:bg-current text-center text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl p-4 mb-8"
+            class="border hover:bg-current text-center text-lg md:text-xl lg:text-2xl p-4 mb-8"
           >
             GALLERY VIEW
           </div>

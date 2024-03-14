@@ -5,13 +5,13 @@ import { RouterLink } from 'vue-router'
 <template>
   <div class="sm:px-16">
     <!-- Bio -->
-    <div class="flex justify-center text-lg lg:text-xl xl:text-2xl mb-8">
+    <div class="flex justify-center text-lg lg:text-xl mb-8">
       {{ about.bio }}
     </div>
 
     <!-- About header -->
     <div class="flex flex-row justify-between">
-      <div class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">ABOUT</div>
+      <div class="text-4xl md:text-5xl lg:text-6xl">ABOUT</div>
       <!-- Arrow up -->
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +32,7 @@ import { RouterLink } from 'vue-router'
     <!-- Project header -->
     <router-link to="/work">
       <div class="flex flex-row justify-between">
-        <div class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">WORK</div>
+        <div class="text-4xl md:text-5xl lg:text-6xl">WORK</div>
         <!-- Arrow up right -->
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +54,7 @@ import { RouterLink } from 'vue-router'
     <!-- Photos header -->
     <router-link to="/photos">
       <div class="flex flex-row justify-between">
-        <div class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">PHOTOS</div>
+        <div class="text-4xl md:text-5xl lg:text-6xl">PHOTOS</div>
         <!-- Arrow right -->
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -76,7 +76,7 @@ import { RouterLink } from 'vue-router'
     <!-- Words header -->
     <router-link to="/words">
       <div class="flex flex-row justify-between">
-        <div class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">WORDS</div>
+        <div class="text-4xl md:text-5xl lg:text-6xl">WORDS</div>
         <!-- Arrow down right -->
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -97,7 +97,7 @@ import { RouterLink } from 'vue-router'
 
     <!-- Contact header -->
     <div class="flex flex-row justify-between">
-      <div class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">CONTACT</div>
+      <div class="text-4xl md:text-5xl lg:text-6xl">CONTACT</div>
       <!-- Arrow down -->
       <svg
         xmlns="http://www.w3.org/2000/svg"

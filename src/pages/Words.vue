@@ -3,7 +3,7 @@
     <hr />
     <div v-for="(w, index) in words" :key="w.id">
       <div @click="handleClick(index)" class="flex flex-row justify-between my-4 hover:underline">
-        <div class="uppercase text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">{{ w.title }}</div>
+        <div class="uppercase text-4xl md:text-5xl lg:text-6xl">{{ w.title }}</div>
         <!-- Arrow right -->
         <svg
           xmlns="http://www.w3.org/2000/svg"
