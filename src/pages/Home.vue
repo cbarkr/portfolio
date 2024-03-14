@@ -117,7 +117,7 @@ import { RouterLink } from 'vue-router'
 
     <!-- Contact -->
     <div class="w-full my-8">
-      <div v-for="item in about.links" :key="item.id">
+      <div v-for="item in about.links" :key="item.id" class="flex flex-row">
         <a
           :href="item.link"
           class="flex flex-row text-lg md:text-xl"
