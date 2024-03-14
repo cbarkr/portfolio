@@ -22,7 +22,12 @@
 }
 
 :root {
-  --color-background: var(--vt-c-black);
+  --whiteish: #f8f8f8;
+  --blackish: #111111;
+}
+
+:root {
+  --color-background: var(--blackish);
     --color-background-soft: var(--vt-c-black-soft);
     --color-background-mute: var(--vt-c-black-mute);
 
@@ -30,7 +35,7 @@
     --color-border-hover: var(--vt-c-divider-dark-1);
 
     --color-heading: var(--vt-c-text-dark-1);
-    --color-text: var(--vt-c-text-dark-2);
+    --color-text: var(--whiteish);
 
   --section-gap: 160px;
 }
