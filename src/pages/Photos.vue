@@ -133,24 +133,31 @@ export default {
       })
     )
 
-    this.preloadBatchSize = Math.round(this.photos.length / 10)
+    // Shuffle the order just for fun :P
+    this.shufflePhotos()
     
     // Load the first batch of photos on creation
-    for (let i = 0; i < this.preloadBatchSize; i++) {
-      const img = new Image()
-      img.src = this.photos[i]
-      this.gallery.push({ 'img': img })
-    }
+    this.preloadBatchSize = Math.round(this.photos.length / 10)
+    this.preloadPhotos(0, this.preloadBatchSize)
   },
   mounted() {
     // Load the rest of the photos on mount
-    for (let i = this.preloadBatchSize; i < this.photos.length; i++) {
-      const img = new Image()
-      img.src = this.photos[i]
-      this.gallery.push({ 'img': img })
-    }
+    this.preloadPhotos(this.preloadBatchSize, this.photos.length)
   },
   methods: {
+    shufflePhotos() {
+      for (let i = this.photos.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [this.photos[i], this.photos[j]] = [this.photos[j], this.photos[i]];
+      }
+    },
+    preloadPhotos(start, end) {
+      for (let i = start; i < end; i++) {
+        const img = new Image()
+        img.src = this.photos[i]
+        this.gallery.push({ 'img': img })
+      }
+    },
     switchViewMode() {
       this.viewMode = !this.viewMode
     },
