@@ -78,7 +78,6 @@ import transmissImageURL from '../assets/images/projects/transmiss/transmiss1.pn
 import pipboyImageURL from '../assets/images/projects/pipboy/pipboy1.jpg'
 import gpsutilsImageURL from '../assets/images/projects/gpsutils/gpsutils1.png'
 import flixlistImageURL from '../assets/images/projects/flixlist/flixlist1.png'
-import pathfindingImageURL from '../assets/images/projects/pathfinding/pathfinding1.jpg'
 
 export default {
   name: 'WorkPage',
@@ -128,16 +127,6 @@ export default {
           link: 'https://github.com/cbarkr/FlixList',
           image: '',
         },
-        {
-          name: 'Pathfinding Visualizer',
-          id: 'pathfinding',
-          description: `
-            Visualizer for A*, Dijkstra, and BFS pathfinding algorithms. 
-            Made in Python and Pygame.
-          `,
-          link: 'https://github.com/cbarkr/PathfindingVisualizer',
-          image: '',
-        }
       ]
     }
   },
@@ -159,9 +148,6 @@ export default {
           break
         case 'flixlist':
           img.src = flixlistImageURL
-          break
-        case 'pathfinding':
-          img.src = pathfindingImageURL
           break
       }
 
