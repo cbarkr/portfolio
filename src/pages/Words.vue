@@ -26,22 +26,44 @@
 </template>
 
 <script>
-import { storeToRefs } from 'pinia'
-import { useWordsStore } from '../stores/words'
+import { wordsList } from '../router/index'
 
-const store = useWordsStore()
-const { words } = storeToRefs(store)
+class Word {
+  constructor(id, title) {
+    this.id = id
+    this.title = title
+  }
+}
 
 export default {
   name: 'WordsPage',
   data() {
     return {
-      words: words.value.toReversed()
+      words: [],
     }
+  },
+  async mounted() {
+    await this.populateWords()
   },
   methods: {
     handleClick(index) {
       this.$router.push(`words/${this.words[index].id}`)
+    },
+    async populateWords() {
+      // Reverse order so the new stuff is at the top
+      for (let i = wordsList.length - 1; i >= 0; i--) {
+        await this.fetchWord(wordsList[i])
+      }
+    },
+    async fetchWord(id) {
+      const wordsImport = await import(`../words/${id}.md`)
+
+      fetch(wordsImport.default)
+        .then((res) => res.text())
+        .then((text) => {
+          const title = text.split('\n')[0].replace(/#/g, '')
+          this.words.push(new Word(id, title))
+        })
     }
   }
 }
