@@ -49,7 +49,7 @@ export default {
       words: [],
     }
   },
-  async mounted() {
+  async created() {
     await this.populateWords()
   },
   methods: {
