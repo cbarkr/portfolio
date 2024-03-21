@@ -52,18 +52,17 @@ export default {
     async populateWords() {
       // Reverse order so the new stuff is at the top
       for (let i = wordsList.length - 1; i >= 0; i--) {
-        await this.fetchWord(wordsList[i])
+        const word = await this.fetchWord(wordsList[i])
+        console.log(word)
+        this.words.push(word)
       }
     },
     async fetchWord(id) {
       const wordsImport = await import(`../words/${id}.md`)
-
-      fetch(wordsImport.default)
-        .then((res) => res.text())
-        .then((text) => {
-          const title = text.split('\n')[0].replace(/#/g, '')
-          this.words.push(new Word(id, title))
-        })
+      const res = await fetch(wordsImport.default)
+      const text = await res.text()
+      const title = text.split('\n')[0].replace(/#/g, '')
+      return new Word(id, title)
     }
   }
 }
