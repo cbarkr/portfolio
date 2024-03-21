@@ -53,7 +53,6 @@ export default {
       // Reverse order so the new stuff is at the top
       for (let i = wordsList.length - 1; i >= 0; i--) {
         const word = await this.fetchWord(wordsList[i])
-        console.log(word)
         this.words.push(word)
       }
     },
