@@ -28,6 +28,8 @@
 <script>
 import { wordsList } from '../router/index'
 
+console.log(wordsList)
+
 class Word {
   constructor(id, title) {
     this.id = id
@@ -62,7 +64,6 @@ export default {
         .then((res) => res.text())
         .then((text) => {
           const title = text.split('\n')[0].replace(/#/g, '')
-          console.log(title)
           this.words.push(new Word(id, title))
         })
     }
