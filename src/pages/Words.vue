@@ -28,6 +28,8 @@
 <script>
 import { wordsList } from '../router/index'
 
+console.log(wordsList)
+
 class Word {
   constructor(id, title) {
     this.id = id
