@@ -1,8 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import { wordsList } from '../stores/words'
+import * as wordsExports from '../words'
 import routes from './routes'
 
 const paths = routes.map((r) => r.path)
+export const wordsList = Object.keys(wordsExports.default)
 
 const router = createRouter({
   history: createWebHistory(),

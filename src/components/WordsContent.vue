@@ -8,11 +8,7 @@
 </template>
 
 <script>
-import { storeToRefs } from 'pinia'
-import { useWordsStore } from '../stores/words'
-
-const store = useWordsStore()
-const { words } = storeToRefs(store)
+import { cleaner } from '../utils/cleaner'
 
 export default {
   name: 'WordsContentComponent',
@@ -21,8 +17,19 @@ export default {
       content: ''
     }
   },
-  mounted() {
-    this.content = words.value.find((word) => word.id === this.$route.params.id).content
+  async mounted() {
+    await this.fetchWords()
+  },
+  methods: {
+    async fetchWords() {
+      const wordsImport = await import(`../words/${this.$route.params.id}.md`)
+
+      fetch(wordsImport.default)
+        .then((res) => res.text())
+        .then((text) => {
+          this.content = cleaner(text)
+        })
+    }
   }
 }
 </script>
