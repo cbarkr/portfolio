@@ -5,8 +5,6 @@ import routes from './routes'
 const paths = routes.map((r) => r.path)
 export const wordsList = Object.keys(wordsExports.default)
 
-console.log(wordsList)
-
 const router = createRouter({
   history: createWebHistory(),
   routes
