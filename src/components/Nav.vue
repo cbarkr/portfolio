@@ -5,18 +5,9 @@ import { RouterLink } from 'vue-router'
 <template>
   <div class="flex justify-between pb-8">
     <!-- Note: Nav text must match route name -->
-    <router-link to="/" class="text-md sm:text-lg md:text-xl">{{
-      selectedRoute(nav.home)
-    }}</router-link>
-    <router-link to="/work" class="text-md sm:text-lg md:text-xl">{{
-      selectedRoute(nav.work)
-    }}</router-link>
-    <router-link to="/photos" class="text-md sm:text-lg md:text-xl">{{
-      selectedRoute(nav.photos)
-    }}</router-link>
-    <router-link to="/words" class="text-md sm:text-lg md:text-xl">{{
-      selectedRoute(nav.words)
-    }}</router-link>
+    <router-link v-for="item in nav" :to="item.route" :key="item.title" class="text-lg flex flex-row">
+      {{ selectedRoute(item.title) }}
+    </router-link>
   </div>
 </template>
 
@@ -25,17 +16,29 @@ export default {
   name: 'NavComponent',
   data() {
     return {
-      nav: {
-        home: 'home',
-        work: 'work',
-        photos: 'photos',
-        words: 'words'
-      }
+      nav: [
+        {
+          route: '/',
+          title: 'home'
+        },
+        {
+          route: '/work',
+          title: 'work'
+        },
+        {
+          route: '/photos',
+          title: 'photos'
+        },
+        {
+          route: '/words',
+          title: 'words'
+        }
+      ]
     }
   },
   methods: {
     selectedRoute(name) {
-      return name === this.$route.name ? `[${name.toUpperCase()}]` : name.toUpperCase()
+      return name === this.$route.name ? `→ ${name.toUpperCase()}` : name.toUpperCase()
     }
   }
 }
