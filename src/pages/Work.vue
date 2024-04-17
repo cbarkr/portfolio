@@ -43,11 +43,11 @@
         <div class="flex flex-row">
           <img :src="c.image.src" alt="project image (coming soon)" class="object-cover max-h-80 mb-4" />
         </div>
-        <div class="text-lg lg:text-xl mb-4">{{ c.description }}</div>
+        <div class="font-light text-lg mb-4">{{ c.description }}</div>
         <div class="flex flex-row">
           <a
             :href="c.link"
-            class="flex flex-row text-lg md:text-xl mb-4"
+            class="flex flex-row font-light text-lg mb-4"
             target="_blank"
             rel="noopener noreferrer"
           >

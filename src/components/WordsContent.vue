@@ -2,7 +2,7 @@
   <div class="flex flex-row justify-center">
     <div class="flex flex-col">
       <!-- Pre-sanitized HTML -->
-      <div v-html="this.content" class="text-lg lg:text-xl max-w-xl" />
+      <div v-html="this.content" class="font-light text-lg lg:text-xl max-w-xl" />
     </div>
   </div>
 </template>

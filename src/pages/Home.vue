@@ -5,7 +5,7 @@ import { RouterLink } from 'vue-router'
 <template>
   <div class="sm:px-16">
     <!-- Bio -->
-    <div class="flex justify-center text-lg lg:text-xl mb-8">
+    <div class="flex justify-center font-light text-lg mb-8">
       {{ about.bio }}
     </div>
 
@@ -120,7 +120,7 @@ import { RouterLink } from 'vue-router'
       <div v-for="item in about.links" :key="item.id" class="flex flex-row">
         <a
           :href="item.link"
-          class="flex flex-row text-lg md:text-xl"
+          class="flex flex-row font-light text-lg"
           target="_blank"
           rel="noopener noreferrer"
         >

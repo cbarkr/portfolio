@@ -30,7 +30,16 @@ const renderer = {
         ${body}
       </${tag}>
     `
-    return template("list-decimal list-inside mb-4")
+    return template("font-light list-decimal list-inside mb-4")
+  },
+  listitem(body, ordered) {
+    const template = (classes) => 
+    `
+      <li class="${classes}">
+        ${body}
+      </li>
+    `
+    return template("font-light text-lg")
   },
   paragraph(text) {
     const template = (classes) => 
@@ -39,7 +48,7 @@ const renderer = {
         ${text}
       </p>
     `
-    return template("mb-4")
+    return template("font-light text-lg mb-4")
   }
 }
 
