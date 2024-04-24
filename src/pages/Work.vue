@@ -51,7 +51,7 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            PROJECT REPO
+            Link
             <!-- Arrow up right -->
             <svg
               xmlns="http://www.w3.org/2000/svg"
