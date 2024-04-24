@@ -50,7 +50,7 @@
         <div class="flex align-center justify-center">
           <div
             @click="switchViewMode"
-            class="border hover:bg-current text-center text-lg md:text-xl lg:text-2xl p-4 mb-8"
+            class="border bg-transparent text-white hover:bg-white hover:text-black text-center text-lg md:text-xl lg:text-2xl p-2"
           >
             GALLERY VIEW
           </div>
