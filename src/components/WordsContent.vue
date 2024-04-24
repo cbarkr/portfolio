@@ -24,7 +24,7 @@ import { RouterLink } from 'vue-router'
         </router-link>
       </div>
       <!-- Pre-sanitized HTML -->
-      <div v-html="this.content" class="font-light text-lg lg:text-xl max-w-xl" />
+      <div v-html="content" class="font-light text-lg lg:text-xl max-w-xl" />
     </div>
   </div>
 </template>
