@@ -3,11 +3,21 @@ import { RouterLink } from 'vue-router'
 </script>
 
 <template>
-  <div class="flex justify-between pb-8">
+  <div class="flex justify-end mb-4">
     <!-- Note: Nav text must match route name -->
-    <router-link v-for="item in nav" :to="item.route" :key="item.title" class="text-lg flex flex-row">
-      {{ selectedRoute(item.title) }}
-    </router-link>
+    <div v-for="(item, index) in nav" :key="item.title" class="text-lg font-light flex flex-row gap-2">
+      <router-link :to="item.route">
+        <div v-if="item.title === this.$route.name" class="font-bold">
+          {{ item.title.toUpperCase() }}
+        </div>
+        <div v-else>
+          {{ item.title.toUpperCase() }}
+        </div>
+      </router-link>
+      <div v-if="index !== nav.length-1" class="pr-2">
+        /
+      </div>
+    </div>
   </div>
 </template>
 
@@ -34,11 +44,6 @@ export default {
           title: 'words'
         }
       ]
-    }
-  },
-  methods: {
-    selectedRoute(name) {
-      return name === this.$route.name ? `→ ${name.toUpperCase()}` : name.toUpperCase()
     }
   }
 }
