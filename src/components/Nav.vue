@@ -3,7 +3,7 @@ import { RouterLink } from 'vue-router'
 </script>
 
 <template>
-  <div class="flex justify-end mb-4">
+  <div class="flex justify-center sm:justify-end mb-4">
     <!-- Note: Nav text must match route name -->
     <div v-for="(item, index) in nav" :key="item.title" class="text-lg font-light flex flex-row gap-2">
       <router-link :to="item.route">
