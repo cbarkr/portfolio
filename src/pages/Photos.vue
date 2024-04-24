@@ -3,7 +3,7 @@
     v-if="viewMode"
     @click="handleClick"
     :id="parentId"
-    class="h-[95%] relative overflow-hidden flex flex-col justify-center"
+    class="h-[95%] relative overflow-hidden flex flex-col justify-center cursor-pointer"
   >
     <div class="flex justify-center my-8">
       <!-- Arrow up -->

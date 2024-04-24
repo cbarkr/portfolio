@@ -2,7 +2,7 @@
   <div class="sm:px-16">
     <hr />
     <div v-for="(c, index) in content" :key="c.id">
-      <div @click="handleClick(index)" class="flex flex-row justify-between my-4 hover:underline">
+      <div @click="handleClick(index)" class="flex flex-row justify-between my-4 hover:underline cursor-pointer">
         <div class="text-4xl md:text-5xl lg:text-6xl">{{ c.name.toUpperCase() }}</div>
         <div>
           <!-- Arrow down -->
