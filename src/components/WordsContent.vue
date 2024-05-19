@@ -4,8 +4,8 @@ import { RouterLink } from 'vue-router'
 
 <template>
   <div class="flex flex-row justify-center">
-    <div class="flex flex-col">
-      <div>
+    <div class="flex flex-col gap-8">
+      <div class="w-max">
         <router-link to="/words">
           <svg
             xmlns="http://www.w3.org/2000/svg"
