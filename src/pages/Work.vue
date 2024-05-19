@@ -76,9 +76,9 @@
 </template>
 
 <script>
-import transmissImageURL from '../assets/images/projects/transmiss/transmiss1.png'
+import transmissImageURL from '../assets/images/projects/transmiss/transmiss2.png'
 import pipboyImageURL from '../assets/images/projects/pipboy/pipboy1.jpg'
-import gpsutilsImageURL from '../assets/images/projects/gpsutils/gpsutils1.png'
+import gpsutilsImageURL from '../assets/images/projects/gpsutils/gpsutils2.png'
 import flixlistImageURL from '../assets/images/projects/flixlist/flixlist1.png'
 
 export default {
