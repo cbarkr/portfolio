@@ -98,7 +98,7 @@ export default {
           image: '',
         },
         {
-          name: 'Pip-Boy 3000 MK? Proto',
+          name: 'Pip-Boy 3000',
           id: 'pipboy',
           description: `
             Prototype of a Pip-Boy from the fallout series.
