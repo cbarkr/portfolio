@@ -47,7 +47,7 @@
         <div class="flex flex-row">
           <a
             :href="c.link"
-            class="flex flex-row font-light text-lg mb-4"
+            class="flex flex-row font-light text-lg p-1 mb-4 hover:bg-whiteish hover:text-blackish hover:no-underline"
             target="_blank"
             rel="noopener noreferrer"
           >

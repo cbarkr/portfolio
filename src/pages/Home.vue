@@ -120,7 +120,7 @@ import { RouterLink } from 'vue-router'
       <div v-for="item in about.links" :key="item.id" class="flex flex-row">
         <a
           :href="item.link"
-          class="flex flex-row font-light text-lg"
+          class="flex flex-row font-light text-lg p-1 hover:bg-whiteish hover:text-blackish hover:no-underline"
           target="_blank"
           rel="noopener noreferrer"
         >
