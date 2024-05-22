@@ -13,9 +13,9 @@
 }
 
 @font-face {
-  font-family: "Geist";
-  src:  url('../fonts/Geist/GeistVariableVF.woff2') format('woff2'),
-        url('../fonts/Geist/GeistVariableVF.ttf') format('truetype');
+  font-family: 'Geist';
+  src: url('../fonts/Geist/GeistVariableVF.woff2') format('woff2'),
+    url('../fonts/Geist/GeistVariableVF.ttf') format('truetype');
 }
 
 body {

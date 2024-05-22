@@ -24,8 +24,7 @@ const routes = [
   {
     path: '/words/:id',
     name: 'wordscontent',
-    component: () =>
-      import(/* webpackChunkName: "wordscontent" */ '../components/WordsContent.vue')
+    component: () => import(/* webpackChunkName: "wordscontent" */ '../components/WordsContent.vue')
   }
 ]
 

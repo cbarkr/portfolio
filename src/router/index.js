@@ -16,7 +16,7 @@ router.beforeEach(async (to) => {
     if (!wordsList.includes(to.params.id)) {
       return '/words'
     }
-    
+
     return true
   }
 

@@ -135,7 +135,7 @@ export default {
 
     // Shuffle the order just for fun :P
     this.shufflePhotos()
-    
+
     // Load the first batch of photos on creation
     this.preloadBatchSize = Math.round(this.photos.length / 10)
     this.preloadPhotos(0, this.preloadBatchSize)
@@ -147,15 +147,15 @@ export default {
   methods: {
     shufflePhotos() {
       for (let i = this.photos.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [this.photos[i], this.photos[j]] = [this.photos[j], this.photos[i]];
+        const j = Math.floor(Math.random() * (i + 1))
+        ;[this.photos[i], this.photos[j]] = [this.photos[j], this.photos[i]]
       }
     },
     preloadPhotos(start, end) {
       for (let i = start; i < end; i++) {
         const img = new Image()
         img.src = this.photos[i]
-        this.gallery.push({ 'img': img })
+        this.gallery.push({ img: img })
       }
     },
     switchViewMode() {

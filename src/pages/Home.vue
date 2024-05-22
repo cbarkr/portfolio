@@ -31,7 +31,9 @@ import { RouterLink } from 'vue-router'
 
     <!-- Project header -->
     <router-link to="/work">
-      <div class="flex flex-row justify-between hover:bg-whiteish hover:text-blackish hover:no-underline">
+      <div
+        class="flex flex-row justify-between hover:bg-whiteish hover:text-blackish hover:no-underline"
+      >
         <div class="text-4xl md:text-5xl lg:text-6xl">WORK</div>
         <!-- Arrow up right -->
         <svg
@@ -53,7 +55,9 @@ import { RouterLink } from 'vue-router'
 
     <!-- Photos header -->
     <router-link to="/photos">
-      <div class="flex flex-row justify-between hover:bg-whiteish hover:text-blackish hover:no-underline">
+      <div
+        class="flex flex-row justify-between hover:bg-whiteish hover:text-blackish hover:no-underline"
+      >
         <div class="text-4xl md:text-5xl lg:text-6xl">PHOTOS</div>
         <!-- Arrow right -->
         <svg
@@ -75,7 +79,9 @@ import { RouterLink } from 'vue-router'
 
     <!-- Words header -->
     <router-link to="/words">
-      <div class="flex flex-row justify-between hover:bg-whiteish hover:text-blackish hover:no-underline">
+      <div
+        class="flex flex-row justify-between hover:bg-whiteish hover:text-blackish hover:no-underline"
+      >
         <div class="text-4xl md:text-5xl lg:text-6xl">WORDS</div>
         <!-- Arrow down right -->
         <svg

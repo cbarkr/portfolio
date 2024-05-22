@@ -2,13 +2,14 @@
 import { RouterLink } from 'vue-router'
 </script>
 
-
 <template>
   <div class="sm:px-16">
     <hr />
     <div v-for="(w, index) in words" :key="w.id">
       <router-link :to="routeLink(index)">
-        <div class="flex flex-row justify-between my-4 hover:bg-whiteish hover:text-blackish hover:no-underline">
+        <div
+          class="flex flex-row justify-between my-4 hover:bg-whiteish hover:text-blackish hover:no-underline"
+        >
           <div class="uppercase text-4xl md:text-5xl lg:text-6xl">{{ w.title }}</div>
           <!-- Arrow right -->
           <svg
@@ -46,7 +47,7 @@ export default {
   name: 'WordsPage',
   data() {
     return {
-      words: [],
+      words: []
     }
   },
   async created() {
@@ -70,8 +71,8 @@ export default {
   },
   computed: {
     routeLink() {
-      return index => `words/${this.words[index].id}`
+      return (index) => `words/${this.words[index].id}`
     }
-  },
+  }
 }
 </script>

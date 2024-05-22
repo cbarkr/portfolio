@@ -1,10 +1,11 @@
 # Intention
 
-Design does not disclose itself to the world. A designer ideates, reiteratively revises their idea, hates everything, starts over, and repeats until their vision is formed. They start with intention; a compulsion to convey something. Execution of that idea, however, determines how that message is ultimately conveyed. 
+Design does not disclose itself to the world. A designer ideates, reiteratively revises their idea, hates everything, starts over, and repeats until their vision is formed. They start with intention; a compulsion to convey something. Execution of that idea, however, determines how that message is ultimately conveyed.
 
 I neither claim to be nor think of myself as a designer, but I enjoy pretending to be one sometimes (after all, mimicry is the first step to mastery). In particular, I try to follow Dieter Rams' principles of design. Why these specific principles? They just make sense to me.
 
 Ideally, everything I output conveys even an iota of the intention I initially input. In practical settings, this means making things as simple, easy to understand, and useful as possible. More specifically:
+
 - When I code, I strive to write it as functionally, efficiently, and elegantly as possible without sacrificing readability
 - When I design, I tend towards straightforward (at times, brutal) compositions
 
