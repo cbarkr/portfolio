@@ -13,7 +13,7 @@ import { RouterLink } from 'vue-router'
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-18 xl:h-18"
+            class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-18 xl:h-18 hover:bg-whiteish hover:text-blackish hover:no-underline"
           >
             <path
               stroke-linecap="round"

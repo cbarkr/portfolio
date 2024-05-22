@@ -2,7 +2,7 @@
   <div class="sm:px-16">
     <hr />
     <div v-for="(c, index) in content" :key="c.id">
-      <div @click="handleClick(index)" class="flex flex-row justify-between my-4 hover:underline cursor-pointer">
+      <div @click="handleClick(index)" class="flex flex-row justify-between my-4 hover:bg-whiteish hover:text-blackish hover:no-underline cursor-pointer">
         <div class="text-4xl md:text-5xl lg:text-6xl">{{ c.name.toUpperCase() }}</div>
         <div>
           <!-- Arrow down -->
@@ -51,7 +51,7 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            Link
+            Project Link
             <!-- Arrow up right -->
             <svg
               xmlns="http://www.w3.org/2000/svg"

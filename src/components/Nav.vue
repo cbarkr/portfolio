@@ -6,7 +6,7 @@ import { RouterLink } from 'vue-router'
   <div class="flex justify-center sm:justify-end mb-4">
     <!-- Note: Nav text must match route name -->
     <div v-for="(item, index) in nav" :key="item.title" class="text-lg font-light flex flex-row gap-2">
-      <router-link :to="item.route">
+      <router-link :to="item.route" class="hover:bg-whiteish hover:text-blackish hover:no-underline">
         <div v-if="item.title === $route.name" class="font-medium">
           {{ item.title.toUpperCase() }}
         </div>
