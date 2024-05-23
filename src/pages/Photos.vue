@@ -95,18 +95,22 @@
 
   <div
     v-else
-    v-for="(p, index) in gallery"
-    :key="p.id"
-    class="md:mx-24 lg:mx-48 mb-8 h-4/5 max-h-full"
+    class="flex flex-col md:mx-24 lg:mx-48 h-4/5 gap-36"
   >
-    <!-- (Pseudo-)Right-aligned images -->
-    <div v-if="index % 2 == 0" class="flex flex-col xs:flex-row-reverse h-4/5 max-h-full">
-      <img :src="p.img.src" class="object-contain" />
-    </div>
+    <div
+      v-for="(p, index) in gallery"
+      :key="p.id"
+      class="flex flex-row h-4/5"
+    >
+      <!-- (Pseudo-)Right-aligned images -->
+      <div v-if="index % 2 == 0" class="flex flex-row-reverse">
+        <img :src="p.img.src" class="object-contain" />
+      </div>
 
-    <!-- Left-aligned images -->
-    <div v-else class="flex flex-col xs:flex-row h-4/5 max-h-full">
-      <img :src="p.img.src" class="object-contain" />
+      <!-- Left-aligned images -->
+      <div v-else class="flex flex-row">
+        <img :src="p.img.src" class="object-contain" />
+      </div>
     </div>
   </div>
 </template>
