@@ -4,7 +4,7 @@
       v-if="viewMode"
       @click="handleClick"
       :id="parentId"
-      class="flex flex-col flex-grow relative justify-center cursor-pointer"
+      class="flex flex-col flex-grow relative justify-center overflow-hidden cursor-pointer"
     >
       <div class="flex justify-center my-8">
         <!-- Arrow up -->
@@ -46,7 +46,7 @@
           <div
             class="flex align-center justify-center text-center text-4xl md:text-5xl lg:text-6xl mb-8"
           >
-            CLICK TO PLACE IMAGES
+            CLICK TO PLACE
           </div>
           <div class="flex align-center justify-center">
             <div
