@@ -5,13 +5,16 @@ const paths = routes.map((r) => r.path)
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
+  routes: routes
 })
 
-router.beforeEach(async (to) => {
+router.beforeEach((to, from, next) => {
   // Redirect home if path doesn't exist
-  if (!paths.includes(to.path) && to.path !== "/words") {
-    return '/'
+  if (!paths.includes(to.path) && !to.path.startsWith("/words")) {
+    next('/')
+  }
+  else {
+    next()
   }
 })
 
