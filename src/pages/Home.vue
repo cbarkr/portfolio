@@ -78,7 +78,7 @@ import { RouterLink } from 'vue-router'
     </router-link>
 
     <!-- Words header -->
-    <router-link to="/words">
+    <a href="/words/">
       <div
         class="flex flex-row justify-between hover:bg-whiteish hover:text-blackish hover:no-underline"
       >
@@ -99,7 +99,7 @@ import { RouterLink } from 'vue-router'
           />
         </svg>
       </div>
-    </router-link>
+    </a>
 
     <!-- Contact header -->
     <div class="flex flex-row justify-between">
