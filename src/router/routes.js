@@ -16,16 +16,6 @@ const routes = [
     name: 'photos',
     component: () => import(/* webpackChunkName: "photos" */ '../pages/Photos.vue')
   },
-  {
-    path: '/words',
-    name: 'words',
-    component: () => import(/* webpackChunkName: "words" */ '../pages/Words.vue')
-  },
-  {
-    path: '/words/:id',
-    name: 'wordscontent',
-    component: () => import(/* webpackChunkName: "wordscontent" */ '../components/WordsContent.vue')
-  }
 ]
 
 export default routes
