@@ -78,7 +78,7 @@ import { RouterLink } from 'vue-router'
     </router-link>
 
     <!-- Words header -->
-    <a href="blog.cbarkr.com">
+    <a href="https://blog.cbarkr.com">
       <div
         class="flex flex-row justify-between hover:bg-whiteish hover:text-blackish hover:no-underline"
       >
