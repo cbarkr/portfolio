@@ -22,7 +22,7 @@ import { RouterLink } from 'vue-router'
           {{ item.title.toUpperCase() }}
         </div>
       </router-link>
-      <a v-else href="/words/" class="hover:bg-whiteish hover:text-blackish hover:no-underline">
+      <a v-else href="blog.cbarkr.com" class="hover:bg-whiteish hover:text-blackish hover:no-underline">
         <!-- 
           Blog / words is hosted as a separate project, and thus cannot be routed to the same way.
           This here is a bit of a workaround (using an <a> and adding a trailing slash) to make sure we route to the other project.
