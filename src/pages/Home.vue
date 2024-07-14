@@ -123,6 +123,9 @@ import { RouterLink } from 'vue-router'
 
     <!-- Contact -->
     <div class="w-full my-8">
+      <div class="flex flex-row font-light text-lg p-1">
+        EMAIL: {{ about.email }}
+      </div>
       <div v-for="item in about.links" :key="item.id" class="flex flex-row">
         <a
           :href="item.link"
@@ -163,11 +166,8 @@ export default {
           interested in technology (especially in the realm of security and privacy), fashion, design, architecture, music, sights, sounds, tastes, experiences, lists, etc.; 
           outside of work and school, I can be found out on my bicycle, in thrift stores around town, at my local Muay Thai gym, or at home organizing my Pinterest boards.
           `,
-        links: [
-          {
-            text: 'CBARKR@PROTONMAIL.COM',
-            link: 'mailto:cbarkr@protonmail.com'
-          },
+        email: '<SECOND-LEVEL DOMAIN OF THIS SITE> [AT] PROTONMAIL [DOT] COM',
+          links: [
           {
             text: 'GITHUB',
             link: 'https://github.com/cbarkr'
