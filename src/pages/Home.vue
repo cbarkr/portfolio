@@ -30,11 +30,11 @@ import { RouterLink } from 'vue-router'
     </div>
 
     <!-- Project header -->
-    <router-link to="/work">
+    <router-link to="/projects">
       <div
         class="flex flex-row justify-between hover:bg-whiteish hover:text-blackish hover:no-underline"
       >
-        <div class="text-4xl md:text-5xl lg:text-6xl">WORK</div>
+        <div class="text-4xl md:text-5xl lg:text-6xl">PROJECTS</div>
         <!-- Arrow up right -->
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -77,12 +77,12 @@ import { RouterLink } from 'vue-router'
       </div>
     </router-link>
 
-    <!-- Words header -->
+    <!-- Blog header -->
     <a href="https://blog.cbarkr.com">
       <div
         class="flex flex-row justify-between hover:bg-whiteish hover:text-blackish hover:no-underline"
       >
-        <div class="text-4xl md:text-5xl lg:text-6xl">WORDS</div>
+        <div class="text-4xl md:text-5xl lg:text-6xl">BLOG</div>
         <!-- Arrow down right -->
         <svg
           xmlns="http://www.w3.org/2000/svg"

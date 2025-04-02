@@ -115,17 +115,48 @@
 </template>
 
 <script>
+import ctfImageURL from '../assets/images/projects/ctf/picoCTF2025.png'
+import homelabImageURL from '../assets/images/projects/homelab/homelab_rice.png'
 import transmissImageURL from '../assets/images/projects/transmiss/transmiss2.png'
 import pipboyImageURL from '../assets/images/projects/pipboy/pipboy1.jpg'
 import gpsutilsImageURL from '../assets/images/projects/gpsutils/gpsutils2.png'
 import flixlistImageURL from '../assets/images/projects/flixlist/flixlist1.png'
 
 export default {
-  name: 'WorkPage',
+  name: 'ProjectsPage',
   data() {
     return {
       activeContent: new Set(),
       content: [
+        {
+          name: 'CTF',
+          id: 'ctf',
+          heading: `
+            is my latest obsession.
+          `,
+          description: `
+            Member of defpwn, SFU Cybersecurity Club's CTF team.
+          `,
+          links: {
+            site: 'https://blog.cbarkr.com/tags/ctf',
+            project: 'https://github.com/cbarkr/ctf'
+          },
+          image: ''
+        },
+        {
+          name: 'My Homelab',
+          id: 'homelab',
+          heading: `
+            is a safe place for me to make, break, dissect, and play with technologies.
+          `,
+          description: `
+            Debian server running Podman containers for self-hosted services, managed with Cockpit.
+          `,
+          links: {
+            site: 'https://blog.cbarkr.com/homelab/'
+          },
+          image: ''
+        },
         {
           name: 'Transmiss',
           id: 'transmiss',
@@ -191,6 +222,12 @@ export default {
       const img = new Image()
 
       switch (c.id) {
+        case 'ctf':
+          img.src = ctfImageURL
+          break
+        case 'homelab':
+          img.src = homelabImageURL
+          break
         case 'transmiss':
           img.src = transmissImageURL
           break

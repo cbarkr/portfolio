@@ -11,7 +11,7 @@ import { RouterLink } from 'vue-router'
       class="text-lg font-light flex flex-row gap-2"
     >
       <router-link
-        v-if="item.title !== 'words'"
+        v-if="item.title !== 'blog'"
         :to="item.route"
         class="hover:bg-whiteish hover:text-blackish hover:no-underline"
       >
@@ -24,7 +24,7 @@ import { RouterLink } from 'vue-router'
       </router-link>
       <a v-else href="https://blog.cbarkr.com" class="hover:bg-whiteish hover:text-blackish hover:no-underline">
         <!-- 
-          Blog / words is hosted as a separate project, and thus cannot be routed to the same way.
+          Blog is hosted as a separate project, and thus cannot be routed to the same way.
           This here is a bit of a workaround (using an <a> and adding a trailing slash) to make sure we route to the other project.
         -->
         <div v-if="item.title === $route.name" class="font-medium">
@@ -50,16 +50,16 @@ export default {
           title: 'home'
         },
         {
-          route: '/work',
-          title: 'work'
+          route: '/projects',
+          title: 'projects'
         },
         {
           route: '/photos',
           title: 'photos'
         },
         {
-          route: '/words',
-          title: 'words'
+          route: '/blog',
+          title: 'blog'
         }
       ]
     }
