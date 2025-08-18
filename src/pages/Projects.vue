@@ -85,6 +85,7 @@
         </div>
         <div class="flex flex-row">
           <a
+            v-if="c.links.project"
             :href="c.links.project"
             class="flex flex-row font-light text-lg hover:bg-whiteish hover:text-blackish hover:no-underline"
             target="_blank"
