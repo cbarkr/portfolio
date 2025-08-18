@@ -115,6 +115,8 @@
 </template>
 
 <script>
+import voleImageURL from '../assets/images/projects/vole/vole.png'
+import absenceIsPresenceImageURL from '../assets/images/projects/absence-is-presence/absence_is_presence.png'
 import ctfImageURL from '../assets/images/projects/ctf/picoCTF2025.png'
 import homelabImageURL from '../assets/images/projects/homelab/homelab_rice.png'
 import transmissImageURL from '../assets/images/projects/transmiss/transmiss2.png'
@@ -128,6 +130,36 @@ export default {
     return {
       activeContent: new Set(),
       content: [
+        {
+          name: 'VOLE',
+          id: 'vole',
+          heading: `
+            is a framework for detecting CWEs in program binaries.
+          `,
+          description: `
+            Vulnerability Observance and Learning-based Exploitation (VOLE) simplifies the process of training machine learning models for vulnerability detection. 
+            The framework aims to streamline the process of training graph convolutional networks using control flow graphs and intermediate represented recovered from NIST SARD Juliet C/C++ binaries.
+            Implemented using angr, pyvex, VEXIR2Vec, and PyTorch.
+          `,
+          links: {
+            project: 'https://github.com/cbarkr/vole'
+          },
+          image: ''
+        },
+        {
+          name: 'Absence is Presence',
+          id: 'absence-is-presence',
+          heading: `
+            explores the relationship between the absence and presence of information.
+          `,
+          description: `
+            Submitted as my final project for CMNS 353, "The Information Age", receiving a perfect grade and is being used as an example project for future iterations of the course :)
+          `,
+          links: {
+            site: 'https://sway.cloud.microsoft/DG3LWBIUVxsKJeYg'
+          },
+          image: ''
+        },
         {
           name: 'CTF',
           id: 'ctf',
@@ -222,6 +254,12 @@ export default {
       const img = new Image()
 
       switch (c.id) {
+        case 'vole':
+          img.src = voleImageURL
+          break
+        case 'absence-is-presence':
+          img.src = absenceIsPresenceImageURL
+          break
         case 'ctf':
           img.src = ctfImageURL
           break
