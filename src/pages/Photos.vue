@@ -119,7 +119,8 @@ export default {
     this.photos = Object.values(
       import.meta.glob('@assets/images/photography/*.{png,jpg,jpeg,PNG,JPEG}', {
         eager: true,
-        as: 'url'
+        query: '?url', 
+        import: 'default'
       })
     )
 
