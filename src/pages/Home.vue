@@ -123,9 +123,7 @@ import { RouterLink } from 'vue-router'
 
     <!-- Contact -->
     <div class="w-full my-8">
-      <div class="flex flex-row font-light text-lg p-1">
-        EMAIL: {{ about.email }}
-      </div>
+      <div class="flex flex-row font-light text-lg p-1">EMAIL: {{ about.email }}</div>
       <div v-for="item in about.links" :key="item.id" class="flex flex-row">
         <a
           :href="item.link"
@@ -167,7 +165,7 @@ export default {
           outside of work and school, I can be found out on my bicycle, in thrift stores around town, at my local Muay Thai gym, or at home organizing my Pinterest boards.
           `,
         email: '<SECOND-LEVEL DOMAIN OF THIS SITE> [AT] PROTONMAIL [DOT] COM',
-          links: [
+        links: [
           {
             text: 'GITHUB',
             link: 'https://github.com/cbarkr'

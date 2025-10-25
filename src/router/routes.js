@@ -15,7 +15,7 @@ const routes = [
     path: '/photos',
     name: 'photos',
     component: () => import(/* webpackChunkName: "photos" */ '../pages/Photos.vue')
-  },
+  }
 ]
 
 export default routes
