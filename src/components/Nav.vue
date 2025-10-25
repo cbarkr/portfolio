@@ -15,7 +15,7 @@ import { RouterLink } from 'vue-router'
         :to="item.route"
         class="hover:bg-whiteish hover:text-blackish hover:no-underline"
       >
-        <div v-if="item.title === $route.name" class="font-medium">
+        <div v-if="item.title === $route.name" class="underline">
           {{ item.title.toUpperCase() }}
         </div>
         <div v-else>
@@ -27,14 +27,14 @@ import { RouterLink } from 'vue-router'
           Blog is hosted as a separate project, and thus cannot be routed to the same way.
           This here is a bit of a workaround (using an <a> and adding a trailing slash) to make sure we route to the other project.
         -->
-        <div v-if="item.title === $route.name" class="font-medium">
+        <div v-if="item.title === $route.name" class="underline">
           {{ item.title.toUpperCase() }}
         </div>
         <div v-else>
           {{ item.title.toUpperCase() }}
         </div>
       </a>
-      <div v-if="index !== nav.length - 1" class="pr-2">/</div>
+      <div v-if="index !== nav.length - 1" class="pr-2">|</div>
     </div>
   </div>
 </template>
