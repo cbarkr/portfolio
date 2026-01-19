@@ -1,10 +1,8 @@
-import Home from '../pages/Home.vue'
-
 const routes = [
   {
     path: '/',
     name: 'home',
-    component: Home
+    component: () => import(/* webpackChunkName: "home" */ '../pages/Home.vue')
   },
   {
     path: '/projects',
@@ -15,6 +13,13 @@ const routes = [
     path: '/photos',
     name: 'photos',
     component: () => import(/* webpackChunkName: "photos" */ '../pages/Photos.vue')
+  },
+  {
+    path: '/blog',
+    name: 'blog',
+    beforeEnter(to, from, next) {
+      window.location.href = 'https://blog.cbarkr.com' // Hack to route to external link
+    }
   }
 ]
 
