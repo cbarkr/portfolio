@@ -1,3 +1,10 @@
+<script setup>
+import ArrowUp from '../components/icons/ArrowUp.vue'
+import ArrowLeft from '../components/icons/ArrowLeft.vue'
+import ArrowRight from '../components/icons/ArrowRight.vue'
+import ArrowDown from '../components/icons/ArrowDown.vue'
+</script>
+
 <template>
   <div class="flex flex-row h-[95%]">
     <div
@@ -7,40 +14,16 @@
       class="flex flex-col flex-grow relative justify-center overflow-hidden cursor-pointer"
     >
       <div class="flex justify-center my-8">
-        <!-- Arrow up -->
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
+        <ArrowUp
           class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-18 xl:h-18"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18"
-          />
-        </svg>
+        />
       </div>
       <!-- Middle -->
       <div class="flex flex-row justify-center my-8">
         <div class="flex self-center mx-8">
-          <!-- Left arrow -->
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
+          <ArrowLeft
             class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-18 xl:h-18"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
-            />
-          </svg>
+          />
         </div>
         <div class="flex flex-col mx-8">
           <div
@@ -58,39 +41,15 @@
           </div>
         </div>
         <div class="flex self-center mx-8">
-          <!-- Arrow right -->
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
+          <ArrowRight
             class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-18 xl:h-18"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-            />
-          </svg>
+          />
         </div>
       </div>
       <div class="flex justify-center my-8">
-        <!-- Arrow down -->
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
+        <ArrowDown
           class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-18 xl:h-18"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3"
-          />
-        </svg>
+        />
       </div>
     </div>
     <div v-else class="flex flex-col flex-grow gap-36">
@@ -104,6 +63,7 @@
 <script>
 export default {
   name: 'PhotosPage',
+  components: [ArrowUp, ArrowLeft, ArrowRight, ArrowDown],
   data() {
     return {
       // TODO: Represent viewMode better

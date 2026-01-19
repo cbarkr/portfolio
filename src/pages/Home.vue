@@ -1,130 +1,38 @@
 <script setup>
-import { RouterLink } from 'vue-router'
+import ArrowUp from '../components/icons/ArrowUp.vue'
+import ArrowUpRight from '../components/icons/ArrowUpRight.vue'
+import ArrowRight from '../components/icons/ArrowRight.vue'
+import ArrowDownRight from '../components/icons/ArrowDownRight.vue'
+import ArrowDown from '../components/icons/ArrowDown.vue'
 </script>
 
 <template>
   <div class="sm:px-16">
     <!-- Bio -->
     <div class="flex justify-center font-light text-lg mb-8">
-      {{ about.bio }}
+      {{ about }}
     </div>
 
-    <!-- About header -->
-    <div class="flex flex-row justify-between">
-      <div class="text-4xl md:text-5xl lg:text-6xl">ABOUT</div>
-      <!-- Arrow up -->
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-18 xl:h-18"
+    <!-- Main -->
+    <div v-for="section in sections">
+      <component
+        :is="section.path ? 'router-link' : 'div'"
+        :to="section.path ? section.path : null"
+        :class="section.path ? 'hover:bg-whiteish hover:text-blackish hover:no-underline' : null"
+        class="flex flex-row justify-between"
       >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18"
+        <div class="text-4xl md:text-5xl lg:text-6xl">{{ section.name.toUpperCase() }}</div>
+        <component
+          :is="section.icon"
+          class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-18 xl:h-18"
         />
-      </svg>
-    </div>
-
-    <!-- Project header -->
-    <router-link to="/projects">
-      <div
-        class="flex flex-row justify-between hover:bg-whiteish hover:text-blackish hover:no-underline"
-      >
-        <div class="text-4xl md:text-5xl lg:text-6xl">PROJECTS</div>
-        <!-- Arrow up right -->
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-18 xl:h-18"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
-          />
-        </svg>
-      </div>
-    </router-link>
-
-    <!-- Photos header -->
-    <router-link to="/photos">
-      <div
-        class="flex flex-row justify-between hover:bg-whiteish hover:text-blackish hover:no-underline"
-      >
-        <div class="text-4xl md:text-5xl lg:text-6xl">PHOTOS</div>
-        <!-- Arrow right -->
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-18 xl:h-18"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-          />
-        </svg>
-      </div>
-    </router-link>
-
-    <!-- Blog header -->
-    <a href="https://blog.cbarkr.com">
-      <div
-        class="flex flex-row justify-between hover:bg-whiteish hover:text-blackish hover:no-underline"
-      >
-        <div class="text-4xl md:text-5xl lg:text-6xl">BLOG</div>
-        <!-- Arrow down right -->
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-18 xl:h-18"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M4.5 4.5l15 15m0 0V8.25m0 11.25H8.25"
-          />
-        </svg>
-      </div>
-    </a>
-
-    <!-- Contact header -->
-    <div class="flex flex-row justify-between">
-      <div class="text-4xl md:text-5xl lg:text-6xl">CONTACT</div>
-      <!-- Arrow down -->
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-18 xl:h-18"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3"
-        />
-      </svg>
+      </component>
     </div>
 
     <!-- Contact -->
     <div class="w-full my-8">
-      <div class="flex flex-row font-light text-lg p-1">EMAIL: {{ about.email }}</div>
-      <div v-for="item in about.links" :key="item.id" class="flex flex-row">
+      <div class="flex flex-row font-light text-lg p-1">EMAIL: {{ contact.email }}</div>
+      <div v-for="item in contact.links" :key="item.id" class="flex flex-row">
         <a
           :href="item.link"
           class="flex flex-row font-light text-lg p-1 hover:bg-whiteish hover:text-blackish hover:no-underline"
@@ -132,21 +40,7 @@ import { RouterLink } from 'vue-router'
           rel="noopener noreferrer"
         >
           {{ item.text }}
-          <!-- Arrow up right -->
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-6 h-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
-            />
-          </svg>
+          <ArrowUpRight class="w-6 h-6" />
         </a>
       </div>
     </div>
@@ -154,16 +48,20 @@ import { RouterLink } from 'vue-router'
 </template>
 
 <script>
+import { shallowRef } from 'vue'
+import routes from '../router/routes'
+
 export default {
   name: 'HomePage',
+  components: [ArrowUp, ArrowUpRight, ArrowRight, ArrowDownRight, ArrowDown],
   data() {
     return {
-      about: {
-        bio: `
-          Hi, I'm Callum, a software developer/security engineer and photographer based in Vancouver; 
-          interested in technology (especially in the realm of security and privacy), fashion, design, architecture, music, sights, sounds, tastes, experiences, lists, etc.; 
-          outside of work and school, I can be found out on my bicycle, in thrift stores around town, at my local Muay Thai gym, or at home organizing my Pinterest boards.
-          `,
+      about: `
+        Hi, I'm Callum, a software developer/security engineer and photographer based in Vancouver; 
+        interested in technology (especially in the realm of security and privacy), fashion, design, architecture, music, sights, sounds, tastes, experiences, lists, etc.; 
+        outside of work and school, I can be found out on my bicycle, in thrift stores around town, at my local Muay Thai gym, or at home organizing my Pinterest boards.
+      `,
+      contact: {
         email: '<SECOND-LEVEL DOMAIN OF THIS SITE> [AT] PROTONMAIL [DOT] COM',
         links: [
           {
@@ -175,7 +73,27 @@ export default {
             link: 'https://www.linkedin.com/in/cbarkr'
           }
         ]
-      }
+      },
+      icons: [
+        shallowRef(ArrowUp),
+        shallowRef(ArrowUpRight),
+        shallowRef(ArrowRight),
+        shallowRef(ArrowDownRight),
+        shallowRef(ArrowDown)
+      ],
+      sections: routes
+        .filter((r) => r.name !== this.$route.name) // Remove current path (home)
+        .map(({ name, path }) => ({ name, path })) // Keep only name and path attrs
+    }
+  },
+  created() {
+    // Add "about" section to start and "contact" section to end
+    this.sections.splice(0, 0, { name: 'about' })
+    this.sections.splice(this.sections.length, 0, { name: 'contact' })
+
+    // Add icons to each section
+    for (let i = 0; i < this.sections.length; i++) {
+      this.sections[i].icon = this.icons[i]
     }
   }
 }

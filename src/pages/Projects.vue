@@ -1,3 +1,9 @@
+<script setup>
+import ArrowUp from '../components/icons/ArrowUp.vue'
+import ArrowUpRight from '../components/icons/ArrowUpRight.vue'
+import ArrowDown from '../components/icons/ArrowDown.vue'
+</script>
+
 <template>
   <div class="sm:px-16">
     <hr />
@@ -7,40 +13,10 @@
         class="flex flex-row justify-between my-4 hover:bg-whiteish hover:text-blackish hover:no-underline cursor-pointer"
       >
         <div class="text-4xl md:text-5xl lg:text-6xl">{{ c.name.toUpperCase() }}</div>
-        <div>
-          <!-- Arrow down -->
-          <svg
-            v-if="!isActive(index)"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-18 xl:h-18"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3"
-            />
-          </svg>
-          <!-- Arrow up -->
-          <svg
-            v-else
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-18 xl:h-18"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18"
-            />
-          </svg>
-        </div>
+        <component
+          :is="isActive(index) ? ArrowUp : ArrowDown"
+          class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-18 xl:h-18"
+        />
       </div>
       <div v-show="isActive(index)" class="flex flex-col gap-4 mb-4">
         <div class="flex flex-row">
@@ -60,21 +36,7 @@
               rel="noopener noreferrer"
             >
               {{ c.name }}
-              <!-- Arrow up right -->
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="w-6 h-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
-                />
-              </svg>
+              <ArrowUpRight class="w-6 h-6" />
             </a>
             <div v-else class="w-max h-max">{{ c.name }}</div>
           </div>
@@ -92,21 +54,7 @@
             rel="noopener noreferrer"
           >
             Project Link
-            <!-- Arrow up right -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-6 h-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
-              />
-            </svg>
+            <ArrowUpRight class="w-6 h-6" />
           </a>
         </div>
       </div>
@@ -116,17 +64,18 @@
 </template>
 
 <script>
-import voleImageURL from '../assets/images/projects/vole/vole.png'
-import absenceIsPresenceImageURL from '../assets/images/projects/absence-is-presence/absence_is_presence.png'
-import ctfImageURL from '../assets/images/projects/ctf/picoCTF2025.png'
-import homelabImageURL from '../assets/images/projects/homelab/homelab_rice.png'
-import transmissImageURL from '../assets/images/projects/transmiss/transmiss2.png'
-import pipboyImageURL from '../assets/images/projects/pipboy/pipboy1.jpg'
-import gpsutilsImageURL from '../assets/images/projects/gpsutils/gpsutils2.png'
-import flixlistImageURL from '../assets/images/projects/flixlist/flixlist1.png'
+import voleImageURL from '@assets/images/projects/vole/vole.png'
+import absenceIsPresenceImageURL from '@assets/images/projects/absence-is-presence/absence_is_presence.png'
+import ctfImageURL from '@assets/images/projects/ctf/picoCTF2025.png'
+import homelabImageURL from '@assets/images/projects/homelab/homelab_rice.png'
+import transmissImageURL from '@assets/images/projects/transmiss/transmiss2.png'
+import pipboyImageURL from '@assets/images/projects/pipboy/pipboy1.jpg'
+import gpsutilsImageURL from '@assets/images/projects/gpsutils/gpsutils2.png'
+import flixlistImageURL from '@assets/images/projects/flixlist/flixlist1.png'
 
 export default {
   name: 'ProjectsPage',
+  components: [ArrowUp, ArrowUpRight, ArrowDown],
   data() {
     return {
       activeContent: new Set(),
