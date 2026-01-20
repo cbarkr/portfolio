@@ -71,7 +71,13 @@ export default {
       currentIndex: 0,
       preloadBatchSize: 0,
       photos: [],
-      gallery: []
+      gallery: [],
+      OrientationEnum: {
+        PORTRAIT: -1,
+        SQUARE: 0,
+        LANDSCAPE: 1
+      },
+      maxSizeInRem: 96
     }
   },
   created() {
@@ -115,45 +121,59 @@ export default {
     toggleGalleryView() {
       this.isGalleryView = true
     },
+    imgToOrientationEnum(width, height) {
+      if (height > width) {
+        return this.OrientationEnum.PORTRAIT
+      } else if (height === width) {
+        return this.OrientationEnum.SQUARE
+      } else {
+        return this.OrientationEnum.LANDSCAPE
+      }
+    },
     async handleClick(event) {
       if (!event) return
       if (this.currentIndex >= this.gallery.length) return
       if (!document.getElementById(this.parentId)) return
 
+      const parent = document.getElementById(this.parentId)
+      const parentBoundingRect = parent.getBoundingClientRect()
       const image = this.gallery[this.currentIndex].img
 
       // Increment current image for next click
       this.currentIndex++
 
-      // Wait for image to load
+      // Load image
       await image.decode()
 
-      // Get dimensions and such
-      const [x, y] = [event.clientX, event.clientY]
-      const [screenW, screenH] = [window.screen.width, window.screen.height]
+      // Get click location, parent offset, and image dimensions
+      const [clickX, clickY] = [event.clientX, event.clientY]
+      const [parentX, parentY] = [parentBoundingRect.left, parentBoundingRect.top]
       const [imageW, imageH] = [image.width, image.height]
 
-      // Calculate image offset
-      // Note: Image height later set to 96rem == 384px
-      // TODO: Use relative units
-      const ratio = 384 / imageH
-      const heightCalc = 384 / 2
-      const widthCalc = (ratio * imageW) / 2
+      // Compute offset relative to parent
+      const offsetX = clickX - parentX
+      const offsetY = clickY - parentY
 
-      const offsetTop = y - (heightCalc % screenH)
-      const offsetLeft = x - (widthCalc % screenW)
+      // Determine orientation for scaling
+      const orientation = this.imgToOrientationEnum(imageW, imageH)
+      const largerDimension = orientation <= this.OrientationEnum.SQUARE ? 'h' : 'w'
 
-      const parent = document.getElementById(this.parentId)
-      const newImage = document.createElement('img')
-
-      // Assign classes, attributes, and styles necessary to place image at cursor
-      const classes = ['absolute', 'h-96']
+      // Devise classes, attributes, and styles
+      const classes = [
+        'absolute',
+        'transform',
+        '-translate-x-1/2',
+        '-translate-y-1/2',
+        `${largerDimension}-${this.maxSizeInRem}`
+      ]
       const attributes = new Map([['src', image.src]])
       const styles = new Map([
-        ['top', offsetTop],
-        ['left', offsetLeft]
+        ['top', offsetY],
+        ['left', offsetX]
       ])
 
+      // Create new image element and add classes, attributes, and styles
+      const newImage = document.createElement('img')
       classes.forEach((c) => newImage.classList.add(c))
       attributes.forEach((v, k) => newImage.setAttribute(k, v))
       styles.forEach((v, k) => (newImage.style[k] = `${v}px`))
