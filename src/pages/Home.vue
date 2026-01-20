@@ -58,7 +58,7 @@ export default {
     return {
       about: `
         Hi, I'm Callum, a software/security engineer and photographer based in Vancouver; 
-        interested in technology (especially in the realm of security and privacy), fashion, design, architecture, music, sights, sounds, tastes, experiences, lists, etc.;
+        interested in technology (especially in the realm of security and privacy), fashion, design, architecture, music, sights, sounds, tastes, experiences, lists, etc.
       `,
       contact: {
         email: '<SECOND-LEVEL DOMAIN OF THIS SITE> [AT] PROTONMAIL [DOT] COM',
