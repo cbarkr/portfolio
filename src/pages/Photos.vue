@@ -8,7 +8,7 @@ import ArrowDown from '../components/icons/ArrowDown.vue'
 <template>
   <div class="flex flex-row h-[95%]">
     <div
-      v-if="viewMode"
+      v-if="!isGalleryView"
       @click="handleClick"
       :id="parentId"
       class="flex flex-col flex-grow relative justify-center overflow-hidden cursor-pointer"
@@ -33,7 +33,7 @@ import ArrowDown from '../components/icons/ArrowDown.vue'
           </div>
           <div class="flex align-center justify-center">
             <div
-              @click="switchViewMode"
+              @click="toggleGalleryView"
               class="border bg-transparent text-white hover:bg-white hover:text-black text-center text-lg md:text-xl lg:text-2xl p-2"
             >
               GALLERY VIEW
@@ -66,8 +66,7 @@ export default {
   components: [ArrowUp, ArrowLeft, ArrowRight, ArrowDown],
   data() {
     return {
-      // TODO: Represent viewMode better
-      viewMode: true, // here, true represents 'click' mode, 'false' represents 'gallery'
+      isGalleryView: false,
       parentId: 'photoParent',
       currentIndex: 0,
       preloadBatchSize: 0,
@@ -113,8 +112,8 @@ export default {
         this.gallery.push({ img: img })
       }
     },
-    switchViewMode() {
-      this.viewMode = !this.viewMode
+    toggleGalleryView() {
+      this.isGalleryView = true
     },
     async handleClick(event) {
       if (!event) return
