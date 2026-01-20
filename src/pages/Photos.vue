@@ -135,7 +135,7 @@ export default {
       const offsetY = event.clientY - parentBoundingRect.top
 
       // Devise classes, attributes, and styles
-      const classes = ['absolute', 'transform', '-translate-x-1/2', '-translate-y-1/2', 'h-80']
+      const classes = ['absolute', 'transform', '-translate-x-1/2', '-translate-y-1/2', 'max-h-96']
       const attributes = new Map([['src', image.src]])
       const styles = new Map([
         ['top', `${offsetY}px`],
