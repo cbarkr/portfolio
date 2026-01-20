@@ -64,6 +64,15 @@ import ArrowDown from '../components/icons/ArrowDown.vue'
 </template>
 
 <script>
+import voleImageURL from '@assets/images/projects/vole/vole.png'
+import absenceIsPresenceImageURL from '@assets/images/projects/absence-is-presence/absence_is_presence.png'
+import ctfImageURL from '@assets/images/projects/ctf/picoCTF2025.png'
+import homelabImageURL from '@assets/images/projects/homelab/homelab_rice.png'
+import transmissImageURL from '@assets/images/projects/transmiss/transmiss2.png'
+import pipboyImageURL from '@assets/images/projects/pipboy/pipboy1.jpg'
+import gpsutilsImageURL from '@assets/images/projects/gpsutils/gpsutils2.png'
+import flixlistImageURL from '@assets/images/projects/flixlist/flixlist1.png'
+
 export default {
   name: 'ProjectsPage',
   components: [ArrowUp, ArrowUpRight, ArrowDown],
@@ -85,7 +94,7 @@ export default {
           links: {
             project: 'https://github.com/cbarkr/vole'
           },
-          imageURL: 'src/assets/images/projects/vole/vole.png'
+          imageURL: voleImageURL
         },
         {
           name: 'Absence is Presence',
@@ -99,7 +108,7 @@ export default {
           links: {
             site: 'https://sway.cloud.microsoft/DG3LWBIUVxsKJeYg'
           },
-          imageURL: 'src/assets/images/projects/absence-is-presence/absence_is_presence.png'
+          imageURL: absenceIsPresenceImageURL
         },
         {
           name: 'CTF',
@@ -114,7 +123,7 @@ export default {
             site: 'https://blog.cbarkr.com/tags/ctf',
             project: 'https://github.com/cbarkr/ctf'
           },
-          imageURL: 'src/assets/images/projects/ctf/picoCTF2025.png'
+          imageURL: ctfImageURL
         },
         {
           name: 'My Homelab',
@@ -128,7 +137,7 @@ export default {
           links: {
             site: 'https://blog.cbarkr.com/homelab/'
           },
-          imageURL: 'src/assets/images/projects/homelab/homelab_rice.png'
+          imageURL: homelabImageURL
         },
         {
           name: 'Transmiss',
@@ -141,7 +150,7 @@ export default {
             site: 'https://transmiss.ca',
             project: 'https://github.com/cbarkr/transmiss'
           },
-          imageURL: 'src/assets/images/projects/transmiss/transmiss2.png'
+          imageURL: transmissImageURL
         },
         {
           name: 'Pip-Boy 3000',
@@ -157,7 +166,7 @@ export default {
           links: {
             project: 'https://github.com/cmpt469-su23-group3/PipBoy_Android'
           },
-          imageURL: 'src/assets/images/projects/pipboy/pipboy1.jpg'
+          imageURL: pipboyImageURL
         },
         {
           name: 'GPSUtils',
@@ -171,7 +180,7 @@ export default {
             project: 'https://github.com/cbarkr/gpsutils',
             site: 'https://cbarkr.github.io/gpsutils/'
           },
-          imageURL: 'src/assets/images/projects/gpsutils/gpsutils2.png'
+          imageURL: gpsutilsImageURL
         },
         {
           name: 'FlixList',
@@ -183,7 +192,7 @@ export default {
           links: {
             project: 'https://github.com/cbarkr/FlixList'
           },
-          imageURL: 'src/assets/images/projects/flixlist/flixlist1.png'
+          imageURL: flixlistImageURL
         }
       ]
     }
