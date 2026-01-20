@@ -71,13 +71,7 @@ export default {
       currentIndex: 0,
       preloadBatchSize: 0,
       photos: [],
-      gallery: [],
-      OrientationEnum: {
-        PORTRAIT: -1,
-        SQUARE: 0,
-        LANDSCAPE: 1
-      },
-      maxSizeInRem: 96
+      gallery: []
     }
   },
   created() {
@@ -121,15 +115,6 @@ export default {
     toggleGalleryView() {
       this.isGalleryView = true
     },
-    imgToOrientationEnum(width, height) {
-      if (height > width) {
-        return this.OrientationEnum.PORTRAIT
-      } else if (height === width) {
-        return this.OrientationEnum.SQUARE
-      } else {
-        return this.OrientationEnum.LANDSCAPE
-      }
-    },
     async handleClick(event) {
       if (!event) return
       if (this.currentIndex >= this.gallery.length) return
@@ -145,38 +130,23 @@ export default {
       // Load image
       await image.decode()
 
-      // Get click location, parent offset, and image dimensions
-      const [clickX, clickY] = [event.clientX, event.clientY]
-      const [parentX, parentY] = [parentBoundingRect.left, parentBoundingRect.top]
-      const [imageW, imageH] = [image.width, image.height]
-
       // Compute offset relative to parent
-      const offsetX = clickX - parentX
-      const offsetY = clickY - parentY
-
-      // Determine orientation for scaling
-      const orientation = this.imgToOrientationEnum(imageW, imageH)
-      const largerDimension = orientation <= this.OrientationEnum.SQUARE ? 'h' : 'w'
+      const offsetX = event.clientX - parentBoundingRect.left
+      const offsetY = event.clientY - parentBoundingRect.top
 
       // Devise classes, attributes, and styles
-      const classes = [
-        'absolute',
-        'transform',
-        '-translate-x-1/2',
-        '-translate-y-1/2',
-        `${largerDimension}-${this.maxSizeInRem}`
-      ]
+      const classes = ['absolute', 'transform', '-translate-x-1/2', '-translate-y-1/2', 'h-80']
       const attributes = new Map([['src', image.src]])
       const styles = new Map([
-        ['top', offsetY],
-        ['left', offsetX]
+        ['top', `${offsetY}px`],
+        ['left', `${offsetX}px`]
       ])
 
       // Create new image element and add classes, attributes, and styles
       const newImage = document.createElement('img')
       classes.forEach((c) => newImage.classList.add(c))
       attributes.forEach((v, k) => newImage.setAttribute(k, v))
-      styles.forEach((v, k) => (newImage.style[k] = `${v}px`))
+      styles.forEach((v, k) => (newImage.style[k] = v))
 
       // Add the image to the DOM!
       parent.appendChild(newImage)
