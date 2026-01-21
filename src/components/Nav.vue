@@ -22,13 +22,13 @@ import { RouterLink } from 'vue-router'
 </template>
 
 <script>
-import routes from '../router/routes'
+import { navRoutes } from '../router/routes'
 
 export default {
   name: 'NavComponent',
   data() {
     return {
-      nav: routes
+      nav: navRoutes
     }
   }
 }

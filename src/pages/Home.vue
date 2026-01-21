@@ -49,7 +49,7 @@ import ArrowDown from '../components/icons/ArrowDown.vue'
 
 <script>
 import { shallowRef } from 'vue'
-import routes from '../router/routes'
+import { homeRoutes } from '../router/routes'
 
 export default {
   name: 'HomePage',
@@ -80,9 +80,7 @@ export default {
         shallowRef(ArrowDownRight),
         shallowRef(ArrowDown)
       ],
-      sections: routes
-        .filter((r) => r.name !== this.$route.name) // Remove current path (home)
-        .map(({ name, path }) => ({ name, path })) // Keep only name and path attrs
+      sections: homeRoutes.map(({ name, path }) => ({ name, path })) // Keep only name and path attrs
     }
   },
   created() {

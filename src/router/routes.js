@@ -1,9 +1,5 @@
-const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: () => import(/* webpackChunkName: "home" */ '../pages/Home.vue')
-  },
+export const homeRoutes = [
+  // Routes used in the home page
   {
     path: '/projects',
     name: 'projects',
@@ -23,4 +19,23 @@ const routes = [
   }
 ]
 
-export default routes
+export const navRoutes = [
+  // Routes used in the nav bar
+  {
+    path: '/',
+    name: 'home',
+    component: () => import(/* webpackChunkName: "home" */ '../pages/Home.vue')
+  },
+  ...homeRoutes
+]
+
+export const routes = [
+  // Routes used to, well, tell the router what to route (i.e. everything!)
+  ...navRoutes,
+  {
+    // Catch-all for anything that wasn't found -> 404!
+    path: '/:catchAll(.*)*',
+    name: '404',
+    component: () => import(/* webpackChunkName: "404" */ '../pages/404.vue')
+  }
+]
