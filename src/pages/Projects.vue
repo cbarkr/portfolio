@@ -12,7 +12,9 @@ import ArrowDown from '../components/icons/ArrowDown.vue'
         @click="handleClick(index)"
         class="flex flex-row justify-between my-4 hover:bg-whiteish hover:text-blackish hover:no-underline cursor-pointer"
       >
-        <div class="text-4xl md:text-5xl lg:text-6xl">{{ c.name.toUpperCase() }}</div>
+        <div class="text-4xl md:text-5xl lg:text-6xl">
+          {{ c.name.toUpperCase() }} <code>({{ c.year }})</code>
+        </div>
         <component
           :is="isActive(index) ? ArrowUp : ArrowDown"
           class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-18 xl:h-18"
@@ -82,6 +84,7 @@ export default {
       content: [
         {
           name: 'VOLE',
+          year: 2025,
           id: 'vole',
           heading: `
             is a framework for detecting CWEs in program binaries.
@@ -98,6 +101,7 @@ export default {
         },
         {
           name: 'Absence is Presence',
+          year: 2025,
           id: 'absence-is-presence',
           heading: `
             explores the relationship between the absence and presence of information.
@@ -112,6 +116,7 @@ export default {
         },
         {
           name: 'CTF',
+          year: 2025,
           id: 'ctf',
           heading: `
             is my latest obsession.
@@ -127,6 +132,7 @@ export default {
         },
         {
           name: 'My Homelab',
+          year: 2025,
           id: 'homelab',
           heading: `
             is a safe place for me to make, break, dissect, and play with technologies.
@@ -141,6 +147,7 @@ export default {
         },
         {
           name: 'Transmiss',
+          year: 2023,
           id: 'transmiss',
           heading: `
             is for when transit misses the mark.
@@ -154,6 +161,7 @@ export default {
         },
         {
           name: 'Pip-Boy 3000',
+          year: 2023,
           id: 'pipboy',
           heading: `
             is a safe, secure piece of Pre-War technology. It guarantees privacy, safety, and guidance in times of need.
@@ -170,6 +178,7 @@ export default {
         },
         {
           name: 'GPSUtils',
+          year: 2023,
           id: 'gpsutils',
           heading: `is a basic GPS module for Python.`,
           description: `
@@ -184,6 +193,7 @@ export default {
         },
         {
           name: 'FlixList',
+          year: 2021,
           id: 'flixlist',
           heading: `is a social movie reviewing site.`,
           description: `
