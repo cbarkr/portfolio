@@ -117,39 +117,39 @@ export default {
     },
     async handleClick(event) {
       if (!event) return
-      if (this.currentIndex >= this.gallery.length) return
       if (!document.getElementById(this.parentId)) return
+      if (!(this.currentIndex < this.gallery.length)) return
 
       const parent = document.getElementById(this.parentId)
-      const parentBoundingRect = parent.getBoundingClientRect()
-      const image = this.gallery[this.currentIndex].img
-
-      // Increment current image for next click
-      this.currentIndex++
+      const bounds = parent.getBoundingClientRect()
+      const curImg = this.gallery[this.currentIndex].img
 
       // Load image
-      await image.decode()
+      await curImg.decode()
 
       // Compute offset relative to parent
-      const offsetX = event.clientX - parentBoundingRect.left
-      const offsetY = event.clientY - parentBoundingRect.top
+      const offsetX = event.clientX - bounds.left
+      const offsetY = event.clientY - bounds.top
 
-      // Devise classes, attributes, and styles
+      // Set classes, attributes, and styles
       const classes = ['absolute', 'transform', '-translate-x-1/2', '-translate-y-1/2', 'max-h-96']
-      const attributes = new Map([['src', image.src]])
+      const attributes = new Map([['src', curImg.src]])
       const styles = new Map([
         ['top', `${offsetY}px`],
         ['left', `${offsetX}px`]
       ])
 
       // Create new image element and add classes, attributes, and styles
-      const newImage = document.createElement('img')
-      classes.forEach((c) => newImage.classList.add(c))
-      attributes.forEach((v, k) => newImage.setAttribute(k, v))
-      styles.forEach((v, k) => (newImage.style[k] = v))
+      const imgElement = document.createElement('img')
+      classes.forEach((c) => imgElement.classList.add(c))
+      attributes.forEach((v, k) => imgElement.setAttribute(k, v))
+      styles.forEach((v, k) => (imgElement.style[k] = v))
 
       // Add the image to the DOM!
-      parent.appendChild(newImage)
+      parent.appendChild(imgElement)
+
+      // Increment current image for next click
+      this.currentIndex++
     }
   }
 }
