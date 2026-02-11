@@ -124,6 +124,9 @@ export default {
       const bounds = parent.getBoundingClientRect()
       const curImg = this.gallery[this.currentIndex].img
 
+      // Increment current image for next click
+      this.currentIndex++
+
       // Load image
       await curImg.decode()
 
@@ -147,9 +150,6 @@ export default {
 
       // Add the image to the DOM!
       parent.appendChild(imgElement)
-
-      // Increment current image for next click
-      this.currentIndex++
     }
   }
 }
